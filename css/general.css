@@ -63,13 +63,13 @@ footer {
     min-height: 240px;
     background-color: #2C3033;
     padding-top: 12px;
+    padding: 0 7%;
 }
 
 footer > p {
     /* border: 1px solid black; */
     text-align: center;
     margin: 4px;
-    font-weight: 500;
     color: white;
     padding: 4px;
 }
@@ -87,4 +87,13 @@ footer > :nth-child(3), :nth-child(5), :nth-child(7) {
 #leverans {
     display: flex;
     justify-content: center;
+}
+
+#footer-mail {
+    text-decoration: none;
+    color: white;
+}
+
+#footer-mail:hover {
+    color: #949C94;
 }
