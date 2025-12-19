@@ -1,0 +1,30 @@
+header {
+    width: 100%;
+    margin: 0 auto;
+    min-height: 120px;
+    background-color: #2C3033;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+}
+
+nav {
+    background-color: #2C3033;
+    min-height: 75px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px;
+}
+
+#link {
+    list-style-type: none;
+}
+
+#link a {
+    text-decoration: none;
+    color: white;
+}
+
+#link a:hover {
+    color: #949C94;
+}
