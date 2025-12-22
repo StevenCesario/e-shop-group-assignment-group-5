@@ -1,0 +1,142 @@
+body { 
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    margin: 0;
+    min-height: 120px;
+    background-color: #2C3033;
+    justify-content: center;
+    display: flex;
+}
+
+nav {
+    background-color: #2C3033;
+    min-height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#div-navbar {
+    min-height: 20px;
+    border: black 2px solid;
+    width: 100px;
+}
+
+#link {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap:10px;
+}
+
+#link a {
+    text-decoration: none;
+    color: white;
+}
+
+#link a:hover {
+    color: #949C94;
+}
+
+#cart-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    /* margin-left: 10px;
+    padding-right: 10px; */
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+footer {
+    /* margin-top: 400px; need to be taken care of*/ 
+    border: 1px solid black;
+    min-height: 240px;
+    background-color: #2C3033;
+    padding-top: 12px;
+    padding: 0 7%;
+}
+
+footer > p {
+    /* border: 1px solid black; */
+    text-align: center;
+    margin: 4px;
+    color: white;
+    padding: 4px;
+}
+
+footer > :nth-child(3), :nth-child(5), :nth-child(7) {
+    margin-top: 24px;
+}
+
+.footer-images {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+#leverans {
+    display: flex;
+    justify-content: center;
+}
+
+#footer-mail {
+    text-decoration: none;
+    color: white;
+}
+
+#footer-mail:hover {
+    color: #949C94;
+}
+
+/* START OF MY CHANGES */
+
+/* #main-content {
+    border: 2px solid red;
+    min-height: 460px;
+} */
+
+.product-hero-section {
+    /* border: 2px solid blue; */
+    min-height: 460px;
+}
+
+/* END OF MY CHANGES */
+
+/* tablet */
+@media screen and (min-width:768px) {
+
+}
+
+/* small desktop */
+@media screen and (min-width:960px) {
+        #wrapper {
+        display: grid;
+        grid-template-columns: 1fr 8fr 1fr;
+    }
+
+    .div-side {
+        background-color: #949C94;
+    }    
+}
+
+/* large desktop */
+@media screen and (min-width:1200px) {
+        #wrapper {
+        display: grid;
+        grid-template-columns: 1fr 8fr 1fr;
+    }
+
+    .div-side {
+        background-color: #949C94;
+    }   
+}
