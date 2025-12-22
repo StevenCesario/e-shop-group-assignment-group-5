@@ -21,7 +21,7 @@ Här vill vi också skapa liknande känslor för användaren som man känner nä
 Loggan möter användaren när hen landar på sidan för att genast låta hen veta var den hamnat. Vi har även bl.a. valt att ha en sticky header som följer med användaren när hen scrollar. Vi har som avsikt att även ha en knapp nere vid höger hörn som tar användaren upp till toppen av sidan igen. Vi väljer även att “skala ner” på mindre enheter och använda en dropdown på mobil. 
 
 ## Vem jobbar på vad?
-Homepage: Sandra
-Product page: Steven
-Product page NES/SNES: August
-Product list: Nahid/William
+* Homepage: Sandra
+* Product page: Steven
+* Product page NES/SNES: August
+* Product list: Nahid/William
