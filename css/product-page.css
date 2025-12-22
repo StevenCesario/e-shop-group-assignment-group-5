@@ -136,6 +136,7 @@ footer > :nth-child(3), :nth-child(5), :nth-child(7) {
 .product-info-small {
     border: 2px solid black;
     padding: 6px;
+    margin-inline: 8px;
 }
 
 /* END OF MY CHANGES */
