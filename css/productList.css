@@ -1,0 +1,393 @@
+:root {
+  --black: #0e0e0e;
+  --dark-gray: #2a2a2a;
+  --gray: #6b6b6b;
+  --light-gray: #e6e6e6;
+  --white: #ffffff;
+  --red: #e63946;
+  --dark-red: #b52a36;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styles */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: var(--black);
+  color: var(--white);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* =====================
+       HEADER / NAV
+       ===================== */
+header {
+  background: linear-gradient(180deg, #1a1a1a, #0e0e0e);
+  border-bottom: 2px solid var(--red);
+}
+
+.nav {
+  max-width: 100vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.logo {
+  margin: 1rem;
+  height: 6rem;
+  cursor: pointer;
+  transition: border 0.15s ease;
+  border-radius: 20%;
+}
+
+.logo:hover {
+  border: #e63946 2px solid;
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: var(--red);
+}
+
+.login-btn,
+.Load-btn {
+  background: transparent;
+  border: 2px solid var(--red);
+  color: var(--white);
+  padding: 0.55rem 1.1rem;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.login-btn,
+.Load-btn:hover {
+  background: var(--red);
+  transform: translateY(-2px);
+}
+
+.div-Load-btn {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cart-btn {
+  margin-left: auto; /*uses all the space left on the LEFT*/
+  background: transparent;
+  border: 2px solid var(--red);
+  color: var(--white);
+  padding: 0.55rem 1.1rem;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.cart-btn:hover {
+  background: var(--red);
+  transform: translateY(-2px);
+}
+
+/* =====================
+       HERO
+       ===================== */
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1rem;
+  background: radial-gradient(circle at top, #2b2b2b, #0e0e0e 70%);
+}
+
+.hero img {
+  width: 160px;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: 1px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 1rem auto 2rem;
+  color: var(--light-gray);
+}
+
+/* =====================
+       PRODUCTS
+       ===================== */
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem 1rem;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border-left: 6px solid var(--red);
+  padding-left: 1rem;
+}
+
+/* Product grid layout */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ====== ADDING STYLES FROM THE NEW CODE ====== */
+
+/* Enhance product with hover effects, shadows, transition */
+.product {
+  background: var(--dark-gray);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer; /* make cursor pointer for interactivity */
+}
+
+/* Hover effect: lift and shadow */
+.product:hover {
+  transform: translateY(-4px) rotate(-0.5deg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Big product styles (already in your code, but re-adding hover effects for consistency) */
+.product.big-product {
+  grid-column: 1;
+  grid-row: span 2;
+  grid-column: span 2;
+  padding: 1rem;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 1.2rem;
+  /* add hover effects for big-product if desired */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product.big-product:hover {
+  transform: translateY(-4px) rotate(-0.5deg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Style for product images inside big-product, with gradient background and size */
+.product.big-product .product-img {
+  font-size: 5rem;
+  background: repeating-linear-gradient(
+    45deg,
+    #3a3a3a,
+    #3a3a3a 10px,
+    #2f2f2f 10px,
+    #2f2f2f 20px
+  );
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Style for image in normal product */
+.product-img {
+  width: 100%;
+  height: 180px; /* default height, can be overridden in big-product */
+  background: repeating-linear-gradient(
+    45deg,
+    #3a3a3a,
+    #3a3a3a 10px,
+    #2f2f2f 10px,
+    #2f2f2f 20px
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--gray);
+  object-fit: contain;
+  margin-bottom: 1rem;
+  transition: all 0.2s ease;
+}
+
+/* Product body styles */
+.product-body {
+  padding: 1rem;
+}
+
+.product-body h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.price {
+  color: var(--red);
+  font-weight: 800;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* =====================
+       FOOTER
+       ===================== */
+footer {
+  background: #070707;
+  border-top: 2px solid var(--red);
+  padding: 2rem 1rem;
+}
+
+.footer-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  color: var(--light-gray);
+}
+
+footer h4 {
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+/* =====================
+       RESPONSIVE
+       ===================== */
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+  /* Make product grid single column on small screens */
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =====================
+   Additional styles from the new code
+   ===================== */
+
+.hero {
+  background-image: url("../img/nahid/hero.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 60vh;
+  padding: 2rem;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #000; /* optional */
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.explor-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: var(--red);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 3em;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.explor-btn:hover {
+  background-color: var(--dark-red);
+}
+
+.explor-btn:active {
+  transform: scale(0.95);
+}
+
+/* FOOTER additional styles */
+footer {
+  margin-top: 400px;
+  border: 1px solid black;
+  min-height: 240px;
+  background-color: #2c3033;
+  padding-top: 12px;
+  padding: 0 7%;
+}
+
+footer > p {
+  text-align: center;
+  margin: 4px;
+  color: white;
+  padding: 4px;
+}
+
+
+
+.footer-images {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+/* Additional hover effects for footer links if needed */
+#footer-mail {
+  text-decoration: none;
+  color: white;
+}
+
+#footer-mail:hover {
+  color: #949c94;
+}
+
+/* Explore button styles (already with font size 3em, adjust for small screens) */
+.explor-btn {
+  font-size: 2em; /* reduce font size on smaller screens for better fit */
+  padding: 1em 2em;
+}
+.hero p {
+  font-size: 2rem;
+  color: var(--dark-red);
+  background-color: var(--dark-gray);
+  font-weight: bold;
+  border-radius: 0.3em;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Reduce button size if needed */
+  .explor-btn {
+    font-size: 1em;
+  }
+}
