@@ -289,9 +289,7 @@ label {
         grid-template-columns: 1fr 8fr 1fr;
     }
 
-    .div-side {
-        background-color: #949C94;
-    }    
+
 }
 
 /* large desktop */
@@ -301,7 +299,5 @@ label {
         grid-template-columns: 1fr 8fr 1fr;
     }
 
-    .div-side {
-        background-color: #949C94;
-    }   
+
 }
