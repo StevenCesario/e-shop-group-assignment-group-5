@@ -85,13 +85,7 @@ footer > p {
   margin: 4px;
   color: white;
   padding: 4px;
-}
-
-footer > :nth-child(3),
-:nth-child(5),
-:nth-child(7) {
-  margin-top: 24px;
-}
+} 
 
 .footer-images {
   display: flex;
