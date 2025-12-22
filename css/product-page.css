@@ -133,16 +133,33 @@ footer > :nth-child(3), :nth-child(5), :nth-child(7) {
 .product-hero-section {
     border: 2px solid red;
     min-height: 460px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    justify-items: center;
     gap: 8px;
+    grid-template-areas:
+        "title"
+        "media"
+        "info"
+        "button";
+}
+
+.product-title {
+    grid-area: title;
+}
+
+.product-image {
+    grid-area: media;
 }
 
 .product-info-small {
     border: 2px solid black;
     padding: 6px;
     margin-inline: 8px;
+    grid-area: info;
+}
+
+.product-buy-button {
+    grid-area: button;
 }
 
 .product-feature-section {
