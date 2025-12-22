@@ -193,8 +193,16 @@ footer > :nth-child(3), footer > :nth-child(5), footer > :nth-child(7) {
 
 /* tablet */
 @media screen and (min-width:768px) {
+    section {
+        padding-inline: 52px;
+    }
+
     .upsell-section-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .feature-section-wrapper {
+        width: 70ch;
     }
 }
 
@@ -223,6 +231,10 @@ footer > :nth-child(3), footer > :nth-child(5), footer > :nth-child(7) {
 
     .upsell-section-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .feature-section-wrapper {
+        width: 50ch;
     }
     /* END OF MY CHANGES */
 }
