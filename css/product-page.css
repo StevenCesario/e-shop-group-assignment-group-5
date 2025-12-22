@@ -235,7 +235,8 @@ footer > :nth-child(3), footer > :nth-child(5), footer > :nth-child(7) {
 
     .product-feature-section {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0,1fr));
+        grid-template-columns: 1fr 2fr;
+        gap: 24px;
     }
 
     .feature-section-media-wrapper {
