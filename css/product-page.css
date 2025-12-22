@@ -1,6 +1,13 @@
 body { 
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer"
+    ;
 }
 
 header {
@@ -10,6 +17,7 @@ header {
     background-color: #2C3033;
     justify-content: center;
     display: flex;
+    grid-area: header;
 }
 
 nav {
@@ -18,6 +26,16 @@ nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+/* Merge into main? */
+p { 
+    margin: 0; 
 }
 
 #div-navbar {
@@ -64,6 +82,7 @@ footer {
     background-color: #2C3033;
     padding-top: 12px;
     padding: 0 7%;
+    grid-area: footer;
 }
 
 footer > p {
@@ -106,8 +125,17 @@ footer > :nth-child(3), :nth-child(5), :nth-child(7) {
 } */
 
 .product-hero-section {
-    /* border: 2px solid blue; */
+    border: 2px solid blue;
     min-height: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.product-info-small {
+    border: 2px solid black;
+    padding: 6px;
 }
 
 /* END OF MY CHANGES */
