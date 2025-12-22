@@ -40,7 +40,7 @@ section {
 }
 
 /* Merge into main? */
-p { 
+p, h2, button { 
     margin: 0; 
 }
 
@@ -140,6 +140,7 @@ footer > :nth-child(3), :nth-child(5), :nth-child(7) {
         "title"
         "media"
         "info"
+        "price"
         "button";
 }
 
@@ -156,6 +157,10 @@ footer > :nth-child(3), :nth-child(5), :nth-child(7) {
     padding: 6px;
     margin-inline: 8px;
     grid-area: info;
+}
+
+.product-price {
+    grid-area: price;
 }
 
 .product-buy-button {
