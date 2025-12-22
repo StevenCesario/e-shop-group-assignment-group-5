@@ -274,3 +274,34 @@ label {
   }
 }*/
 /*test ends here */
+
+
+
+/* tablet */
+@media screen and (min-width:768px) {
+
+}
+
+/* small desktop */
+@media screen and (min-width:960px) {
+        #wrapper {
+        display: grid;
+        grid-template-columns: 1fr 8fr 1fr;
+    }
+
+    .div-side {
+        background-color: #949C94;
+    }    
+}
+
+/* large desktop */
+@media screen and (min-width:1200px) {
+        #wrapper {
+        display: grid;
+        grid-template-columns: 1fr 8fr 1fr;
+    }
+
+    .div-side {
+        background-color: #949C94;
+    }   
+}
