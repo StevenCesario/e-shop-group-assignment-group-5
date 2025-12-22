@@ -33,6 +33,12 @@ main {
     grid-area: main;
 }
 
+/* Get on the same page and merge into main */
+section {
+    padding-block: 16px; 
+    padding-inline: 16px;
+}
+
 /* Merge into main? */
 p { 
     margin: 0; 
@@ -137,6 +143,11 @@ footer > :nth-child(3), :nth-child(5), :nth-child(7) {
     border: 2px solid black;
     padding: 6px;
     margin-inline: 8px;
+}
+
+.product-feature-section {
+    border: 2px solid green;
+    min-height: 280px;
 }
 
 /* END OF MY CHANGES */
