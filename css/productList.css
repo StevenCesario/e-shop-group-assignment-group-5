@@ -354,12 +354,7 @@ footer > p {
   padding: 4px;
 }
 
-/* Additional footer grid spacing */
-footer > :nth-child(3),
-:nth-child(5),
-:nth-child(7) {
-  margin-top: 24px;
-}
+
 
 .footer-images {
   display: flex;
