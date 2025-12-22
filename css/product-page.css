@@ -131,7 +131,7 @@ footer > :nth-child(3), footer > :nth-child(5), footer > :nth-child(7) {
 } */
 
 .product-hero-section {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     min-height: 460px;
     display: grid;
     justify-items: center;
@@ -193,17 +193,11 @@ footer > :nth-child(3), footer > :nth-child(5), footer > :nth-child(7) {
 
 /* tablet */
 @media screen and (min-width:768px) {
-    /* START OF MY CHANGES */
-    .upsell-section-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-    /* END OF MY CHANGES */
-
 }
 
 /* small desktop */
 @media screen and (min-width:960px) {
-        #wrapper {
+    #wrapper {
         display: grid;
         grid-template-columns: 1fr 8fr 1fr;
     }
@@ -211,6 +205,19 @@ footer > :nth-child(3), footer > :nth-child(5), footer > :nth-child(7) {
     .div-side {
         background-color: #949C94;
     }    
+
+    /* START OF MY CHANGES */
+    .product-hero-section {
+        border: 2px solid blue;
+        grid-template-areas:
+            "media title"
+            "media info"
+            "media price"
+            "media button";
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: center;
+    }
+    /* END OF MY CHANGES */
 }
 
 /* large desktop */
