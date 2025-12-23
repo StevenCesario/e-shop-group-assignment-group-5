@@ -1,30 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nshop</title>
     <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/homepage.css">
 </head>
 <body>
 
-    <header>
-        <img src="img/Nshop.logo.jpg" alt="Nshop logo">
-    </header>
+  </head>
+  <body>
 
-    <nav>
-        <div id="div-navbar"><img src=""></div>
+    <header>
+      <img src="img/Nshop.logo.jpg" alt="Nshop logo" />
+
+      <nav>
+        <div id="div-navbar"><img src="" /></div>
 
         <div id="link">
-            <a href="">NES</a>
-            <a href="">SNES</a>
-            <a href="">Products</a>
+          <a href="">NES</a>
+          <a href="">SNES</a>
+          <a href="">Products</a>
         </div>
 
-        <button id="cart-button">Kundvagn (3)</button>
-    </nav>
+        <!--   testing not our code -->
 
-    <main id="wrapper">
+        <!--     <input type="checkbox" id="toggle-menu" />
+        <input type="checkbox" id="toggle-modal" />
+
+        <header class="header">
+          <div class="header-inner">
+            <label class="hamburger" for="toggle-menu">
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+            </label>
+
+            <ul class="nav">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Services</a></li>
+            </ul>
+          </div>
+        </header>-->
+
+        <!--test ends here -->
+
+        <button class="cart-button">Kundvagn (3)</button>
+      </nav>
+    </header>
+
+      <main id="wrapper">
         <div class="div-side"></div>
         <div id="main-content"></div>
         <div class="div-side"></div>
@@ -40,13 +68,153 @@
             <img src="./img/VISA.svg" alt="VISA" height="16px">
         </div>
         
-        <p>Vi levererar med</p>
-        <div class="footer-images">
-            <img id="leverans" src="./img/Postnord.svg" alt="Postnord" height="16px">
+        <div id="main-content">
+
+            <!-- HERO -->
+            <hero> 
+                <img class="hero-image" src="img/Homepage/Yoshi.jpg" alt="hero-image">
+                <div class="hero-text">
+                <h1>Retro Gaming Lever Vidare</1>
+                <p>Upptäck vårt urval av klassiska NES- och SNES-konsoler och spel. Återupplev barndomens magi med tidlösa äventyr och ikoniska karaktärer.</p>
+                <button class="hero-button">Shoppa nu</button>
+                </h1>
+               </div>
+            </hero>
+
+            <!-- PRODUCT SECTION -->
+            <div class="product-section">
+                <h2>Populära produkter</h2>
+                <div class="product-row">
+
+                    <!-- POPULAR PRODUCTS -->
+                  
+                    <div class="product-card">
+                        <img src="img/Homepage/NES-Console-Set.png" alt="NES Console" width="100%">
+                        <h3>Nintendo Entertainment System</h3>
+                        <p>Pris: 999 kr</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="img/Homepage/SNES-Controller.png" alt="SNES Controller" width="100%">
+                        <h3>Super Nintendo Controller</h3>
+                        <p>Pris: 299 kr</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="img/Products/NES/NES-game.jpg" alt="NES Game" width="100%">
+                        <h3>Super Mario Bros.</h3>
+                        <p>Pris: 199 kr</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="img/Products/SNES/SNES-game.jpg" alt="SNES Game" width="100%">
+                        <h3>The Legend of Zelda: A Link to the Past</h3>
+                        <p>Pris: 249 kr</p>
+                    </div>
+                </div>
+                <h2>NES produkter</h2>
+                <div class="product-row">
+
+                    <!-- NES products -->
+                  
+                    <div class="product-card">
+                        <img src="img\Homepage\SNES-Console.png" alt="SNES Console" width="100%">
+                        <h3>Nintendo Entertainment System</h3>
+                        <p>Pris: 999 kr</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="img/Homepage/SNES-Controller.png" alt="SNES Controller" width="100%">
+                        <h3>Super Nintendo Controller</h3>
+                        <p>Pris: 299 kr</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="img/Homepage/NES-Cords.webp" alt="Cords" width="70%">
+                        <h3>Super Mario Bros.</h3>
+                        <p>Pris: 199 kr</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="img/Homepage/ALTTP-game.jpg" alt="NES Game" width="80%">
+                        <h3>The Legend of Zelda: A Link to the Past</h3>
+                        <p>Pris: 249 kr</p>
+                    </div>
+                </div>
+                <h2>SNES produkter</h2>
+                <div class="product-row">
+
+                    <!-- SNES products -->
+                  
+                    <div class="product-card">
+                        <img src="img\Homepage\SNES-Console.png" alt="SNES Console" width="100%">
+                        <h3>Nintendo Entertainment System</h3>
+                        <p>Pris: 999 kr</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="img/Homepage/SNES-Controller.png" alt="SNES Controller" width="100%">
+                        <h3>Super Nintendo Controller</h3>
+                        <p>Pris: 299 kr</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="img/Products/NES/NES-game.jpg" alt="NES Game" width="100%">
+                        <h3>Super Mario Bros.</h3>
+                        <p>Pris: 199 kr</p>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="img/Products/SNES/SNES-game.jpg" alt="SNES Game" width="100%">
+                        <h3>The Legend of Zelda: A Link to the Past</h3>
+                        <p>Pris: 249 kr</p>
+                    </div>
+                </div>
+            
+            </div>
+
+
+
+
         </div>
-        <p>Made with love by &copy; Group 5 <3</p>
+
+        <div class="div-side">
+
+        </div>
+    </main>
+
+
+
+
+
+
+    <footer>
+      <p>
+        Om oss<br />Vi är ett gäng fullstack studenter som älskar retrospel och
+        ville skapa en inbjudande och stilren e-shop med två av de större
+        retro-konsolerna någonsin.
+      </p>
+      <p>
+        Kontakt<br /><a id="footer-mail" href="">info@nshop.com</a
+        ><br />0700-123456
+      </p>
+      <p>Säker betalning med</p>
+      <div class="footer-images">
+        <img src="./img/Mastercard.svg" alt="Mastercard" height="16px" />
+        <img src="./img/Klarna.png" alt="Klarna" height="16px" />
+        <img src="./img/VISA.svg" alt="VISA" height="16px" />
+      </div>
+
+      <p>Vi levererar med</p>
+      <div class="footer-images">
+        <img
+          id="leverans"
+          src="./img/Postnord.svg"
+          alt="Postnord"
+          height="16px"
+        />
+      </div>
+      <p>Made with love by &copy; Group 5</p>
     </footer>
-    
-    
-</body>
+  </body>
 </html>
