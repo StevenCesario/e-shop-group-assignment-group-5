@@ -66,6 +66,7 @@ p, h2, button {
 
 .product-buy-button {
     grid-area: button;
+    /* BUTTON STYLING WILL GO HERE */
 }
 
 .product-feature-section {
