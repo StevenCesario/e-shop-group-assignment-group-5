@@ -8,6 +8,10 @@
   --dark-red: #b52a36;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
