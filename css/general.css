@@ -9,8 +9,15 @@
 }
 
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white); /* Override whenever needed */
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+    ;
 }
 
 header {
@@ -23,6 +30,7 @@ header {
   position: fixed;
   top: 0;
   border-bottom: var(--red) 4px solid;
+  grid-area: header;
 }
 
 nav {
@@ -73,6 +81,10 @@ nav {
   transform: translateY(-2px);
 }
 
+main {
+    grid-area: main;
+}
+
 #up {
     position: fixed;
     cursor: pointer;
@@ -83,20 +95,23 @@ nav {
 }
 
 footer {
-  margin-top: 400px;
-  border: 1px solid black;
+  /* margin-top: 400px; This is replaced by using a header -> main -> footer grid-template-areas config instead */
+  /* border: 1px solid black; */
   min-height: 240px;
   background-color: var(--dark-gray);
-  padding-top: 12px;
-  padding: 0 7%;
+  padding: 32px 7%; /* Added some top and bottom padding */
+  text-align: center;
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 footer > p {
   /* border: 1px solid black; */
-  text-align: center;
-  margin: 4px;
-  color: white;
+  /* color: white; Moved to body*/
   padding: 4px;
+  width: 50ch;
 } 
 
 .footer-images {
@@ -105,14 +120,9 @@ footer > p {
   gap: 4px;
 }
 
-#leverans {
-  display: flex;
-  justify-content: center;
-}
-
 #footer-mail {
   text-decoration: none;
-  color: white;
+  color: white; /* This one is actually needed here */
 }
 
 #footer-mail:hover {
@@ -285,25 +295,21 @@ label {
 
 /* tablet */
 @media screen and (min-width:768px) {
-
+    
 }
 
 /* small desktop */
 @media screen and (min-width:960px) {
-        #wrapper {
+    #wrapper {
         display: grid;
         grid-template-columns: 1fr 8fr 1fr;
     }
-
-
 }
 
 /* large desktop */
 @media screen and (min-width:1200px) {
-        #wrapper {
+    #wrapper {
         display: grid;
         grid-template-columns: 1fr 8fr 1fr;
     }
-
-
 }
