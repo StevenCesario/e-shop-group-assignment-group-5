@@ -1,4 +1,5 @@
 :root {
+    /* COLORS */
   --black: #0e0e0e;
   --dark-gray: #2c3033;
   --gray: #6b6b6b;
@@ -6,6 +7,10 @@
   --white: #ffffff;
   --red: #e80013;
   --dark-red: #b52a36;
+
+  /* SPACING */
+  --footer-block-padding: 32px;
+  --footer-inline-padding: 7%;
 }
 
 body {
@@ -99,7 +104,7 @@ footer {
   /* border: 1px solid black; */
   min-height: 240px;
   background-color: var(--dark-gray);
-  padding: 32px 7%; /* Added some top and bottom padding */
+  padding: var(--footer-block-padding) var(--footer-inline-padding); /* Added some top and bottom padding */
   text-align: center;
   grid-area: footer;
   display: flex;
@@ -295,7 +300,9 @@ label {
 
 /* tablet */
 @media screen and (min-width:768px) {
-    
+    footer {
+        padding: calc(var(--footer-block-padding) * 1.2) calc(var(--footer-inline-padding) * 1.2)
+    }
 }
 
 /* small desktop */
@@ -303,6 +310,10 @@ label {
     #wrapper {
         display: grid;
         grid-template-columns: 1fr 8fr 1fr;
+    }
+
+    footer {
+        padding: calc(var(--footer-block-padding) * 1.5) calc(var(--footer-inline-padding) * 1.5)
     }
 }
 
