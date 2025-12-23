@@ -20,6 +20,9 @@ header {
   background-color: #2c3033;
   justify-content: center;
   display: flex;
+  position: fixed;
+  top: 0;
+  border-bottom: red 4px solid;
 }
 
 nav {
