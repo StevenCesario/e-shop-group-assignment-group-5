@@ -70,6 +70,15 @@ nav {
   transform: translateY(-2px);
 }
 
+#up {
+    position: fixed;
+    cursor: pointer;
+    width: 50px;
+    margin-right: 5px;
+    right: 20px;
+    bottom: 60px;
+}
+
 footer {
   margin-top: 400px;
   border: 1px solid black;
