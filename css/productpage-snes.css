@@ -4,13 +4,32 @@
     padding: 0;
 }
 
-#up {
-    position: fixed;
-    cursor: pointer;
-    width: 50px;
-    margin-right: 5px;
-    right: 20px;
-    bottom: 60px;
+body {
+    background-color: var(--black);
 }
+
+#main-content {
+    color: var(--white);
+}
+
+.hero {
+    padding-top: 100px;
+}
+
+#console {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+article {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+
+
+
+
+
 
 
