@@ -16,15 +16,33 @@ body {
     padding-top: 100px;
 }
 
-#console {
+.hero img {
+    border-radius: 10px;
+}
+
+#products h2 {
+    margin: 20px 0px;
+    padding: 10px;
+    border-left: 5px solid var(--red);
+}
+
+.product-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin: 10px 0px;
+    column-gap: 20px;
 }
 
 article {
     background-color: var(--white);
     color: var(--black);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
 }
+
+
 
 
 
