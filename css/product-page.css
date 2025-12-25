@@ -13,6 +13,11 @@ header {
     grid-area: header;
 }
 
+#link {
+    display: none;
+    /* Will try to add mobile drop down here */
+}
+
 main {
     grid-area: main;
 }
