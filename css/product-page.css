@@ -135,7 +135,6 @@ p, h2, h4, button {
     .feature-section-text-wrapper {
         max-width: 35ch;
         width: 100%;
-        /* background-color: red; */
         display: grid;
     }
 
@@ -144,15 +143,13 @@ p, h2, h4, button {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-template-rows: repeat(2, 120px);
         gap: 8px;
-        /* background-color: blue; */
-        object-fit: cover; /* To prevent the screenshots from stretching */
         align-content: center;
     }
 
     .product-screenshot {
         width: 100%;       /* Force the image to be as wide as the grid cell */
-        height: 100%;      /* Force the image to be as tall as the row */
-        object-fit: cover; /* MAGIC: Cuts off the edges so the image doesn't stretch */
+        height: 100%;      /*Force the image to be as tall as the row */
+        object-fit: cover; /* To prevent the screenshots from stretching */
         border-radius: 8px;
     }
     
