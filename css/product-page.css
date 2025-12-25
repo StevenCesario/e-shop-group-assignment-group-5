@@ -86,9 +86,21 @@ p, h2, button {
     background-color: var(--green);
     color: white;
     padding: var(--content-padding-block) var(--content-padding-inline);
-    font-size: large;
+    font-size: 32px;
     font-weight: bold;
     border-radius: var(--button-border-radius);
+    font-family: "VT323", monospace;
+
+    /* We use shadows with 0 blur to create solid blocks of color */
+    box-shadow: 
+    /* The "Pixels" on the corners */
+    -6px 0 0 0 #000, 
+    6px 0 0 0 #000, 
+    0 -6px 0 0 #000, 
+    0 6px 0 0 #000;
+  
+    /* Some breathing room so that it doesn't touch other elements */
+    margin: 8px;
 }
 
 .product-buy-button:hover {
