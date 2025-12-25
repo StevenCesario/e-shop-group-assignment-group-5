@@ -1,6 +1,7 @@
 :root {
     /* COLORS */
     --green: #4CAF50;
+    --green-darker: #45a049;
 
     /* SPACING */
     --content-padding-block: 18px;
@@ -88,6 +89,16 @@ p, h2, button {
     font-size: large;
     font-weight: bold;
     border-radius: var(--button-border-radius);
+}
+
+.product-buy-button:hover {
+    background-color: var(--green-darker);
+    transform: translateY(-2px); /* Lift up 2px */
+}
+
+.product-buy-button:active {
+    transform: translateY(0); /* Snap back down when pressed */
+    filter: brightness(0.9); /* A little bit darker */
 }
 
 .product-feature-section {
