@@ -1,3 +1,13 @@
+:root {
+    /* COLORS */
+    --green: #4CAF50;
+
+    /* SPACING */
+    --content-padding-block: 18px;
+    --content-padding-inline: 30px;
+    --button-border-radius: 4px;
+}
+
 body { 
     display: grid;
     grid-template-areas: 
@@ -66,7 +76,18 @@ p, h2, button {
 
 .product-buy-button {
     grid-area: button;
-    /* BUTTON STYLING WILL GO HERE */
+    /* Reset button defaults */
+    appearance: none;
+    border: none;
+    background: none;
+
+    cursor: pointer;
+    background-color: var(--green);
+    color: white;
+    padding: var(--content-padding-block) var(--content-padding-inline);
+    font-size: large;
+    font-weight: bold;
+    border-radius: var(--button-border-radius);
 }
 
 .product-feature-section {
