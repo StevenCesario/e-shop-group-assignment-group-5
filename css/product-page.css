@@ -18,6 +18,28 @@ header {
     /* Will try to add mobile drop down here */
 }
 
+/* Hide checkbox visually */
+/* .mobile-drop-down {
+    display: none;
+} */
+
+/* Hide the menu by default on mobile */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    /* Add positioning to make it an actual dropdown */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #333;
+}
+
+/* When checkbox is checked, show the menu */
+.menu-toggle:checked ~ .nav-links {
+  display: flex;
+}
+
 main {
     grid-area: main;
 }
