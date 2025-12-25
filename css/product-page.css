@@ -17,12 +17,12 @@ main {
 
 /* Get on the same page and merge into main */
 section {
-    padding-block: 16px; 
-    padding-inline: 16px;
+    padding-block: 48px; 
+    /* padding-inline: 24px; */
 }
 
 /* Merge into main? */
-p, h2, button { 
+p, h2, h4, button { 
     margin: 0; 
 }
 
@@ -129,29 +129,47 @@ p, h2, button {
     .product-feature-section {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        gap: 24px;
+        gap: 12px;
+    }
+
+    .feature-section-text-wrapper {
+        max-width: 35ch;
+        width: 100%;
+        display: grid;
     }
 
     .feature-section-media-wrapper {
         display: grid;
-        /* border: 5px solid red; */
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-template-rows: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(2, 120px);
         gap: 8px;
+        align-content: center;
+    }
+
+    .product-screenshot {
+        width: 100%;       /* Force the image to be as wide as the grid cell */
+        height: 100%;      /*Force the image to be as tall as the row */
+        object-fit: cover; /* To prevent the screenshots from stretching */
+        border-radius: 8px;
     }
     
     .upsell-section-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
-
-    .feature-section-text-wrapper {
-        width: 50ch;
-    }
 }
 
 /* large desktop */
 @media screen and (min-width:1200px) {
-    .div-side {
-        background-color: #949C94;
-    }   
+    .product-feature-section {
+        grid-template-columns: 1fr 2fr;
+        gap: 24px;
+    }
+
+    .feature-section-text-wrapper {
+        max-width: 60ch;
+    }
+
+    .feature-section-media-wrapper {
+        grid-template-rows: repeat(2, 320px);
+    }
 }
