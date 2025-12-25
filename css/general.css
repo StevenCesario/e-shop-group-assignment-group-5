@@ -73,6 +73,10 @@ nav {
   transform: translateY(-2px);
 }
 
+#wrapper {
+  margin-top: 120px;
+}
+
 #up {
     position: fixed;
     cursor: pointer;
