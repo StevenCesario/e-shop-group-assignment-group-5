@@ -94,6 +94,10 @@ main {
     grid-area: main;
 }
 
+#wrapper {
+  margin-top: 120px;
+}
+
 #up {
     position: fixed;
     cursor: pointer;
