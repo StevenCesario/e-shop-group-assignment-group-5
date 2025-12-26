@@ -8,20 +8,24 @@
     align-items: center;
     background-color: var(--black);
     color: white;
-    position: relative;
+    /* position: relative; */
     
     }
 
 .hero-section { 
     background-color: var(--black);
-    width: 50vw;
-    height 40vh
+    width: 48rem;
+    height: 40vh;
+    padding: 2rem;
+    margin:0 auto;
+    overflow-x: auto;
     
     display: flex;
     justify-content: center;
     /* position: relative; */
     transition: all .5s linear;
      /*  Hur gör jag detta element starkare så hero-boxes håller sig i den.*/
+     border-radius: 0,5rem;
     
 } 
 
@@ -31,7 +35,7 @@
 
 .hero-content .hero-box {
     height: 80vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
