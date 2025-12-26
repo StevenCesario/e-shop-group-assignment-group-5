@@ -1,3 +1,14 @@
+:root {
+    /* COLORS */
+    --green: #4CAF50;
+    --green-darker: #45a049;
+
+    /* SPACING */
+    --content-padding-block: 18px;
+    --content-padding-inline: 30px;
+    --button-border-radius: 4px;
+}
+
 body { 
     display: grid;
     grid-template-areas: 
@@ -5,6 +16,8 @@ body {
         "main"
         "footer"
     ;
+    color: white;
+    background-color: black;
 }
 
 header {
@@ -53,8 +66,17 @@ p, h2, h4, button {
     grid-area: media;
 }
 
+.hero-img-wrapper {
+    min-height: 320px;
+    width: 60%;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    place-content: center;
+}
+
 .product-info-small {
-    border: 2px solid black;
+    background-color: var(--gray);
     padding: 6px;
     margin-inline: 8px;
     grid-area: info;
@@ -66,6 +88,40 @@ p, h2, h4, button {
 
 .product-buy-button {
     grid-area: button;
+    /* Reset button defaults */
+    appearance: none;
+    border: none;
+    background: none;
+
+    cursor: pointer;
+    background-color: var(--green);
+    color: white;
+    padding: var(--content-padding-block) var(--content-padding-inline);
+    font-size: 32px;
+    font-weight: bold;
+    border-radius: var(--button-border-radius);
+    font-family: "VT323", monospace;
+
+    /* We use shadows with 0 blur to create solid blocks of color */
+    box-shadow: 
+    /* The "Pixels" on the corners */
+    -6px 0 0 0 #000, 
+    6px 0 0 0 #000, 
+    0 -6px 0 0 #000, 
+    0 6px 0 0 #000;
+  
+    /* Some breathing room so that it doesn't touch other elements */
+    margin: 8px;
+}
+
+.product-buy-button:hover {
+    background-color: var(--green-darker);
+    transform: translateY(-2px); /* Lift up 2px */
+}
+
+.product-buy-button:active {
+    transform: translateY(0); /* Snap back down when pressed */
+    filter: brightness(0.9); /* A little bit darker */
 }
 
 .product-feature-section {
@@ -91,7 +147,7 @@ p, h2, h4, button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid black;
+    border: 2px solid blue;
 }
 
 /* tablet */
@@ -112,7 +168,7 @@ p, h2, h4, button {
 /* small desktop */
 @media screen and (min-width:960px) {
     .div-side {
-        background-color: #949C94;
+        background-color: black;
     }    
 
     .product-hero-section {
@@ -155,6 +211,14 @@ p, h2, h4, button {
     
     .upsell-section-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .feature-section-text-wrapper {
+        width: 50ch;
+    }
+
+    footer {
+        font-size: 20px;
     }
 }
 
