@@ -167,6 +167,14 @@ p, h2, h4, button {
     .upsell-section-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
+
+    .feature-section-text-wrapper {
+        width: 50ch;
+    }
+
+    footer {
+        font-size: 20px;
+    }
 }
 
 /* large desktop */
