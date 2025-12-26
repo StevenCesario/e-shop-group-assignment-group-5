@@ -147,6 +147,10 @@ p, h2, button {
     .feature-section-text-wrapper {
         width: 50ch;
     }
+
+    footer {
+        font-size: 20px;
+    }
 }
 
 /* large desktop */
