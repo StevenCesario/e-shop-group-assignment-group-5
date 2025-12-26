@@ -75,13 +75,30 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  overflow: hidden;
+  position:relative;
 }
 
-/*#div-navbar {
-  min-height: 20px;
-  border: black 6px solid;
-  width: 100px;
-}*/
+nav #myLinks {
+  display: none;
+}
+
+nav a {
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block
+}
+
+nav a.icon {
+  background: var(--dark-gray);
+  display:block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+
 
 #link {
   list-style-type: none;
@@ -96,8 +113,8 @@ nav {
   color: white;
 }
 
-#link a:hover {
-  color: #949c94;
+a:hover {
+  color: var(--red);
 }
 
 .cart-button {
