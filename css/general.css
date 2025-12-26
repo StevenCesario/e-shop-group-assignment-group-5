@@ -7,14 +7,41 @@
   --white: #ffffff;
   --red: #e80013;
   --dark-red: #b52a36;
+  --green: #4CAF50;
+  --dark-green: #45a049;
 
   /* SPACING */
+  --font-size-default: 16px;
+  --font-size-large: 24px;
+
+  --hero-section-min-height: 80vh;
+
+  --general-column-gap: 20px;
+  --general-column-gap-desktop: 28px;
+
+  --general-gap-desktop: 12px;
+
+  --section-padding-block: 96px;
+
+  --border-radius-s: 10px;
+  --border-radius-l: 20px;
+
   --footer-block-padding: 32px;
   --footer-inline-padding: 7%;
 }
 
+/* Border box sizing to include padding and border with content */
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+/* Reset margin for elements that automatically apply margin */
+h1, h2, h3, h4, p, button {
+  margin: 0;
 }
 
 body {
@@ -118,6 +145,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: var(--font-size-default);
 }
 
 footer > p {
@@ -321,7 +349,8 @@ label {
     }
 
     footer {
-        padding: calc(var(--footer-block-padding) * 1.5) calc(var(--footer-inline-padding) * 1.5)
+        padding: calc(var(--footer-block-padding) * 1.5) calc(var(--footer-inline-padding) * 1.5);
+        font-size: var(--font-size-large);
     }
 }
 
