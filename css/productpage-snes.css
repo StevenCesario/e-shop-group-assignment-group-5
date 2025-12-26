@@ -8,6 +8,10 @@ body {
     background-color: var(--black);
 }
 
+header {
+    z-index: 1;
+}
+
 #main-content {
     color: var(--white);
 }
@@ -18,6 +22,15 @@ body {
 
 .hero img {
     border-radius: 10px;
+}
+
+.hero-text {
+    position: absolute;
+    top: 65%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
 }
 
 #products h2 {
@@ -36,7 +49,7 @@ body {
 article {
     background-color: var(--white);
     color: var(--black);
-    border: 1px solid #ccc;
+    border: 1px solid var(--white);
     border-radius: 10px;
     padding: 16px;
     text-align: center;
