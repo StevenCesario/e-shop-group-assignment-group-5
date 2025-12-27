@@ -73,6 +73,7 @@ p, h2, h4, button {
     border-radius: 8px;
     display: flex;
     place-content: center;
+    /* DETTA SKA ÄNDRAS OCH BYGGAS PÅ */
 }
 
 .product-info-small {
