@@ -39,6 +39,12 @@ p, h2, h4, button {
     margin: 0; 
 }
 
+img {
+  max-width: 100%;
+  height: auto; /* This tells the browser: 'Ignore the HTML height attribute and use the Aspect Ratio instead' */
+  display: block;
+}
+
 /* #main-content {
     border: 2px solid red;
     min-height: 460px;
@@ -62,7 +68,7 @@ p, h2, h4, button {
     grid-area: title;
 }
 
-.product-image {
+.product-main-image {
     grid-area: media;
 }
 
