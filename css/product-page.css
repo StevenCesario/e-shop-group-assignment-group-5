@@ -228,22 +228,24 @@ img {
     /* Gör ALLT större :) */
     .product-title {
         font-size: 52px;
-        /* align-self: end; */
+        align-self: end;
     }
 
     .product-info-small {
         font-size: 20px;
         padding: 20px;
         line-height: 1.4;
+        max-width: 650px;
     }
 
     .product-price {
         font-size: 48px;
+        align-self: end;
     }
 
     .product-buy-button {
         font-size: 40px;
-        padding: 20px 40px;
+        padding: 20px 60px;
     }
 
     .product-feature-section {
