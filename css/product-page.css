@@ -137,7 +137,8 @@ p, h2, h4, button {
     border: 2px solid blue;
 }
 
-.upsell-section-grid {
+/* Denna section är inte grid längre! */
+/* .upsell-section-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 6px;
@@ -148,6 +149,35 @@ p, h2, h4, button {
     flex-direction: column;
     align-items: center;
     border: 2px solid blue;
+} */
+
+/* Vi använder flexbox och andra funktionaliteter istället */
+.carousel-wrapper {
+    position: relative; /* För att positionera knapparna relativt till "the carousel track" */
+    display: flex;
+    align-items: center;
+}
+
+/* The Scrolling Track */
+.upsell-carousel-track {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto; /* För att kunna scrolla horizontellt */
+    scroll-behavior: smooth;
+    padding-block: 16px;
+
+    /* Utan denna kan the scroll sluta på ett halvt kort. Det är denna som gör att det 
+    känns "snappy" och modenrt när vi scrollar och ser till att vi alltid visar ett helt till kort */
+    scroll-snap-type: x mandatory; 
+
+    /* Göm scrollbar:en */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+/* Göm scrollbar:en för Chrome/Safari/Opera */
+.upsell-carousel-track::-webkit-scrollbar {
+  display: none;
 }
 
 /* tablet */
