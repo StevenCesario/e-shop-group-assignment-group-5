@@ -175,11 +175,39 @@ p, h2, h4, button {
         border: 2px solid blue;
         grid-template-areas:
             "media title"
-            "media info"
             "media price"
+            "media info"
             "media button";
         grid-template-columns: repeat(2, minmax(0, 1fr));
         align-items: center;
+    }
+
+    .product-info-small {
+        font-size: 20px;
+        padding: 20px;
+        line-height: 1.4;
+        max-width: 750px;
+
+        /* Setup för Sleeping Pikachu */
+        position: relative;
+        overflow: visible;
+    }
+
+    .sleeping-pikachu {
+        position: absolute; /* Takes him out of the document flow */
+        
+        /* vertical position: 100% from the bottom means "sit on top" */
+        bottom: 100%; 
+        
+        /* horizontal position: 10px from the right edge */
+        right: 10px;  
+        
+        /* size him appropriately */
+        width: 200px; 
+        height: auto;
+        
+        /* för att få honom att ligga på info boxen */
+        margin-bottom: -62px;
     }
 
     .product-feature-section {
