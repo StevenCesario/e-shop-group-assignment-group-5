@@ -191,7 +191,10 @@ p, h2, h4, button {
     .feature-section-text-wrapper {
         max-width: 35ch;
         width: 100%;
-        display: grid;
+    }
+
+    .feature-section-text-wrapper h3 {
+        padding-bottom: 12px;
     }
 
     .feature-section-media-wrapper {
@@ -230,7 +233,11 @@ p, h2, h4, button {
     }
 
     .feature-section-text-wrapper {
-        max-width: 60ch;
+        max-width: 65ch;
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
     }
 
     .feature-section-media-wrapper {
