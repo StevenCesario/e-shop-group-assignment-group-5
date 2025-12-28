@@ -17,12 +17,32 @@
   // 3. Lägg till click listeners, igen med arrow functions (callback specifikt i detta fall)
   // 'left' i denna context (med scrollBy) betyder "Horizontal Offset."
   // För att scrolla i motsatta riktiningen lägger vi bara till ett minus för att signalera "motsatt"
+  // UPDATE: Nu med "Rewind Loop Logic"! Om vi är i slutet av the carousel och trycker igen hamnar vi i början
+  
+  
   nextBtn.addEventListener('click', () => {
-    // Scrolla till höger
-    track.scrollBy({ left: scrollAmount(), behavior: 'smooth'} )
+    // Räkna ut maximum possible scroll position
+    const maxScrollLeft = track.scrollWidth - track.clientWidth;
+    
+    // Kolla ifall vi är nära (eller väldigt nära) slutet av the carousel
+    // Vi använder ">= maxScrollLeft - 1" som en buffer för att hantera tiny pixel calculation differences
+    if (track.scrollLeft >= maxScrollLeft - 1) {
+        // Loopa tillbaka till början av the carousel!
+        // Vi gör detta med scrollTo istället för scrollBy
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {  
+        // Vår tidigare kod för att scrolla till höger!
+        track.scrollBy({ left: scrollAmount(), behavior: 'smooth' })
+    }
   });
 
   prevBtn.addEventListener('click', () => {
-    // Scrolla till vänster
-    track.scrollBy({ left: -scrollAmount(), behavior: 'smooth'})
+    // Kolla ifall vi är i början av the carousel
+    if (track.scrollLeft <= 0) {
+        // Loopa till slutet
+        track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
+    } else {
+        // Scrolla till vänster som vanligt
+        track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' })
+    }
   });
