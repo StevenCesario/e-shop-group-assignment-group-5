@@ -240,6 +240,7 @@ p, h2, h4, button {
     background-color: var(--red);
 }
 
+/* Flytta knapparna något höger och vänster så att de inte täcker knapparna */
 .prev-btn { left: -20px; }
 .next-btn { right: -20px; }
 
@@ -318,9 +319,9 @@ p, h2, h4, button {
         flex: 0 0 calc(25% - 16px); 
     }
 
-    /* Fix button positioning so they don't overlap content */
+    /* Positionera knapparna reasonably på desktop också */
     .prev-btn { left: -50px; }
-    .next-btn { right: 50px; }
+    .next-btn { right: -50px; }
 
     .upsell-card {
         font-size: 18px;
