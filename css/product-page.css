@@ -7,6 +7,7 @@
     --content-padding-block: 18px;
     --content-padding-inline: 30px;
     --button-border-radius: 4px;
+    --carousel-gap: 16px;
 }
 
 body { 
@@ -157,7 +158,8 @@ img {
     border: 2px solid blue;
 }
 
-.upsell-section-grid {
+/* Denna section är inte grid längre! */
+/* .upsell-section-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 6px;
@@ -168,7 +170,103 @@ img {
     flex-direction: column;
     align-items: center;
     border: 2px solid blue;
+} */
+
+/* Vi använder flexbox och andra funktionaliteter istället */
+.carousel-wrapper {
+    position: relative; /* För att positionera knapparna relativt till "the carousel track" */
+    display: flex;
+    align-items: center;
 }
+
+/* The Scrolling Track */
+.upsell-carousel-track {
+    display: flex;
+    gap: var(--carousel-gap);
+    overflow-x: auto; /* För att kunna scrolla horizontellt */
+    scroll-behavior: smooth;
+    padding-block: var(--carousel-gap);
+
+    /* Utan denna kan the scroll sluta på ett halvt kort. Det är denna som gör att det 
+    känns "snappy" och modenrt när vi scrollar och ser till att vi alltid visar ett helt till kort.
+    Andra halvan för "magin" är nedan i form av scroll-snap-align: start; på individuella kortet */
+    scroll-snap-type: x mandatory; 
+
+    /* Göm scrollbar:en */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+
+    width: 100%; /* Tvinga the carousel track att fylla hela wrappern */
+}
+
+/* Göm scrollbar:en för Chrome/Safari/Opera */
+.upsell-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.upsell-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* The logic: Visa 2 kort på mobil, 4 på desktop (sätts nere i Media Queryn). Detta ersätter vår grid.
+    Flexbox är det bättre valet i detta fall i och med att vi "pushar element out into the overflow"! */
+    
+    /* FIX: Vi har 1 gap i en 2 card carousel, inte 2! 1 gaps × 16px = 16px total gap space
+    (100% minus 16px of total gap space) divided by 2 */
+    flex: 0 0 calc(50% - calc(var(--carousel-gap) / 2));
+
+    /* Andra halvan av "modern snappiness magin"; se ovan i scroll-snap-type: x mandatory; 
+    Detta blir the anchor point och kan liknas till en magnet.*/
+    scroll-snap-align: start;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    border-radius: 8px;
+    color: black;
+    background-color: white; /* Dark gray med vit text kan oxå funka! */
+}
+
+.upsell-media-wrapper img {
+    height: 100px;
+    width: auto;
+}
+
+/* Vänster och höger knapparna */
+.carousel-btn {
+    position: absolute; /* Lägg knapparna ovanför the track och carousel korten */
+    border-radius: 50%; /* Gör knapparna runda */
+    background-color: rgba(0, 0, 0, 0.7); /* Gör knapparna transparenta */
+    z-index: 10; /* Se till att knapparna alltid är i ett lager ovanför korten */
+    
+    /* Dessa två rader tillsammans ser till att knapparna blir perfectlyvertically centered */
+    top: 50%; 
+    transform: translateY(-50%);
+    
+    /* De två raderna ovan centrerar KNAPPARNA, dessa tre centrerar allt inuti knapparna */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    
+    cursor: pointer;
+    color: white;
+    border: 2px solid white;
+    
+    /* Kopplat till raden under som ändrar färgen på knappen till röd.
+    Gör det inte instantly och jarring, ta 0.3s som att sätta på och av en lampa */
+    transition: background 0.3s; 
+}
+
+.carousel-btn:hover {
+    background-color: var(--red);
+}
+
+/* Flytta knapparna något höger och vänster så att de inte täcker knapparna */
+.prev-btn { left: -20px; }
+.next-btn { right: -20px; }
 
 /* TODO: Add to general.css */
 /* Protect specific icons from the global 'width: 100%' rule */
@@ -308,6 +406,21 @@ img {
     
     .upsell-section-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .upsell-card {
+        /* FIX: Vi har 3 gaps i en 4 card carousel, inte 4! 3 gaps × 16px = 48px total gap space
+        /* (100% minus 48px of total gap space) divided by 4 */
+        /* To use the variable, we need to subtract 3/4 of the gap from each card to make room for 3 gaps */
+        flex: 0 0 calc(25% - (var(--carousel-gap) * 3 / 4));
+    }
+
+    /* Positionera knapparna reasonably på desktop också */
+    .prev-btn { left: -50px; }
+    .next-btn { right: -50px; }
+
+    .upsell-card {
+        font-size: 18px;
     }
 
     footer {
