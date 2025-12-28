@@ -94,6 +94,10 @@ img {
     grid-area: info;
 }
 
+.sleeping-pikachu {
+    display: none; /* Göm på mobil, visa endast på large desktop */
+}
+
 .product-price {
     grid-area: price;
 }
@@ -348,23 +352,7 @@ img {
         overflow: visible;
     }
 
-    .sleeping-pikachu {
-        position: absolute; /* Takes him out of the document flow */
-        
-        /* vertical position: 100% from the bottom means "sit on top" */
-        bottom: 100%; 
-        
-        /* horizontal position: 10px from the right edge */
-        right: 10px;  
-        
-        /* size him appropriately */
-        width: 200px; 
-        height: auto;
-        
-        /* för att få honom att ligga på info boxen */
-        margin-bottom: -62px;
-    }
-
+    
     .product-feature-section {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -421,6 +409,24 @@ img {
 
 /* large desktop */
 @media screen and (min-width:1200px) {
+    .sleeping-pikachu { /* Visas nu endast på large desktop */
+        display: block;
+        position: absolute; /* Takes him out of the document flow */
+        
+        /* vertical position: 100% from the bottom means "sit on top" */
+        bottom: 100%; 
+        
+        /* horizontal position: 10px from the right edge */
+        right: 10px;  
+        
+        /* size him appropriately */
+        width: 200px; 
+        height: auto;
+        
+        /* för att få honom att ligga på info boxen */
+        margin-bottom: -62px;
+    }
+
     .product-feature-section {
         grid-template-columns: 1fr 2fr;
         gap: 24px;
