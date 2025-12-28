@@ -202,6 +202,47 @@ p, h2, h4, button {
     background-color: white; /* Dark gray med vit text kan oxå funka! */
 }
 
+.upsell-media-wrapper img {
+    height: 100px;
+    width: auto;
+}
+
+/* Vänster och höger knapparna */
+.carousel-btn {
+    position: absolute; /* Lägg knapparna ovanför the track och carousel korten */
+    border-radius: 50%; /* Gör knapparna runda */
+    background-color: rgba(0, 0, 0, 0.7); /* Gör knapparna transparenta */
+    z-index: 10; /* Se till att knapparna alltid är i ett lager ovanför korten */
+    
+    /* Dessa två rader tillsammans ser till att knapparna blir perfectlyvertically centered */
+    top: 50%; 
+    transform: translateY(-50%);
+    
+    /* De två raderna ovan centrerar KNAPPARNA, dessa tre centrerar allt inuti knapparna */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    
+    cursor: pointer;
+    color: white;
+    border: 2px solid white;
+    
+    /* Kopplat till raden under som ändrar färgen på knappen till röd.
+    Gör det inte instantly och jarring, ta 0.3s som att sätta på och av en lampa */
+    transition: background 0.3s; 
+}
+
+.carousel-btn:hover {
+    background-color: var(--red);
+}
+
+.prev-btn { left: -20px; }
+.next-btn { right: -20px; }
+
 /* tablet */
 @media screen and (min-width:768px) {
     section {
@@ -276,6 +317,10 @@ p, h2, h4, button {
         /* 100% / 4 items = 25%. Minus the gap adjustment */
         flex: 0 0 calc(25% - 16px); 
     }
+
+    /* Fix button positioning so they don't overlap content */
+    .prev-btn { left: -50px; }
+    .next-btn { right: 50px; }
 
     .upsell-card {
         font-size: 18px;
