@@ -59,7 +59,32 @@
             <section class="product-hero-section">
                 <h1 class="product-title">Product Title</h1>
                 <div class="hero-img-wrapper">
-                  <img class="product-image" src="./img/link-to-the-past.jpg" alt="Legend of Zelda: A Link to the Past (1991) SNES Box Cover Art" height="240px">
+                  <picture>
+                    <source
+                      type="image/avif"
+                      srcset ="./img/product-page/zelda-lttp-sm.avif 500w,
+                               ./img/product-page/zelda-lttp-md.avif 850w,
+                               ./img/product-page/zelda-lttp-lg.avif 1155w"
+                      sizes="(max-width: 767px) 100vw,
+                             (max-width: 1199px) 850px,
+                             1155px">
+
+                    <source
+                      type="image/webp"
+                      srcset ="./img/product-page/zelda-lttp-sm.webp 500w,
+                               ./img/product-page/zelda-lttp-md.webp 850w,
+                               ./img/product-page/zelda-lttp-lg.webp 1155w"
+                      sizes="(max-width: 767px) 100vw,
+                             (max-width: 1199px) 850px,
+                             1155px">
+                    <img 
+                      class="product-main-image" 
+                      src="./img/product-page/zelda-lttp-lg.jpg"
+                      width="1155" 
+                      height="800"
+                      alt="Legend of Zelda: A Link to the Past (1991) SNES Box Cover Art"
+                      loading="eager">
+                  </picture>
                 </div>
                 <div class="product-info-small">
                     <img class="sleeping-pikachu" src="img/product-page/pikcahu-sleeping-no-bg.png" alt="Sleeping Pikachu :)">

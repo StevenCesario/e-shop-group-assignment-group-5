@@ -31,7 +31,7 @@ main {
 /* Get on the same page and merge into main */
 section {
     padding-block: 48px; 
-    /* padding-inline: 24px; */
+    padding-inline: 36px;
 }
 
 /* Merge into main? */
@@ -39,17 +39,33 @@ p, h2, h4, button {
     margin: 0; 
 }
 
+#link {
+    display: none;
+}
+
+/* Move this into general.css? */
+img {
+  max-width: 100%;
+  height: auto; /* This tells the browser: 'Ignore the HTML height attribute and use the Aspect Ratio instead' */
+  display: block;
+}
+
 /* #main-content {
     border: 2px solid red;
     min-height: 460px;
 } */
 
+/* .product-hero-section h1 {
+    background-color: red;
+} */
+
 .product-hero-section {
     /* border: 2px solid red; */
+    padding-top: 72px;
     min-height: 460px;
     display: grid;
     justify-items: center;
-    gap: 8px;
+    gap: 24px;
     grid-template-areas:
         "title"
         "media"
@@ -60,19 +76,23 @@ p, h2, h4, button {
 
 .product-title {
     grid-area: title;
-}
-
-.product-image {
-    grid-area: media;
+    border-left: 5px solid var(--red);
+    padding-left: 8px;
 }
 
 .hero-img-wrapper {
+    grid-area: media;
     min-height: 320px;
-    width: 60%;
-    background-color: white;
-    border-radius: 8px;
+    width: 100%;
+    max-width: 500px; /* Se till att bilden inte blir för stor på mobil */
     display: flex;
     place-content: center;
+}
+
+.product-main-image {
+    border-radius: 8px;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.45); 
+    border: 1px solid rgba(255, 255, 255, 0.8); /* Subtle edge definition */
 }
 
 .product-info-small {
@@ -150,6 +170,14 @@ p, h2, h4, button {
     border: 2px solid blue;
 }
 
+/* TODO: Add to general.css */
+/* Protect specific icons from the global 'width: 100%' rule */
+.footer-images img {
+    height: 16px;       /* Force the small size */
+    width: auto;        /* Keep aspect ratio */
+    display: inline-block; /* Let them sit side-by-side */
+}
+
 /* tablet */
 @media screen and (min-width:768px) {
     section {
@@ -161,25 +189,63 @@ p, h2, h4, button {
     }
 
     .feature-section-text-wrapper {
-        width: 70ch;
+        width: 75ch;
     }
 }
 
 /* small desktop */
 @media screen and (min-width:960px) {
+    section {
+        padding-block: 82px; 
+        padding-inline: 72px;
+    }
+
     .div-side {
         background-color: black;
     }    
 
     .product-hero-section {
+        min-height: 720px;
         border: 2px solid blue;
         grid-template-areas:
             "media title"
             "media price"
             "media info"
             "media button";
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        align-items: center;
+        grid-template-columns: 1.2fr 1fr;
+        align-items: start;
+        text-align: left;
+        justify-items: start;
+    }
+
+    .hero-img-wrapper {
+        width: 100%; /* Let it fill its grid cell */
+        max-width: 700px;
+        justify-self: center;
+        align-self: center;
+    }
+
+    /* Gör ALLT större :) */
+    .product-title {
+        font-size: 52px;
+        align-self: end;
+    }
+
+    .product-info-small {
+        font-size: 20px;
+        padding: 20px;
+        line-height: 1.4;
+        max-width: 650px;
+    }
+
+    .product-price {
+        font-size: 48px;
+        align-self: end;
+    }
+
+    .product-buy-button {
+        font-size: 40px;
+        padding: 20px 60px;
     }
 
     .product-info-small {
@@ -242,10 +308,6 @@ p, h2, h4, button {
     
     .upsell-section-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .feature-section-text-wrapper {
-        width: 50ch;
     }
 
     footer {
