@@ -7,6 +7,7 @@
     --content-padding-block: 18px;
     --content-padding-inline: 30px;
     --button-border-radius: 4px;
+    --carousel-gap: 16px;
 }
 
 body { 
@@ -161,10 +162,10 @@ p, h2, h4, button {
 /* The Scrolling Track */
 .upsell-carousel-track {
     display: flex;
-    gap: 16px;
+    gap: var(--carousel-gap);
     overflow-x: auto; /* För att kunna scrolla horizontellt */
     scroll-behavior: smooth;
-    padding-block: 16px;
+    padding-block: var(--carousel-gap);
 
     /* Utan denna kan the scroll sluta på ett halvt kort. Det är denna som gör att det 
     känns "snappy" och modenrt när vi scrollar och ser till att vi alltid visar ett helt till kort.
@@ -192,7 +193,7 @@ p, h2, h4, button {
     
     /* FIX: Vi har 1 gap i en 2 card carousel, inte 2! 1 gaps × 16px = 16px total gap space
     (100% minus 16px of total gap space) divided by 2 */
-    flex: 0 0 calc(50% - 8px);
+    flex: 0 0 calc(50% - calc(var(--carousel-gap) / 2));
 
     /* Andra halvan av "modern snappiness magin"; se ovan i scroll-snap-type: x mandatory; 
     Detta blir the anchor point och kan liknas till en magnet.*/
@@ -320,7 +321,8 @@ p, h2, h4, button {
     .upsell-card {
         /* FIX: Vi har 3 gaps i en 4 card carousel, inte 4! 3 gaps × 16px = 48px total gap space
         /* (100% minus 48px of total gap space) divided by 4 */
-        flex: 0 0 calc(25% - 12px);
+        /* To use the variable, we need to subtract 3/4 of the gap from each card to make room for 3 gaps */
+        flex: 0 0 calc(25% - (var(--carousel-gap) * 3 / 4));
     }
 
     /* Positionera knapparna reasonably på desktop också */
