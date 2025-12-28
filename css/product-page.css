@@ -167,7 +167,8 @@ p, h2, h4, button {
     padding-block: 16px;
 
     /* Utan denna kan the scroll sluta på ett halvt kort. Det är denna som gör att det 
-    känns "snappy" och modenrt när vi scrollar och ser till att vi alltid visar ett helt till kort */
+    känns "snappy" och modenrt när vi scrollar och ser till att vi alltid visar ett helt till kort.
+    Andra halvan för "magin" är nedan i form av scroll-snap-align: start; på individuella kortet */
     scroll-snap-type: x mandatory; 
 
     /* Göm scrollbar:en */
@@ -178,6 +179,25 @@ p, h2, h4, button {
 /* Göm scrollbar:en för Chrome/Safari/Opera */
 .upsell-carousel-track::-webkit-scrollbar {
   display: none;
+}
+
+.upsell-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* The logic: Visa 2 kort på mobil, 4 på desktop. Detta ersätter vår grid.
+    Flexbox är det bättre valet i detta fall i och med att vi "pushar element out into the overflow"! */
+    flex: 0 0 calc(50% - 16px);
+
+    /* Andra halvan av "modern snappiness magin"; se ovan i scroll-snap-type: x mandatory; 
+    Detta blir the anchor point och kan liknas till en magnet.*/
+    scroll-snap-align: start;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    border-radius: 8px;
+    color: black;
+    background-color: white; /* Dark gray med vit text kan oxå funka! */
 }
 
 /* tablet */
@@ -248,6 +268,10 @@ p, h2, h4, button {
 
     .feature-section-text-wrapper {
         width: 50ch;
+    }
+
+    .upsell-card {
+        font-size: 18px;
     }
 
     footer {
