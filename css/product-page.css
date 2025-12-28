@@ -189,7 +189,10 @@ p, h2, h4, button {
     align-items: center;
     /* The logic: Visa 2 kort på mobil, 4 på desktop (sätts nere i Media Queryn). Detta ersätter vår grid.
     Flexbox är det bättre valet i detta fall i och med att vi "pushar element out into the overflow"! */
-    flex: 0 0 calc(50% - 16px);
+    
+    /* FIX: Vi har 1 gap i en 2 card carousel, inte 2! 1 gaps × 16px = 16px total gap space
+    (100% minus 16px of total gap space) divided by 2 */
+    flex: 0 0 calc(50% - 8px);
 
     /* Andra halvan av "modern snappiness magin"; se ovan i scroll-snap-type: x mandatory; 
     Detta blir the anchor point och kan liknas till en magnet.*/
@@ -315,8 +318,9 @@ p, h2, h4, button {
     }
 
     .upsell-card {
-        /* 100% / 4 items = 25%. Minus the gap adjustment */
-        flex: 0 0 calc(25% - 16px); 
+        /* FIX: Vi har 3 gaps i en 4 card carousel, inte 4! 3 gaps × 16px = 48px total gap space
+        /* (100% minus 48px of total gap space) divided by 4 */
+        flex: 0 0 calc(25% - 12px);
     }
 
     /* Positionera knapparna reasonably på desktop också */
