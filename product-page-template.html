@@ -6,6 +6,7 @@
     <title>Nshop</title>
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/product-page.css">
+    <script src="scripts/product-page-carousel.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,30 +26,6 @@
           <a href="">Products</a>
         </div>
 
-        <!--   testing not our code -->
-
-        <!--     <input type="checkbox" id="toggle-menu" />
-        <input type="checkbox" id="toggle-modal" />
-
-        <header class="header">
-          <div class="header-inner">
-            <label class="hamburger" for="toggle-menu">
-              <span class="hamburger-bar"></span>
-              <span class="hamburger-bar"></span>
-              <span class="hamburger-bar"></span>
-            </label>
-
-            <ul class="nav">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Services</a></li>
-            </ul>
-          </div>
-        </header>-->
-
-        <!--test ends here -->
-
         <button class="cart-button">Kundvagn (3)</button>
       </nav>
     </header>
@@ -59,9 +36,35 @@
             <section class="product-hero-section">
                 <h1 class="product-title">Product Title</h1>
                 <div class="hero-img-wrapper">
-                  <img class="product-image" src="./img/link-to-the-past.jpg" alt="Legend of Zelda: A Link to the Past (1991) SNES Box Cover Art" height="240px">
+                  <picture>
+                    <source
+                      type="image/avif"
+                      srcset ="./img/product-page/zelda-lttp-sm.avif 500w,
+                               ./img/product-page/zelda-lttp-md.avif 850w,
+                               ./img/product-page/zelda-lttp-lg.avif 1155w"
+                      sizes="(max-width: 767px) 100vw,
+                             (max-width: 1199px) 850px,
+                             1155px">
+
+                    <source
+                      type="image/webp"
+                      srcset ="./img/product-page/zelda-lttp-sm.webp 500w,
+                               ./img/product-page/zelda-lttp-md.webp 850w,
+                               ./img/product-page/zelda-lttp-lg.webp 1155w"
+                      sizes="(max-width: 767px) 100vw,
+                             (max-width: 1199px) 850px,
+                             1155px">
+                    <img 
+                      class="product-main-image" 
+                      src="./img/product-page/zelda-lttp-lg.jpg"
+                      width="1155" 
+                      height="800"
+                      alt="Legend of Zelda: A Link to the Past (1991) SNES Box Cover Art"
+                      loading="eager">
+                  </picture>
                 </div>
                 <div class="product-info-small">
+                    <img class="sleeping-pikachu" src="img/product-page/pikcahu-sleeping-no-bg.png" alt="Sleeping Pikachu :)">
                     <p class="product-info-small-text">Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute</p>
                     <div class="product-choice">
                         <h4>Choice:</h4>
@@ -80,7 +83,7 @@
             </section>
             <section class="product-feature-section">
                 <div class="feature-section-text-wrapper">
-                    <h4>Medium length features headline</h4>
+                    <h3>Medium length features headline</h3>
                     <p>This is just placeholder text. Don’t be alarmed, this is just here to fill up space since your finalized copy isn’t ready yet. Once we have your content finalized, we’ll replace this placeholder text with your real content.</p>
                     <br>
                     <p>There are other placeholder text alternatives like Hipster Ipsum, Zombie Ipsum, Bacon Ipsum, and many more. While often hilarious, these placeholder passages can also lead to much of the same confusion.</p>
@@ -94,25 +97,65 @@
             </section>
             <section class="product-upsell-section">
                 <h3>Köps ofta med</h3>
-                <div class="upsell-section-grid">
-                    <div class="upsell-section-grid-item">
-                        <div class="upsell-grid-media-wrapper">
-                            <img src="./img/snes-controller-box.jpg" alt="SNES Controller" height="120px">
-                        </div>
-                        <div class="upsell-grid-text-wrapper">
-                            <h5>SNES Controller</h5>
-                            <span>479kr - I lager</span>
-                        </div>
+                <div class="carousel-wrapper">
+                  <button class="carousel-btn prev-btn" aria-label="Scroll Left">&lt;</button>
+                  <div class="upsell-carousel-track">
+                    <div class="upsell-card">
+                      <div class="upsell-grid-media-wrapper">
+                          <img src="./img/snes-controller-box.jpg" alt="SNES Controller" height="120px">
+                      </div>
+                      <div class="upsell-grid-text-wrapper">
+                          <h5>SNES Controller</h5>
+                          <span>479kr - I lager</span>
+                      </div>
                     </div>
-                    <div class="upsell-section-grid-item">
-                        <div class="upsell-grid-media-wrapper">
-                            <img src="./img/snes-controller-box.jpg" alt="SNES Controller" height="120px">
-                        </div>
-                        <div class="upsell-grid-text-wrapper">
-                            <h5>SNES Controller</h5>
-                            <span>479kr - I lager</span>
-                        </div>
+                    <div class="upsell-card">
+                      <div class="upsell-grid-media-wrapper">
+                          <img src="./img/snes-controller-box.jpg" alt="SNES Controller" height="120px">
+                      </div>
+                      <div class="upsell-grid-text-wrapper">
+                          <h5>Donkey Kong</h5>
+                          <span>269kr - I lager</span>
+                      </div>
                     </div>
+                    <div class="upsell-card">
+                      <div class="upsell-grid-media-wrapper">
+                          <img src="./img/snes-controller-box.jpg" alt="SNES Controller" height="120px">
+                      </div>
+                      <div class="upsell-grid-text-wrapper">
+                          <h5>Super Mario 2</h5>
+                          <span>379kr - I lager</span>
+                      </div>
+                    </div>
+                    <div class="upsell-card">
+                      <div class="upsell-grid-media-wrapper">
+                          <img src="./img/snes-controller-box.jpg" alt="SNES Controller" height="120px">
+                      </div>
+                      <div class="upsell-grid-text-wrapper">
+                          <h5>Earthbound</h5>
+                          <span>479kr - I lager</span>
+                      </div>
+                    </div>
+                    <div class="upsell-card">
+                      <div class="upsell-grid-media-wrapper">
+                          <img src="./img/snes-controller-box.jpg" alt="SNES Controller" height="120px">
+                      </div>
+                      <div class="upsell-grid-text-wrapper">
+                          <h5>Mario Kart</h5>
+                          <span>179kr - I lager</span>
+                      </div>
+                    </div>
+                    <div class="upsell-card">
+                      <div class="upsell-grid-media-wrapper">
+                          <img src="./img/snes-controller-box.jpg" alt="SNES Controller" height="120px">
+                      </div>
+                      <div class="upsell-grid-text-wrapper">
+                          <h5>Metroid</h5>
+                          <span>479kr - I lager</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-btn next-btn" aria-label="Scroll Right">&gt;</button>
                 </div>
             </section>
         </div>

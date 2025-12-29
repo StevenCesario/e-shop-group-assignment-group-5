@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Nshop - Homepage</title>
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/homepage.css">
@@ -15,15 +17,30 @@
   <body>
 
     <header id="header">
-      <img src="img/Nshop.logo.jpg" alt="Nshop logo" />
+      
 
       <nav>
+    
+        <!-- Logo now links back to homepage -->
+        <a href="Homepage.html">
+            <img src="img/Nshop.logo.jpg" alt="Nshop logo" class="logo" />
+        </a>
 
-        <div id="link">
-          <a href="">NES</a>
-          <a href="">SNES</a>
-          <a href="">Products</a>
+        <div class="nav-links">
+            <a href="productpage-nes.html">NES</a>
+            <a href="productpage.snes.html">SNES</a>
+            <a href="productlist.html">Products</a>
+            <button class="login-btn">Login</button>
         </div>
+      <!--Search without styling until now------- -->
+      <div class="search-container">
+    
+      <input type="text" placeholder="Search for products..." />
+            <div class="search-icon">
+              <i class="fa fa-search"></i>
+   
+    </div>
+    </div>
 
         <div id="myLinks">
           <a href="">NES</a>
@@ -216,8 +233,8 @@
         retro-konsolerna någonsin.
       </p>
       <p>
-        Kontakt<br /><a id="footer-mail" href="">info@nshop.com</a
-        ><br />0700-123456
+    <a id="footer-mail" href="contact.html">Kontakta oss</a><br /> Eller via mobil :0700-123456
+       
       </p>
       <p>Säker betalning med</p>
       <div class="footer-images">
