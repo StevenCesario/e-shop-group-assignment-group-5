@@ -59,7 +59,7 @@ body {
 header {
   width: 100%;
   margin: 0;
-  min-height: 120px;
+  min-height: 17.5rem;
   background-color: var(--dark-gray);
   justify-content: center;
   align-items:center;
@@ -68,15 +68,17 @@ header {
   top: 0;
   border-bottom: var(--red) 4px solid;
   grid-area: header;
+  z-index: 1000;
 }
 
 nav {
   background-color: var(--dark-gray);
   min-height: 50px;
-  width: 100%;
+  min-width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-
+  align-items: center;
   overflow: hidden;
   position:relative;
 }
@@ -96,10 +98,11 @@ nav a.icon {
   display:block;
   position:absolute;
   left: 50vw;
+  /* top: 20vw; */
 }
 
 
-#link {
+.nav-links {
   list-style-type: none;
   display: none;
   font-weight: bold;
@@ -109,7 +112,7 @@ nav a.icon {
   width: 100%;
 }
 
-#link a {
+.nav-links a {
   text-decoration: none;
   color: white;
 }
@@ -118,8 +121,26 @@ a:hover {
   color: var(--red);
 }
 
+.header-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-s;
+  min-width: 100%;
+  padding: 1rem;
+
+}
+
+.search-container {
+  display: flex;
+
+}
+
+.fa{
+  font-size: 1.5rem;
+}
+
 .cart-button {
-  margin-left: auto; /*uses all the space left on the LEFT*/
+  /* margin-left: auto; uses all the space left on the LEFT */
   background: transparent;
   border: 2px solid var(--red);
   color: var(--white);
@@ -130,7 +151,7 @@ a:hover {
   transition: background 0.15s ease, transform 0.15s ease;
 }
 
-.cart-btn:hover {
+.cart-button:hover {
   background: var(--red);
   transform: translateY(-2px);
 }
@@ -196,7 +217,7 @@ footer > p {
         padding: calc(var(--footer-block-padding) * 1.2) calc(var(--footer-inline-padding) * 1.2)
     }
 
-    #link {
+    .nav-links {
   display: flex;
 
   /* align-items: center */
@@ -208,6 +229,17 @@ footer > p {
     display: none;
     
   }
+nav {
+  min-width: 90%; 
+  flex-direction: row;
+}
+.header-right {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-evenly;
+
+  
+}
 }
 
 /* small desktop */
