@@ -59,7 +59,7 @@ body {
 header {
   width: 100%;
   margin: 0;
-  min-height: 17.5rem;
+  min-height: 8rem;
   background-color: var(--dark-gray);
   justify-content: center;
   align-items:center;
@@ -69,6 +69,8 @@ header {
   border-bottom: var(--red) 4px solid;
   grid-area: header;
   z-index: 1000;
+  font-family: VT323, monospace;
+  font-size: var(--font-size-large);
 }
 
 nav {
@@ -83,22 +85,32 @@ nav {
   position:relative;
 }
 
+.logo-link {
+  text-decoration: none;
+  min-width:15%;
+}
+
 nav #myLinks {
   display: none;
 }
 
 nav a {
-  padding: 14px 16px;
+  padding: 0.6rem 0.8rem;
   text-decoration: none;
-  display: block
+  color: var(--white);
+  display: block;
+  
+
 }
 
 nav a.icon {
   background: var(--dark-gray);
   display:block;
   position:absolute;
-  left: 50vw;
-  /* top: 20vw; */
+  border: 1px solid var(--black);
+  border-radius: 0.5rem;
+  left: 3vw;
+  top: 4vw;
 }
 
 
@@ -108,13 +120,21 @@ nav a.icon {
   font-weight: bold;
   justify-content: space-evenly;
   align-items: end;
-  gap: 10px;
-  width: 100%;
+  /* gap: 10px; */
+  min-width: 45%;
 }
 
 .nav-links a {
   text-decoration: none;
   color: white;
+  border: 1px solid var(--red);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  
+}
+
+.nav-links a:nth-child(1) {
+  padding: 0.5rem 1rem;
 }
 
 a:hover {
@@ -124,19 +144,22 @@ a:hover {
 .header-right {
   display: flex;
   flex-direction: row;
-  justify-content: space-s;
-  min-width: 100%;
-  padding: 1rem;
+  justify-content: space-evenly;
+  min-width: 35%;
+  padding: 0.5rem;
 
 }
+
 
 .search-container {
   display: flex;
-
+  justify-content: space-evenly;
 }
+.fa-search:hover {
+  color: var(--red);
+  cursor: pointer;
+  transition: color 0.3s ease;
 
-.fa{
-  font-size: 1.5rem;
 }
 
 .cart-button {
@@ -149,6 +172,7 @@ a:hover {
   font-weight: 700;
   cursor: pointer;
   transition: background 0.15s ease, transform 0.15s ease;
+
 }
 
 .cart-button:hover {
@@ -161,7 +185,7 @@ main {
 }
 
 #wrapper {
-  margin-top: 120px;
+  margin-top: 8rem;
 }
 
 #up {
@@ -211,36 +235,47 @@ footer > p {
 
 
 
-/* tablet */
+/* --  tablet -- */
 @media screen and (min-width:768px) {
-    footer {
-        padding: calc(var(--footer-block-padding) * 1.2) calc(var(--footer-inline-padding) * 1.2)
-    }
 
-    .nav-links {
+nav {
+  min-width: 90%; 
+  min-height: 100%;
+  flex-direction: row;
+}
+
+.nav-links {
   display: flex;
+  min-width: 30%;
 
-  /* align-items: center */
-  gap: 30px;
-  font-size: var(--font-size-large)
   }
 
-  nav a.icon {
+nav a.icon {
     display: none;
     
   }
-nav {
-  min-width: 90%; 
-  flex-direction: row;
+
+
+.logo-link {
+  min-width:10%;
 }
+
 .header-right {
   display: flex;
   /* flex-direction: column; */
   justify-content: space-evenly;
+   /* min-height: 80%; */
+    min-width: 25%;
+}
 
-  
+  .cart-button {
+    align-self: flex-end;
 }
 }
+
+    footer {
+        padding: calc(var(--footer-block-padding) * 1.2) calc(var(--footer-inline-padding) * 1.2)
+    }
 
 /* small desktop */
 @media screen and (min-width:960px) {
@@ -254,12 +289,39 @@ nav {
         padding: calc(var(--footer-block-padding) * 1.5) calc(var(--footer-inline-padding) * 1.5);
         font-size: var(--font-size-large);
     }
-}
+
+    .logo-link {
+     min-width:20%;
+    }
+
+        .nav-links {
+  min-width: 35%; 
+  }
+
+    .header-right {
+      min-width: 30%;
+    
+    }
+  }
 
 /* large desktop */
 @media screen and (min-width:1200px) {
     #wrapper {
         display: grid;
         grid-template-columns: 1fr 8fr 1fr;
+    }
+
+    
+    .logo-link {
+     min-width:25%;
+    }
+
+        .nav-links {
+  min-width: 40%; 
+  }
+
+    .header-right {
+      min-width: 35%;
+    
     }
 }
