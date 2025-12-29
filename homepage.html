@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Nshop - Homepage</title>
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/homepage.css">
-</head>
+    <!-- For the hamburgermenu from w3schools -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts/general.js" defer></script>
+  </head>
 <body>
 
   <body>
@@ -16,7 +19,8 @@
     <header id="header">
       
 
-     <nav class="nav">
+      <nav>
+    
         <!-- Logo now links back to homepage -->
         <a href="Homepage.html">
             <img src="img/Nshop.logo.jpg" alt="Nshop logo" class="logo" />
@@ -38,31 +42,18 @@
     </div>
     </div>
 
-        <!--   testing not our code -->
-
-        <!--     <input type="checkbox" id="toggle-menu" />
-        <input type="checkbox" id="toggle-modal" />
-
-        <header class="header">
-          <div class="header-inner">
-            <label class="hamburger" for="toggle-menu">
-              <span class="hamburger-bar"></span>
-              <span class="hamburger-bar"></span>
-              <span class="hamburger-bar"></span>
-            </label>
-
-            <ul class="nav">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Services</a></li>
-            </ul>
-          </div>
-        </header>-->
-
-        <!--test ends here -->
+        <div id="myLinks">
+          <a href="">NES</a>
+          <a href="">SNES</a>
+          <a href="">Products</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
 
         <button class="cart-button">Kundvagn (3)</button>
+
+        
       </nav>
     </header>
 
