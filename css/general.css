@@ -94,6 +94,18 @@ nav #myLinks {
   display: none;
 }
 
+#myLinks {
+
+  border-top: 4px solid var(--red);
+  border-bottom: 4px solid var(--red);
+  text-align: center;
+}
+
+#myLinks a:nth-child(1), #myLinks a:nth-child(2) {
+   border-bottom: 1px solid var(--red);
+ 
+
+}
 nav a {
   padding: 0.6rem 0.8rem;
   text-decoration: none;
@@ -215,7 +227,7 @@ footer > p {
   /* border: 1px solid black; */
   /* color: white; Moved to body*/
   padding: 4px;
-  width: 50ch;
+  max-width: 50ch;
 } 
 
 .footer-images {
