@@ -22,7 +22,7 @@
       <nav>
     
         <!-- Logo now links back to homepage -->
-        <a href="Homepage.html">
+        <a class="logo-link" href="Homepage.html">
             <img src="img/Nshop.logo.jpg" alt="Nshop logo" class="logo" />
         </a>
 
@@ -30,29 +30,33 @@
             <a href="productpage-nes.html">NES</a>
             <a href="productpage.snes.html">SNES</a>
             <a href="productlist.html">Products</a>
-            <button class="login-btn">Login</button>
+            
         </div>
-      <!--Search without styling until now------- -->
-      <div class="search-container">
-    
-      <input type="text" placeholder="Search for products..." />
-            <div class="search-icon">
-              <i class="fa fa-search"></i>
-   
-    </div>
-    </div>
+      
+
 
         <div id="myLinks">
-          <a href="">NES</a>
-          <a href="">SNES</a>
-          <a href="">Products</a>
+          <a href="productpage-nes.html">NES</a>
+          <a href="productpage.snes.html">SNES</a>
+          <a href="productlist.html">Products</a>
         </div>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
+          <i class="fa fa-bars fa-2x"></i>
         </a>
 
-        <button class="cart-button">Kundvagn (3)</button>
-
+        <div class="header-right">
+              <div class="search-container">
+                   <!--Search without styling until now------- -->
+                    <input type="text" placeholder="Search for products..." />
+                      <div class="search-icon">
+                        <a href="#" aria-label="Search">
+                      <i class="fa fa-search" aria-hidden="true" title=""Search"></i></a>
+   
+                      </div>
+                </div>
+                        <button class="cart-button"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true">(3)</i></button>
+              
+            </div>
         
       </nav>
     </header>
