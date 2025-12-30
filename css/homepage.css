@@ -33,20 +33,18 @@
     display: flex;
     gap: 3em;
     scroll-behavior: smooth;
-    padding: 1em;
+    /* padding: 1em; */
    /* justify-content: center; */
     flex-direction: row;
     box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-    border-radius: 0.5rem;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
-   
-
+    /* border-radius: 0.5rem; */
+    /* scrollbar-width: none; Firefox */
+    /* -ms-overflow-style: none; Internet Explorer 10+ */
 }
 
-.hero-carousel ::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome, Safari and Opera */
-}
+/* .hero-carousel ::-webkit-scrollbar {
+    display: none; Hide scrollbar for Chrome, Safari and Opera
+} */
 
 /* 
 .hero-carousel::scroll-button(right), .hero-carousel::scroll-button(left) {
@@ -81,18 +79,23 @@
     height: 21 em;
     aspect-ratio: 16 / 9;
     overflow-x: auto;
-    min-width: 100%;
-    background-color: black;
+    min-width: 90%;
+    /* background-color: black; */
     padding: 2em;
     border-radius: .5em;
     border: solid var(--red) 3px;
     box-shadow: 0 4px 8px rgba(221, 208, 208, 0.1);
     transition: transform 0.3s ease;
-    text-align:center;
+    /* text-align: center; */
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: center;
+}
+
+#slider-1 {
+    /* background-image: url(/img/homepage/arcade-old-game-castle-scene.jpg);  */
+    /* background-size: cover; */
 }
 
 #slider-2 {
@@ -112,6 +115,8 @@
     text-align: center;
     margin-bottom: 1em;
     font-size: var(--font-size-large);
+    grid-area: hero-text1;  
+    
 }
 
 .hero-button1 {
@@ -125,6 +130,7 @@
     font-weight: 700;
     cursor: pointer;
     transition: background 0.15s ease, transform 0.15s ease;
+    grid-area: hero-button1;
 
 }
 
@@ -158,9 +164,31 @@
 
 .hero-slider1, .hero-slider2, .hero-slider3 {
   width: 100%;
+  display:grid;
+  grid-template-areas:
+  "hero-text1" "hero-slider1" "hero-slider1"
+  "hero-text1" "hero-slider1" "hero-slider1"
+   "hero-button1" "hero-slider1" "hero-slider1"
+   "hero-banner" "hero-slider1" "hero-slider1";
 }
 
+.hero-slider1 {
+   grid-area: "hero-slider1";
+}
 
+.pixel-figures {
+    grid-area: "pixel-figures";
+}
+
+.hero-banner {
+    background-color: var(--red);
+    max-width: 40%;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+    color: white;
+    font-size: var(--font-size-large);
+}
 
 .product-section {
     background-color: black;
@@ -223,7 +251,8 @@ footer {
         grid-template-columns: 1fr 8fr 1fr;
     }
 
-    .div-side {
-        background-color: black;
-    }   
+}
+
+header {
+    z-index: 1000;
 }
