@@ -3,12 +3,10 @@
 
 .main-content {
     background-color: black;
-     padding-top: 10rem;
-
-    /* display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    color: white;  */
+    position: absolute;
 }
 
 #wrapper {
@@ -16,98 +14,77 @@
  
 }   
 
+
+    /* -- HERO -- */
+
 .hero-wrapper {
     background-color: black;
-    max-width: 100rem;
-    margin: 0 auto;
-    padding-top: 1em;
+    max-width: 100%;
+    max-height: 100vh;
     position: relative;
+    display:flex;
+    /* overflow: hidden; */
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  
 }
 
 .hero-carousel {
     background-color: black;
-    max-width: 100rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    max-width: 300vw;
+    max-height: 40vh;
     margin: 0 auto;
     display: flex;
-    gap: 3em;
     scroll-behavior: smooth;
-    /* padding: 1em; */
-   /* justify-content: center; */
     flex-direction: row;
-    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-    /* border-radius: 0.5rem; */
-    /* scrollbar-width: none; Firefox */
-    /* -ms-overflow-style: none; Internet Explorer 10+ */
+    animation: slider-animation 15s infinite alternate;
+     
 }
 
-/* .hero-carousel ::-webkit-scrollbar {
-    display: none; Hide scrollbar for Chrome, Safari and Opera
-} */
+.slider-1, .slider-2, .slider-3 {
 
-/* 
-.hero-carousel::scroll-button(right), .hero-carousel::scroll-button(left) {
-    content: '>';
-    border: solid white 1px;
-    background-color: var(--red);
-    font-size: 3rem;
-    color: white;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    padding-bottom: .1em;
-    cursor: pointer;
-    position: fixed;
-
-}
-
-.hero-carousel::scroll-button(left) {
-    content: '<';
-    position-area: left center; */
-/* } */
-
-/* .hero-carousel::scroll-button(right):disabled, .hero-carousel::scroll-button(left):disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-} */
-
-#slider-1, #slider-2, #slider-3 {
-    flex: 1 0 100%;
-    scroll-snap-align: start;
+    width: calc(100% /3);
+    max-height: 80vh;
     object-fit: cover;
-    height: 21 em;
+    
     aspect-ratio: 16 / 9;
     overflow-x: auto;
-    min-width: 90%;
-    /* background-color: black; */
-    padding: 2em;
-    border-radius: .5em;
     border: solid var(--red) 3px;
-    box-shadow: 0 4px 8px rgba(221, 208, 208, 0.1);
-    transition: transform 0.3s ease;
-    /* text-align: center; */
+    box-shadow: 0 4px 0 rgba(221, 208, 208, 0.1); 
+    justify-content: flex-start;
+    align-items:center;
+    /* transition: transform 1s ease; */
+    
     display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
 }
 
-#slider-1 {
-    /* background-image: url(/img/homepage/arcade-old-game-castle-scene.jpg);  */
-    /* background-size: cover; */
+@keyframes slider-animation {
+    0%{ transform: translateX(0); 
+    }
+    33.33%{ transform: translateX(0); 
+    }
+    66.66%{ transform: translateX(-33.33%); 
+    }
+    100%{ transform: translateX(-66.66%); 
+    }
 }
 
-#slider-2 {
-    background-color: var(--red);
-    border: solid var(--white) 2px;
+.slider-1 {
+    background-image: url(../img/Homepage/Hero-slider-background_test2.JPG);
+    background-size: 90%;
+    background-repeat: no-repeat;
 }
 
-#slider-3 {
-    background-color: var(--red);
-    border: solid var(--white) 2px;
+.slider-2 {
+    background-image: url(../img//Homepage/Dungeon-chest_test.PNG);
+    background-size: 80;
+    background-repeat: no-repeat;
 }
 
+.slider-3 {
+    background-image: url(../img//Homepage/SNES-background_test.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
 
 .hero-text {
     color: white;
@@ -115,12 +92,21 @@
     text-align: center;
     margin-bottom: 1em;
     font-size: var(--font-size-large);
-    grid-area: hero-text1;  
+    grid-area: hero-text;  
     
 }
 
-.hero-button1 {
-    background: transparent;
+.hero-text > h1 { 
+    background-color: var(--black);
+}
+
+.hero-text p {
+    background-color: var(--black);
+    font-size: var(--font-size-large);
+}
+
+.hero-button1, .hero-button2, .hero-button3 {
+    background: var(--black);
     font-size: var(--font-size-large);
     font-family: 'VT323', monospace;
     border: 2px solid var(--red);
@@ -130,70 +116,46 @@
     font-weight: 700;
     cursor: pointer;
     transition: background 0.15s ease, transform 0.15s ease;
-    grid-area: hero-button1;
+    grid-area: hero-button;
 
 }
 
-.hero-button1:hover {
+.hero-button1:hover, .hero-button2:hover, .hero-button3:hover {
     background: var(--red);
     transform: scale(1.05);
     opacity: 1;
     color: var(--black);
 }
 
-.hero-button2, .hero-button3 {
-    background: var(--black);
-    font-size: var(--font-size-large);
-    font-family: 'VT323', monospace;
-    border: 2px solid var(--white);
-    color: var(--red);
-    padding: 0.55rem 1.1rem;
-    border-radius: 6px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.15s ease, transform 0.15s ease;
 
-}
-
-.hero-button2:hover, .hero-button3:hover {
-    background: var(--red);
-    transform: scale(1.05);
-    opacity: 1;
-    color: var(--black);
-}
-
-.hero-slider1, .hero-slider2, .hero-slider3 {
+/* .slider-1, .slider-2, .slider-3 {
   width: 100%;
   display:grid;
   grid-template-areas:
-  "hero-text1" "hero-slider1" "hero-slider1"
-  "hero-text1" "hero-slider1" "hero-slider1"
-   "hero-button1" "hero-slider1" "hero-slider1"
+  "hero-text" "hero-slider1" "hero-slider1"
+  "pixel-figures" "hero-slider1" "hero-slider1"
+   "hero-button" "hero-slider1" "hero-slider1"
    "hero-banner" "hero-slider1" "hero-slider1";
-}
+} */
 
 .hero-slider1 {
    grid-area: "hero-slider1";
 }
 
-.pixel-figures {
-    grid-area: "pixel-figures";
-}
-
 .hero-banner {
     background-color: var(--red);
-    max-width: 40%;
+    min-width: 100vh;
     margin: 0 auto;
-    padding: 2em;
+    padding: 0.5rem;
     text-align: center;
-    color: white;
-    font-size: var(--font-size-large);
 }
+
+    /* -- PRODUCT SECTION -- */
 
 .product-section {
     background-color: black;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     
     display:grid;
     grid-template-columns: column;
@@ -202,7 +164,7 @@
 .product-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    gap: var(--general-gap-desktop);
     justify-content:flex-start;
     flex-wrap: wrap;
     margin: 20px;
@@ -221,12 +183,30 @@ footer {
     margin: 0;
 }
 
-/* tablet */
+
+    /* -- TABLET -- */
 @media screen and (min-width:768px) {
+
+    .hero-carousel {
+        min-width: 300vw;
+        min-height: 50wh;
+    }
+
+    .hero-banner {
+    background-color: var(--red);
+    max-width: 100vh;
+    margin: 0 auto;
+    padding: 0.5rem;
+    text-align: center;
+    color: white;
+    font-size: var(--font-size-large);
+}
 
 }
 
-/* small desktop */
+
+    /* -- SMALL DESKTOP -- */
+
 @media screen and (min-width:960px) {
         #wrapper {
         display: grid;
@@ -236,23 +216,60 @@ footer {
 
     .div-side {
         background-color: black;
+        z-index: 1000;
     }   
     
-    .hero-carousel {
-        flex-direction: row;
+    .hero-wrapper { 
+        max-width: 60vw;
+        max-height: 60vh;
     }
+    
+    .slider-1 {
+    background-image: url(../img/Homepage/Hero-slider-background_test2.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    
+}
+
+    .slider-2 {
+    background-image: url(../img//Homepage/Dungeon-chest_test.PNG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem;
+}
+
+    .slider-3 {
+    background-image: url(../img//Homepage/SNES-background_test.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem;
+}
 
 }
 
-/* large desktop */
+    /* -- LARGE DESKTOP -- */
+
 @media screen and (min-width:1200px) {
         #wrapper {
         display: grid;
         grid-template-columns: 1fr 8fr 1fr;
     }
 
+        .hero-wrapper { 
+        max-width: 100vh;
+        max-height: 70vh;
+        
+        }
+
+
+        /* -- TILLFÄLLIGT -- */
 }
 
 header {
     z-index: 1000;
+}
+
+.div-side {
+ border: 1px solid blue;
 }
