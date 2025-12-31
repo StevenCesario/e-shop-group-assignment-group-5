@@ -54,6 +54,7 @@ body {
         "main"
         "footer"
     ;
+    grid-template-columns: minmax(0, 1fr);
 }
 
 header {
