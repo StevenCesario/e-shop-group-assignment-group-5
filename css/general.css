@@ -54,6 +54,11 @@ body {
         "main"
         "footer"
     ;
+
+    /* FIX: Detta förhindrar att man kan scrolla horizontellt på mobil.
+    Istället för att använda default grid-template-columns: minmax(auto, 1fr)
+    använder vi grid-template-columns: minmax(0, 1fr) vilket gör att columnerna kan
+    shrink när det behövs (t.ex. på mobil) */
     grid-template-columns: minmax(0, 1fr);
 }
 
