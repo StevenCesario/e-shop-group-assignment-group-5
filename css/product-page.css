@@ -434,7 +434,7 @@ img {
 
     .feature-section-text-wrapper {
         max-width: 65ch;
-        font-size: 1.125rem; /* 18px */
+        font-size: 1.25rem; /* 20px */
         display: flex;
         flex-direction: column;
         justify-content: start;
