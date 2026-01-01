@@ -2,124 +2,160 @@
 /* Font: Monotone static */
 
 .main-content {
-    
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--black);
-    color: white;
-    /* position: relative; */
-    
-    }
+    position: absolute;
+}
 
-.hero-section { 
-    background-color: var(--black);
-    width: 48rem;
-    height: 40vh;
-    padding: 2rem;
-    margin:0 auto;
-    overflow-x: auto;
-    
+#wrapper {
+    background-color: black;
+ 
+}   
+
+
+    /* -- HERO -- */
+
+.hero-wrapper {
+    background-color: black;
+    max-width: 100%;
+    max-height: 100vh;
+    position: relative;
+    display:flex;
+    /* overflow: hidden; */
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  
+}
+
+.hero-carousel {
+    background-color: black;
+    max-width: 300vw;
+    max-height: 40vh;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
-    /* position: relative; */
-    transition: all .5s linear;
-     /*  Hur gör jag detta element starkare så hero-boxes håller sig i den.*/
-     border-radius: 0,5rem;
-    
-} 
-
-.hero-content {
-   display:flex
+    scroll-behavior: smooth;
+    flex-direction: row;
+    animation: slider-animation 15s infinite alternate;
+     
 }
 
-.hero-content .hero-box {
-    height: 80vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    transform: translate(-50%, -50%);
-    padding-top:50px;
-}
+.slider-1, .slider-2, .slider-3 {
 
-.hero-content .hero-box:nth-child(1) {
-
-    background-color: #990000; 
-    background-image: linear-gradient(147deg, #990000 0%, #ff0000 74%); 
-}
-
-.hero-content .hero-box:nth-child(2) {
-    border: 1px solid black;
-    background-color: white;
-    /* background-color: #990000;
-    background-image: linear-gradient(147deg, #ff0000 0%,  #990000 74%); */
-}
-.hero-content .hero-box:nth-child(3) {
-    border: 1px solid black;
-    background-color: grey;
-    /* background-color: #990000;
-    background-image: linear-gradient(147deg, #990000 0%, #ff0000 74%); */
-}
-
-.hero-slider-tabs input {
-    visibility: hidden;
-    display: none;
-}
-
-
-.labels {   
-    display: flex;
-    gap: 10px;
-    position: absolute; 
-    bottom: 15%;
-    left: 15%;   
-    transform: translateX(-50%, -50%);
-    z-index: 10; /* for them to be always on top */
-    
-}
-
-.labels label {
-    height: 15px;
-    width: 10px;
-    background-color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all .4s ease-in-out;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-
-}
-.hero-slider-tabs input:nth-child(1):checked ~ .labels label:nth-child(1),
-.hero-slider-tabs input:nth-child(2):checked ~ .labels label:nth-child(2),
-.hero-slider-tabs input:nth-child(3):checked ~ .labels label:nth-child(3) {
-    width: 50px;
-    background-color: var(--red);
-    opacity: 1;
-}
-/* 
-  .hero-image { 
-    height: 100vw;
-    width: 100%;
-    padding: 2px;
+    width: calc(100% /3);
+    max-height: 80vh;
     object-fit: cover;
-    border-radius: 30px;
-    box-shadow: 5px 5px 5px 10px rgba(224, 221, 221, 0.308); 
-    box-shadow: rgba(255, 255, 255, 0.144) 0px 10px 10px 10px;
-    box-shadow: rgba(74, 74, 80, 0.267) 0px 4px 16px, rgba(127, 127, 151, 0.452) 0px 8px 32px;
-}  */
-
-
-
-
-.div-side {
-   background-color: var(--black);
+    
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    border: solid var(--red) 3px;
+    box-shadow: 0 4px 0 rgba(221, 208, 208, 0.1); 
+    justify-content: flex-start;
+    align-items:center;
+    /* transition: transform 1s ease; */
+    
+    display: flex;
 }
+
+@keyframes slider-animation {
+    0%{ transform: translateX(0); 
+    }
+    33.33%{ transform: translateX(0); 
+    }
+    66.66%{ transform: translateX(-33.33%); 
+    }
+    100%{ transform: translateX(-66.66%); 
+    }
+}
+
+.slider-1 {
+    background-image: url(../img/Homepage/Hero-slider-background_test2.JPG);
+    background-size: 90%;
+    background-repeat: no-repeat;
+}
+
+.slider-2 {
+    background-image: url(../img//Homepage/Dungeon-chest_test.PNG);
+    background-size: 80;
+    background-repeat: no-repeat;
+}
+
+.slider-3 {
+    background-image: url(../img//Homepage/SNES-background_test.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+.hero-text {
+    color: white;
+    font-family: 'VT323', monospace;
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: var(--font-size-large);
+    grid-area: hero-text;  
+    
+}
+
+.hero-text > h1 { 
+    background-color: var(--black);
+}
+
+.hero-text p {
+    background-color: var(--black);
+    font-size: var(--font-size-large);
+}
+
+.hero-button1, .hero-button2, .hero-button3 {
+    background: var(--black);
+    font-size: var(--font-size-large);
+    font-family: 'VT323', monospace;
+    border: 2px solid var(--red);
+    color: var(--white);
+    padding: 0.55rem 1.1rem;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease;
+    grid-area: hero-button;
+
+}
+
+.hero-button1:hover, .hero-button2:hover, .hero-button3:hover {
+    background: var(--red);
+    transform: scale(1.05);
+    opacity: 1;
+    color: var(--black);
+}
+
+
+/* .slider-1, .slider-2, .slider-3 {
+  width: 100%;
+  display:grid;
+  grid-template-areas:
+  "hero-text" "hero-slider1" "hero-slider1"
+  "pixel-figures" "hero-slider1" "hero-slider1"
+   "hero-button" "hero-slider1" "hero-slider1"
+   "hero-banner" "hero-slider1" "hero-slider1";
+} */
+
+.hero-slider1 {
+   grid-area: "hero-slider1";
+}
+
+.hero-banner {
+    background-color: var(--red);
+    min-width: 100vh;
+    margin: 0 auto;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+    /* -- PRODUCT SECTION -- */
 
 .product-section {
-    background-color: var(--black);
-    padding-top: 100px;
-    padding-bottom: 100px;
+    background-color: black;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     
     display:grid;
     grid-template-columns: column;
@@ -128,7 +164,7 @@
 .product-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    gap: var(--general-gap-desktop);
     justify-content:flex-start;
     flex-wrap: wrap;
     margin: 20px;
@@ -147,12 +183,30 @@ footer {
     margin: 0;
 }
 
-/* tablet */
+
+    /* -- TABLET -- */
 @media screen and (min-width:768px) {
+
+    .hero-carousel {
+        min-width: 300vw;
+        min-height: 50wh;
+    }
+
+    .hero-banner {
+    background-color: var(--red);
+    max-width: 100vh;
+    margin: 0 auto;
+    padding: 0.5rem;
+    text-align: center;
+    color: white;
+    font-size: var(--font-size-large);
+}
 
 }
 
-/* small desktop */
+
+    /* -- SMALL DESKTOP -- */
+
 @media screen and (min-width:960px) {
         #wrapper {
         display: grid;
@@ -162,18 +216,50 @@ footer {
 
     .div-side {
         background-color: black;
+        z-index: 1000;
     }   
+    
+    .hero-wrapper { 
+        max-width: 60vw;
+        max-height: 60vh;
+    }
+    
+    .slider-1 {
+    background-image: url(../img/Homepage/Hero-slider-background_test2.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem;
     
 }
 
-/* large desktop */
+    .slider-2 {
+    background-image: url(../img//Homepage/Dungeon-chest_test.PNG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem;
+}
+
+    .slider-3 {
+    background-image: url(../img//Homepage/SNES-background_test.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem;
+}
+
+}
+
+    /* -- LARGE DESKTOP -- */
+
 @media screen and (min-width:1200px) {
         #wrapper {
         display: grid;
         grid-template-columns: 1fr 8fr 1fr;
     }
 
-    .div-side {
-        background-color: black;
-    }   
-}
+        .hero-wrapper { 
+        max-width: 100vh;
+        max-height: 70vh;
+        
+        }
+
+ }
