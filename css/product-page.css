@@ -8,6 +8,8 @@
     --content-padding-inline: 1.875rem; /* ca 30px */
     --button-border-radius: 0.25rem; /* ca 4px */
     --carousel-gap: 1rem;
+
+    --section-padding-block: 3rem; /* ca 48px */ 
 }
 
 body { 
@@ -31,7 +33,7 @@ main {
 
 /* Get on the same page and merge into main */
 section {
-    padding-block: 3rem; /* ca 48px */ 
+    padding-block: var(--section-padding-block);
     padding-inline: 2.25rem /* ca 36px */
 }
 
