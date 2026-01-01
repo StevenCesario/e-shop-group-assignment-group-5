@@ -1,45 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- For the hamburgermenu from w3schools -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts/general.js" defer></script>
+  <title>NShop – contact</title>
+   <!----<link rel="stylesheet" href="css/general.css" />-->
 
-    <title>NShop – Contact</title>
+  <link rel="stylesheet" href="css/productList.css" />
+  <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/homepage.css">
+        <link rel="stylesheet" href="css/contact.css">
 
-    <!-- Reusing existing styling -->
-    <link rel="stylesheet" href="css/productList.css" />
-  </head>
+</head>
 
-  <body>
-    <!-- HEADER  -->
-    <header>
-      <nav class="nav">
-        <a href="Homepage.html">
-          <img src="img/Nshop.logo.jpg" alt="Nshop logo" class="logo" />
+<body>
+  <!-- =====================
+       HEADER
+       ===================== -->
+ <header id="header">
+      
+
+      <nav>
+    
+        <!-- Logo now links back to homepage -->
+        <a class="logo-link" href="Homepage.html">
+            <img src="img/Nshop.logo.jpg" alt="Nshop logo" class="logo" />
         </a>
 
         <div class="nav-links">
+            <a href="productpage-nes.html">NES</a>
+            <a href="productpage.snes.html">SNES</a>
+            <a href="productlist.html">Products</a>
+            
+        </div>
+      
+
+
+        <div id="myLinks">
           <a href="productpage-nes.html">NES</a>
           <a href="productpage.snes.html">SNES</a>
           <a href="productlist.html">Products</a>
-          <button class="login-btn">Login</button>
         </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars fa-2x"></i>
+        </a>
 
-        <div class="search-container">
-          <input type="text" placeholder="Search for products..." />
-          <div class="search-icon">
-            <i class="fa fa-search"></i>
-          </div>
-        </div>
-
-        <button class="cart-btn">Kundvagn (3)</button>
+        <div class="header-right">
+              <div class="search-container">
+                   <!--Search without styling until now------- -->
+                    <input type="text" placeholder="Search for products..." />
+                      <div class="search-icon">
+                        <a href="#" aria-label="Search">
+                      <i class="fa fa-search" aria-hidden="true" title=""Search"></i></a>
+   
+                      </div>
+                </div>
+                        <button class="cart-button"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true">(3)</i></button>
+              
+            </div>
+        
       </nav>
     </header>
+  
+     <div class="hero-container">
+
+  <section class="hero">
+            <img src="img/nahid/contact.jpg" alt="All products hero img" />
+
+        <p>
+          Please reach out to us with any questions, comments, or feedback
+          you may have. We're here to help and would love to hear from you!
+
+        </p>
+
+  </section>
+
+  </div>
+
 
     <!-- CONTACT SECTION -->
     <section class="section">
@@ -55,44 +97,36 @@
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="5" required></textarea>
 
-        <button type="submit" class="Load-btn">Send</button>
+        <button type="submit" class="explor-btn">Send</button>
       </form>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-      <p>
-        Om oss<br />
-        Vi är ett gäng fullstack studenter som älskar retrospel och ville skapa
-        en inbjudande och stilren e-shop med två av de större retro-konsolerna
-        någonsin.
-      </p>
+   
+ <!-- =====================
+       FOOTER
+       ===================== -->
+  <footer>
+    <p>
+      Om oss<br />Vi är ett gäng fullstack studenter som älskar retrospel och
+      ville skapa en inbjudande och stilren e-shop med två av de större
+      retro-konsolerna någonsin.
+    </p>
+    <p>
+    <a id="footer-mail" href="contact.html">Kontakta oss</a><br /> Eller via mobil :0700-123456
+    </p>
+    <p>Säker betalning med</p>
+    <div class="footer-images">
+      <img src="./img/Mastercard.svg" alt="Mastercard" height="16px" />
+      <img src="./img/Klarna.png" alt="Klarna" height="16px" />
+      <img src="./img/VISA.svg" alt="VISA" height="16px" />
+    </div>
 
-      <p>
-        Kontakt<br />
-        Kontakt<br /><a id="footer-mail" href="contact.html">info@nshop.com</a
-        ><br />0700-123456 ><br />
-        0700-123456
-      </p>
+    <p>Vi levererar med</p>
+    <div class="footer-images">
+      <img id="leverans" src="./img/Postnord.svg" alt="Postnord" height="16px" />
+    </div>
+    <p>Made with love by &copy; Group 5</p>
+  </footer>
+</body>
 
-      <p>Säker betalning med</p>
-      <div class="footer-images">
-        <img src="./img/Mastercard.svg" alt="Mastercard" height="16px" />
-        <img src="./img/Klarna.png" alt="Klarna" height="16px" />
-        <img src="./img/VISA.svg" alt="VISA" height="16px" />
-      </div>
-
-      <p>Vi levererar med</p>
-      <div class="footer-images">
-        <img
-          id="leverans"
-          src="./img/Postnord.svg"
-          alt="Postnord"
-          height="16px"
-        />
-      </div>
-
-      <p>Made with love by &copy; Group 5</p>
-    </footer>
-  </body>
 </html>

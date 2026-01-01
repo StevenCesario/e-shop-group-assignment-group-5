@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Nshop - Homepage</title>
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/homepage.css">
-</head>
+    <!-- For the hamburgermenu from w3schools -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts/general.js" defer></script>
+  </head>
 <body>
 
   <body>
@@ -16,9 +19,10 @@
     <header id="header">
       
 
-     <nav class="nav">
+      <nav>
+    
         <!-- Logo now links back to homepage -->
-        <a href="Homepage.html">
+        <a class="logo-link" href="Homepage.html">
             <img src="img/Nshop.logo.jpg" alt="Nshop logo" class="logo" />
         </a>
 
@@ -26,7 +30,7 @@
             <a href="productpage-nes.html">NES</a>
             <a href="productpage.snes.html">SNES</a>
             <a href="productlist.html">Products</a>
-            <button class="login-btn">Login</button>
+            
         </div>
       <div class="search-container">
     
@@ -36,8 +40,32 @@
    
             </div>
       </div>
+      
 
-        <button class="cart-button">Kundvagn (3)</button>
+
+        <div id="myLinks">
+          <a href="productpage-nes.html">NES</a>
+          <a href="productpage.snes.html">SNES</a>
+          <a href="productlist.html">Products</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars fa-2x"></i>
+        </a>
+
+        <div class="header-right">
+              <div class="search-container">
+                   <!--Search without styling until now------- -->
+                    <input type="text" placeholder="Search for products..." />
+                      <div class="search-icon">
+                        <a href="#" aria-label="Search">
+                      <i class="fa fa-search" aria-hidden="true" title=""Search"></i></a>
+   
+                      </div>
+                </div>
+                        <button class="cart-button"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true">(3)</i></button>
+              
+            </div>
+        
       </nav>
     </header>
 
@@ -205,20 +233,21 @@
     </a>
 
     <footer>
+      <h3>Om oss</h3>
       <p>
-        Om oss<br />Vi är ett gäng fullstack studenter som älskar retrospel och
+        Vi är ett gäng fullstack studenter som älskar retrospel och
         ville skapa en inbjudande och stilren e-shop med två av de större
         retro-konsolerna någonsin.
       </p>
       <p>
-    <a id="footer-mail" href="contact.html">Kontakta oss</a><br /> Eller via mobil :0700-123456
+    <a id="footer-mail" href="contact.html">Kontakta oss</a><br /> Eller via mobil: 0700-123456
        
       </p>
       <p>Säker betalning med</p>
       <div class="footer-images">
-        <img src="./img/Mastercard.svg" alt="Mastercard" height="16px" />
-        <img src="./img/Klarna.png" alt="Klarna" height="16px" />
-        <img src="./img/VISA.svg" alt="VISA" height="16px" />
+        <img src="./img/Mastercard.svg" alt="Mastercard" height="20px" />
+        <img src="./img/Klarna.png" alt="Klarna" height="20px" />
+        <img src="./img/VISA.svg" alt="VISA" height="20px" />
       </div>
 
       <p>Vi levererar med</p>

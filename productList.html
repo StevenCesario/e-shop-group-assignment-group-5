@@ -5,21 +5,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <title>NShop – Retro Gaming Store</title>
+   <!-- For the hamburgermenu from w3schools -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts/general.js" defer></script>
+  <title>NShop – All products</title>
    <!----<link rel="stylesheet" href="css/general.css" />-->
 
   <link rel="stylesheet" href="css/productList.css" />
+  <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/homepage.css">
 </head>
 
 <body>
   <!-- =====================
        HEADER
        ===================== -->
-  <header>
-   <nav class="nav">
+ <header id="header">
+      
+
+      <nav>
+    
         <!-- Logo now links back to homepage -->
-        <a href="Homepage.html">
+        <a class="logo-link" href="Homepage.html">
             <img src="img/Nshop.logo.jpg" alt="Nshop logo" class="logo" />
         </a>
 
@@ -27,60 +34,71 @@
             <a href="productpage-nes.html">NES</a>
             <a href="productpage.snes.html">SNES</a>
             <a href="productlist.html">Products</a>
-            <button class="login-btn">Login</button>
+            
         </div>
-      <!--Search without styling until now------- -->
-      <div class="search-container">
-    
-      <input type="text" placeholder="Search for products..." />
-            <div class="search-icon">
-              <i class="fa fa-search"></i>
+      
+
+
+        <div id="myLinks">
+          <a href="productpage-nes.html">NES</a>
+          <a href="productpage.snes.html">SNES</a>
+          <a href="productlist.html">Products</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars fa-2x"></i>
+        </a>
+
+        <div class="header-right">
+              <div class="search-container">
+                   <!--Search without styling until now------- -->
+                    <input type="text" placeholder="Search for products..." />
+                      <div class="search-icon">
+                        <a href="#" aria-label="Search">
+                      <i class="fa fa-search" aria-hidden="true" title=""Search"></i></a>
    
-    </div>
-    </div>
-      <!------------------------------------------> 
-    <button class="cart-btn">Kundvagn (3)</button>
-    </nav>
-    
-  </header>
+                      </div>
+                </div>
+                        <button class="cart-button"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true">(3)</i></button>
+              
+            </div>
+        
+      </nav>
+    </header>
 
   <!-- =====================
        HERO
        ===================== -->
+       <div class="hero-container">
+
   <section class="hero">
-    <!--<div class="hero-content">
-      <div class="hero-after">
-        <img src="img/Nshop.logo.jpg" alt="Nshop logo" />-->
+            <img src="img/nahid/hero.png" alt="All products hero img" />
+
         <p>
           Retro games, classic consoles, and pixel-powered joy. A nostalgic
           adventure for every gamer.
         </p>
-        <a  class="explor-btn" href="#anchor">Products</a>
-    
+                      <a  class="explor-btn" href="#anchor">Products</a>
+
   </section>
+
+  </div>
 
   <!-- =====================
      PRODUCTS
      ===================== -->
   <section class="section">
+    
     <h2 id= "anchor" class="section-title">All Products</h2>
 
     <div class="product-grid">
       <!-- block 1 -->
       <div class="product big-product">
-
-        <div class="product-img">💾</div>
-        <div class="product-body">
-          <h3>Game Cartridge</h3>
-          <div class="price">$19</div>
-        </div>
+        <img src="img/nahid/nes-hero.avif" alt="All products hero img"  />
+       
       </div>
-
-
       <div class="product">
-        <div class="product-img">💾</div>
+        <div class="product-img">nes</div>
         <div class="product-body">
-          <h3>Game Cartridge</h3>
           <div class="price">$19</div>
         </div>
       </div>
@@ -88,46 +106,35 @@
 
 
       <div class="product">
-        <div class="product-img">💾</div>
+        <div class="product-img">nes</div>
         <div class="product-body">
-          <h3>Game Cartridge</h3>
           <div class="price">$19</div>
         </div>
       </div>
 
 
       <div class="product">
-        <div class="product-img">👾</div>
+        <div class="product-img">nes</div>
         <div class="product-body">
-          <h3>Pixel Figure</h3>
           <div class="price">$29</div>
         </div>
       </div>
 
       <div class="product">
-        <div class="product-img">💾</div>
+        <div class="product-img">nes</div>
         <div class="product-body">
-          <h3>Game Cartridge</h3>
           <div class="price">$19</div>
         </div>
       </div>
 
       <!-- block 2 -->
-      <!-- block 1 -->
-      <div class="product big-product">
-
-        <div class="product-img">💾</div>
-        <div class="product-body">
-          <h3>Game Cartridge</h3>
-          <div class="price">$19</div>
-        </div>
+        <div class="product big-product">
+        <img src="img/nahid/snes-hero.jpg" alt="All products hero img"  />
+       
       </div>
-
-
       <div class="product">
-        <div class="product-img">💾</div>
+        <div class="product-img">snes</div>
         <div class="product-body">
-          <h3>Game Cartridge</h3>
           <div class="price">$19</div>
         </div>
       </div>
@@ -135,46 +142,34 @@
 
 
       <div class="product">
-        <div class="product-img">💾</div>
+        <div class="product-img">snes</div>
         <div class="product-body">
-          <h3>Game Cartridge</h3>
           <div class="price">$19</div>
         </div>
       </div>
 
 
       <div class="product">
-        <div class="product-img">👾</div>
+        <div class="product-img">snes</div>
         <div class="product-body">
-          <h3>Pixel Figure</h3>
           <div class="price">$29</div>
         </div>
       </div>
 
       <div class="product">
-        <div class="product-img">💾</div>
+        <div class="product-img">snes</div>
         <div class="product-body">
-          <h3>Game Cartridge</h3>
           <div class="price">$19</div>
         </div>
       </div>
-
       <!-- block 3 -->
-      <!-- block 1 -->
-      <div class="product big-product">
-
-        <div class="product-img">💾</div>
-        <div class="product-body">
-          <h3>Game Cartridge</h3>
-          <div class="price">$19</div>
-        </div>
+        <div class="product big-product">
+        <img src="img/nahid/spel.png" alt="All products hero img"  />
+       
       </div>
-
-
       <div class="product">
-        <div class="product-img">💾</div>
+        <div class="product-img">spel</div>
         <div class="product-body">
-          <h3>Game Cartridge</h3>
           <div class="price">$19</div>
         </div>
       </div>
@@ -182,36 +177,68 @@
 
 
       <div class="product">
-        <div class="product-img">💾</div>
+        <div class="product-img">spel</div>
         <div class="product-body">
-          <h3>Game Cartridge</h3>
           <div class="price">$19</div>
         </div>
       </div>
 
 
       <div class="product">
-        <div class="product-img">👾</div>
+        <div class="product-img">spel</div>
         <div class="product-body">
-          <h3>Pixel Figure</h3>
           <div class="price">$29</div>
         </div>
       </div>
 
       <div class="product">
-        <div class="product-img">💾</div>
+        <div class="product-img">spel</div>
         <div class="product-body">
-          <h3>Game Cartridge</h3>
           <div class="price">$19</div>
         </div>
-</div>
+      </div>
       <!-- end block 3 -->
+         <div class="product big-product">
+        <img src="img/nahid/accessories.png" alt="All products hero img"  />
+       
+      </div>
+      <div class="product">
+        <div class="product-img">Cable</div>
+        <div class="product-body">
+          <div class="price">$19</div>
+        </div>
+      </div>
+
+
+
+      <div class="product">
+        <div class="product-img">Controller</div>
+        <div class="product-body">
+          <div class="price">$19</div>
+        </div>
+      </div>
+
+
+      <div class="product">
+        <div class="product-img">Cable</div>
+        <div class="product-body">
+          <div class="price">$29</div>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="product-img">Controller</div>
+        <div class="product-body">
+          <div class="price">$19</div>
+        </div>
+      </div>
     </div>
-  </section>
-  
-  <div class="div-Load-btn">
-    <button class="Load-btn">More Products</button>
+      <div class="load-more-container">
+    <button class="load-more-btn">More Products</button>
   </div>
+  </section>
+
+
   </div>
 
  <!-- =====================

@@ -10,29 +10,53 @@
 <body>
 
     <header id="header">
-        <img src="img/Nshop.logo.jpg" alt="Nshop logo">
+        <nav>
+            <!-- Logo now links back to homepage -->
+            <a class="logo-link" href="Homepage.html">
+            <img src="img/Nshop.logo.jpg" alt="Nshop logo" class="logo" />
+            </a>
+
+            <div class="nav-links">
+                <a href="productpage-nes.html">NES</a>
+                <a href="productpage.snes.html">SNES</a>
+                <a href="productlist.html">Products</a>
+            
+            </div>
+
+            <div id="myLinks">
+          <a href="productpage-nes.html">NES</a>
+          <a href="productpage.snes.html">SNES</a>
+          <a href="productlist.html">Products</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars fa-2x"></i>
+        </a>
+
+        <div class="header-right">
+              <div class="search-container">
+                   <!--Search without styling until now------- -->
+                    <input type="text" placeholder="Search for products..." />
+                      <div class="search-icon">
+                        <a href="#" aria-label="Search">
+                      <i class="fa fa-search" aria-hidden="true" title=""Search"></i></a>
+   
+                      </div>
+                </div>
+                        <button class="cart-button"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true">(3)</i></button>
+              
+                </div>
+        </nav>
     </header>
 
-    <nav>
-        <div id="div-navbar"><img src=""></div>
-
-        <div id="link">
-            <a href="productpage-nes.html">NES</a>
-            <a href="productpage.snes.html">SNES</a>
-            <a href="">Products</a>
-        </div>
-
-        <button id="cart-button">Kundvagn (3)</button>
-    </nav>
 
     <main id="wrapper">
         <div class="div-side"></div>
         <div id="main-content">
             <div class="hero">
                 <img src="img/Productpage-snes/snes-hero.jpg" alt="" width="100%">
-                <div class="hero-text">
+                <!-- <div class="hero-text">
                     <h2>Bli Super <br> Med <br> Super Mario</h2>
-                </div>
+                </div> -->
             </div>
 
             <div id="products">
@@ -40,25 +64,40 @@
                 <h2>Konsoler och tillbehör</h2>
                 <section class="product-section">
                     <article>
-                        <a href="blank">
-                            <img src="img/Homepage/SNES-Console.png" alt="SNES konsol" width="100%">
+                        <a href="">
+                            <img src="img/Homepage/SNES-Console.png" alt="SNES konsol" class="img-responsive">
                         </a>  
-                        <h3>NES konsol</h3>  
-                        <p>Pris</p>
+                        <div class="product-text">
+                            <h3>SNES konsol</h3>  
+                            <p>Pris 999 kr</p>
+                        </div>
                     </article>
                     <article>
-                        <a href="blank">
-                            <img src="blank" alt="SNES kabel" width="100%">
+                        <a href="">
+                            <img src="img/Productpage-snes/snes-kabel.webp" alt="SNES AV kabel" class="img-responsive">
                         </a>
-                        <h3>NES kabel</h3>
-                        <p>Pris</p>
+                        <div class="product-text">
+                            <h3>SNES AV kabel</h3>
+                            <p>Pris 99 kr</p>
+                        </div>
                     </article>
                     <article>
-                        <a href="blank">
-                            <img src="img/Homepage/SNES-Controller.png" alt="SNES kontrol" width="100%">
+                        <a href="">
+                            <img src="img/Homepage/SNES-Controller.png" alt="SNES kontrol" class="img-responsive">
                         </a>
-                        <h3>NES kontrol</h3>
-                        <p>Pris</p>
+                        <div class="product-text">
+                            <h3>SNES kontrol</h3>
+                            <p>Pris 299 kr</p>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="">
+                            <img src="img/Productpage-snes/game-commander.webp" alt=" SNES Game Commander" class="img-responsive">
+                        </a>
+                        <div class="product-text">
+                            <h3>SNES Game Commander</h3>
+                            <p>Pris 399 kr</p>
+                        </div>
                     </article>
                 </section>
                 <!-- GAMES -->
@@ -66,24 +105,75 @@
                 <section class="product-section">
                     <article>
                         <a href="">
-                            <img src="img/link-to-the-past.jpg" alt="" width="100%">
+                            <img src="img/Productpage-snes/zelda-alttp.webp" alt="The legend of Zelda a link to the past" class="img-responsive">
                         </a>
-                        <h3>The legend of Zelda <br> a link to the past</h3>
-                        <p>Pris</p>
+                        <div class="product-text">
+                            <h3>The legend of Zelda <br> a link to the past</h3>
+                            <p>Pris 199 kr</p>
+                        </div>
                     </article>
                     <article>
-                        <a href="blank">
-                            <img src="" alt="NES spel">
+                        <a href="">
+                            <img src="img/Productpage-snes/super-mario-world.webp" alt="Super Mario World" class="img-responsive">
                         </a>
-                        <h3>Spel</h3>
-                        <p>Pris</p>
+                        <div class="product-text">
+                            <h3>Super Mario World</h3>
+                            <p>Pris 199 kr</p>
+                        </div>
                     </article>
                     <article>
-                        <a href="blank">
-                            <img src="" alt="NES spel">
+                        <a href="">
+                            <img src="img/Productpage-snes/street-fighter2.webp" alt="Street fighter II" class="img-responsive">
                         </a>
-                        <h3>Spel</h3>
-                        <p>Pris</p>
+                        <div class="product-text">
+                            <h3>Street Fighter II</h3>
+                            <p>Pris 199 kr</p>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="">
+                            <img src="img/Productpage-snes/dracula.webp" alt="Dracula" class="img-responsive">
+                        </a>
+                        <div class="product-text">
+                            <h3>Dracula</h3>
+                            <p>Pris 199 kr</p>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="">
+                            <img src="img/Productpage-snes/dinocity.webp" alt="DinoCity" class="img-responsive">
+                        </a>
+                        <div class="product-text">
+                            <h3>DinoCity</h3>
+                            <p>Pris 199 kr</p>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="">
+                            <img src="img/Productpage-snes/mortal-kombat.webp" alt="Mortal Kombat" class="img-responsive">
+                        </a>
+                        <div class="product-text">
+                            <h3>Mortal Kombat</h3>
+                            <p>Pris 199 kr</p>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="">
+                            <img src="img/Productpage-snes/battle-clash.webp" alt="Battle Clash Super Scope" class="img-responsive">
+                        </a>
+                        <div class="product-text">
+                            <h3>Battle Clash (Super Scope)</h3>
+                            <p>Pris 199 kr</p>
+                        </div>
+                    </article>
+                    <article>
+                        <a href="">
+                            <img src="img/Productpage-snes/dragons-lair.webp" alt="Dragon's Lair" class="img-responsive">
+                        </a>
+                        <div class="product-text">
+                            <h3>Dragon's Lair</h3>
+                            <p>Pris 199 kr</p>
+                        </div>
                     </article>
                 </section>
             </div>
@@ -96,7 +186,8 @@
     </a>
 
     <footer>
-        <p>Om oss<br>Vi är ett gäng fullstack studenter som älskar retrospel och ville skapa en inbjudande och stilren e-shop <br> med två av de större retro-konsolerna någonsin.</p>
+        <h3>Om oss</h3>
+        <p>Vi är ett gäng fullstack studenter som älskar retrospel och ville skapa en inbjudande och stilren e-shop <br> med två av de större retro-konsolerna någonsin.</p>
         <p>Kontakt<br><a id="footer-mail" href="">info@nshop.com</a><br>0700-123456</p>
         <p>Säker betalning med</p>
         <div class="footer-images">
