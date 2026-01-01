@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=VT323&display=swap");
+
 :root {
   --black: #0e0e0e;
   --dark-gray: #2a2a2a;
@@ -16,130 +18,79 @@
 
 /* Body styles */
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background: var(--black);
   color: var(--white);
   line-height: 1.5;
-}
-
-a {
-  color: var(--white);
-  text-decoration: none;
-}
-
-/* =====================
-       HEADER / NAV
-       ===================== */
-header {
-  background: linear-gradient(180deg, #1a1a1a, #0e0e0e);
-  border-bottom: 2px solid var(--red);
-}
-
-.nav {
-  max-width: 100vw;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-}
-
-.logo {
-  margin: 1rem;
-  height: 6rem;
-  cursor: pointer;
-  transition: border 0.15s ease;
-  border-radius: 20%;
-}
-
-.logo:hover {
-  border: #e63946 2px solid;
-}
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  font-weight: 600;
-}
-
-.nav-links a:hover {
-  color: var(--red);
-}
-
-.login-btn,
-.Load-btn {
-  background: transparent;
-  border: 2px solid var(--red);
-  color: var(--white);
-  padding: 0.55rem 1.1rem;
-  border-radius: 6px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.15s ease, transform 0.15s ease;
-}
-
-.login-btn,
-.Load-btn:hover {
-  background: var(--red);
-  transform: translateY(-2px);
-}
-
-.div-Load-btn {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.cart-btn {
-  margin-left: auto; /*uses all the space left on the LEFT*/
-  background: transparent;
-  border: 2px solid var(--red);
-  color: var(--white);
-  padding: 0.55rem 1.1rem;
-  border-radius: 6px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.15s ease, transform 0.15s ease;
-}
-
-.cart-btn:hover {
-  background: var(--red);
-  transform: translateY(-2px);
 }
 
 /* =====================
        HERO
        ===================== */
 .hero {
-  min-height: 70vh;
+  margin-top: 15em;
+  position: relative;
+
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   text-align: center;
-  padding: 4rem 1rem;
-  background: radial-gradient(circle at top, #2b2b2b, #0e0e0e 70%);
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
 }
 
 .hero img {
-  width: 160px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
   margin-bottom: 1.5rem;
-}
-
-.hero h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  letter-spacing: 1px;
+  border-radius: 1.5rem;
 }
 
 .hero p {
-  max-width: 600px;
-  margin: 1rem auto 2rem;
+  max-width: 30rem;
+  padding: 0.5rem;
   color: var(--light-gray);
+  background-color: var(--dark-gray);
+  border-radius: 0.3em;
+  color: var(--light-gray);
+  position: absolute;
+  font-size: 2em;
+  font-family: "VT323", monospace;
+}
+
+.explor-btn {
+  margin-top: 1rem;
+  padding: 1em;
+  background-color: var(--red);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.2em;
+  font-size: 0.4em;
+  transition: background-color 0.3s, transform 0.2s;
+  font-family: "VT323", monospace;
+}
+
+.explor-btn:hover {
+  background-color: var(--dark-red);
+}
+
+.explor-btn:active {
+  transform: scale(0.95);
 }
 
 /* =====================
        PRODUCTS
        ===================== */
 .section {
-  max-width: 1200px;
+  max-width: 100vh;
   margin: auto;
   padding: 3rem 1rem;
 }
@@ -158,15 +109,13 @@ header {
   gap: 1.5rem;
 }
 
-/* ====== ADDING STYLES FROM THE NEW CODE ====== */
-
-/* Enhance product with hover effects, shadows, transition */
+/* hover effects, shadows, transition */
 .product {
-  background: var(--dark-gray);
-  border-radius: 10px;
+  background: var(--white);
+  border-radius: 1em;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer; /* make cursor pointer for interactivity */
+  cursor: pointer;
 }
 
 /* Hover effect: lift and shadow */
@@ -175,62 +124,48 @@ header {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
-/* Big product styles (already in your code, but re-adding hover effects for consistency) */
-.product.big-product {
-  grid-column: 1;
-  grid-row: span 2;
-  grid-column: span 2;
-  padding: 1rem;
+.product.big-product, .product.big-product2, .product.big-product3 {
+  grid-column: span 2; /* Just 2 columns wide */
+  grid-row: span 2; /* 2 rows tall */
+  grid-column: span 4;
+  padding: 0.4em;
   min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   border-radius: 1.2rem;
-  /* add hover effects for big-product if desired */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+/*.product.big-product2 {
+
+  background-image: url('../img/nahid/snes-hero.jpg');
+}
+.product.big-product3 {
+  background-image: url('../img/nahid/controller-hero.avif');
+}*/
 
 .product.big-product:hover {
   transform: translateY(-4px) rotate(-0.5deg);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
-
-/* Style for product images inside big-product, with gradient background and size */
-.product.big-product .product-img {
-  font-size: 5rem;
-  background: repeating-linear-gradient(
-    45deg,
-    #3a3a3a,
-    #3a3a3a 10px,
-    #2f2f2f 10px,
-    #2f2f2f 20px
-  );
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
+/* Style for product images */
+.product img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 1em;;
 }
 
 /* Style for image in normal product */
 .product-img {
   width: 100%;
   height: 180px; /* default height, can be overridden in big-product */
-  background: repeating-linear-gradient(
-    45deg,
-    #3a3a3a,
-    #3a3a3a 10px,
-    #2f2f2f 10px,
-    #2f2f2f 20px
-  );
+
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
-  color: var(--gray);
   object-fit: contain;
   margin-bottom: 1rem;
   transition: all 0.2s ease;
@@ -249,8 +184,8 @@ header {
 .price {
   color: var(--red);
   font-weight: 800;
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
+  margin-top: 0rem;
+  font-size: 2rem;
 }
 
 /* =====================
@@ -289,54 +224,6 @@ footer h4 {
   }
 }
 
-/* =====================
-   Additional styles from the new code
-   ===================== */
-
-.hero {
-  background-image: url("../img/nahid/hero.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  min-height: 60vh;
-  padding: 2rem;
-  color: #fff;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #000; /* optional */
-}
-
-.hero-content {
-  background-color: rgba(0, 0, 0, 0.5);
-  display: inline-block;
-  padding: 20px;
-  border-radius: 15px;
-}
-
-.explor-btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: var(--red);
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 3em;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.explor-btn:hover {
-  background-color: var(--dark-red);
-}
-
-.explor-btn:active {
-  transform: scale(0.95);
-}
-
 /* FOOTER additional styles */
 footer {
   margin-top: 400px;
@@ -353,8 +240,6 @@ footer > p {
   color: white;
   padding: 4px;
 }
-
-
 
 .footer-images {
   display: flex;
@@ -377,13 +262,7 @@ footer > p {
   font-size: 2em; /* reduce font size on smaller screens for better fit */
   padding: 1em 2em;
 }
-.hero p {
-  font-size: 2rem;
-  color: var(--dark-red);
-  background-color: var(--dark-gray);
-  font-weight: bold;
-  border-radius: 0.3em;
-}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   /* Reduce button size if needed */
