@@ -14,7 +14,7 @@
 
 .hero-section { 
     background-color: var(--black);
-    width: 48rem;
+    min-width: 48rem;
     height: 40vh;
     padding: 2rem;
     margin:0 auto;
@@ -24,7 +24,6 @@
     justify-content: center;
     /* position: relative; */
     transition: all .5s linear;
-     /*  Hur gör jag detta element starkare så hero-boxes håller sig i den.*/
      border-radius: 0,5rem;
     
 } 
@@ -111,7 +110,6 @@
 
 
 
-
 .div-side {
    background-color: var(--black);
 }
@@ -127,8 +125,7 @@
 
 .product-row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: 1fr;
     justify-content:flex-start;
     flex-wrap: wrap;
     margin: 20px;
@@ -136,8 +133,8 @@
 
 .product-card {
     border: 1px solid #ccc;
-    border-radius: 20px;
-    padding: 16px;
+    border-radius: 1.5rem;
+    padding: 1rem;
     text-align: center;
     background-color: white;
     color: black;
@@ -149,6 +146,15 @@ footer {
 
 /* tablet */
 @media screen and (min-width:768px) {
+
+.product-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    margin: 1.25rem; }
+
 
 }
 
@@ -164,6 +170,16 @@ footer {
         background-color: black;
     }   
     
+.product-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+
 }
 
 /* large desktop */
