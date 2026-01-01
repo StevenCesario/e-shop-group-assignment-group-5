@@ -3,13 +3,46 @@
     --green: #4CAF50;
     --green-darker: #45a049;
 
-    /* SPACING */
+    /* FONT FAMILIES */
+    --pixel-font: "VT323", monospace;
+
+    /* PADDING */
     --content-padding-block: 1.125rem; /* ca 18px */
     --content-padding-inline: 1.875rem; /* ca 30px */
-    --button-border-radius: 0.25rem; /* ca 4px */
-    --carousel-gap: 1rem;
+    --content-padding-sm: 0.375rem; /* ca 6px */
+    --content-padding-md: 0.75rem; /* 12px */
 
     --section-padding-block: 3rem; /* ca 48px */ 
+    --section-padding-block-lg: 5.125rem; /* 82px */ 
+    --section-padding-inline-sm: 2.25rem; /* ca 36px */
+    --section-padding-inline-md: 3.25rem; /* ca 52px */
+
+    /* GAP */
+    --carousel-gap: 1rem;
+    --row-gap: 1.5rem; /* ca 24px */
+
+    /* SECTION SPECIFIC */
+    --hero-section-padding-top: 4.5rem; /* ca 72px */
+    --hero-section-min-height: 28.75rem; /* ca 460px */
+    
+    --hero-img-max-width-mobile: 31.25rem; /* ca 500px */
+    --hero-img-box-shadow: 0 0 40px rgba(255, 255, 255, 0.45); 
+    --hero-img-border: 1px solid rgba(255, 255, 255, 0.8); /* Subtle edge definition */
+
+    --title-padding-left: 0.5rem;
+
+    --feature-section-min-height: 17.5rem; /* 280px */
+
+    /* BORDER RADIUS */
+    --button-border-radius: 0.25rem; /* ca 4px */
+    --image-border-radius: 0.5rem;
+
+    /* FONT SIZES */
+    --font-size-md: 1.25rem; /* ca 20px */
+    --font-size-lg: 2rem;
+
+    /* ETC */
+    --header-red-styling: 0.313rem solid var(--red); /* ca 5px */
 }
 
 body { 
@@ -34,7 +67,7 @@ main {
 /* Get on the same page and merge into main */
 section {
     padding-block: var(--section-padding-block);
-    padding-inline: 2.25rem /* ca 36px */
+    padding-inline: var(--section-padding-inline-sm);
 }
 
 /* Merge into main? */
@@ -55,11 +88,11 @@ img {
 
 .product-hero-section {
     /* border: 2px solid red; */
-    padding-top: 4.5rem; /* ca 72px */
-    min-height: 28.75rem; /* ca 460px */
+    padding-top: var(--hero-section-padding-top);
+    min-height: var(--hero-section-min-height);
     display: grid;
     justify-items: center;
-    gap: 1.5rem; /* ca 24px */
+    gap: var(--row-gap);
     grid-template-areas:
         "title"
         "media"
@@ -70,29 +103,27 @@ img {
 
 .product-title {
     grid-area: title;
-    border-left: 0.313rem solid var(--red); /* ca 5px */
-    padding-left: 0.5rem;
+    border-left: var(--header-red-styling);
+    padding-left: --title-padding-left;
 }
 
 .hero-img-wrapper {
     grid-area: media;
-    min-height: 20rem; /* ca 320px */
     width: 100%;
-    max-width: 31.25rem; /* ca 500px */ /* Se till att bilden inte blir för stor på mobil */
+    max-width: var(--hero-img-max-width-mobile); /* Se till att bilden inte blir för stor på mobil */
     display: flex;
     place-content: center;
 }
 
 .product-main-image {
-    border-radius: 0.5rem;
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.45); 
-    border: 1px solid rgba(255, 255, 255, 0.8); /* Subtle edge definition */
+    border-radius: var(--image-border-radius);
+    box-shadow: var(--hero-img-box-shadow);
+    border: var(--hero-img-border);
 }
 
 .product-info-small {
     background-color: var(--gray);
-    padding: 0.375rem; /* ca 6px */
-    margin-inline: 0.5rem;
+    padding: var(--content-padding-sm);
     grid-area: info;
 }
 
@@ -115,10 +146,10 @@ img {
     background-color: var(--green);
     color: white;
     padding: var(--content-padding-block) var(--content-padding-inline);
-    font-size: 2rem;
+    font-size: var(--font-size-lg);
     font-weight: bold;
     border-radius: var(--button-border-radius);
-    font-family: "VT323", monospace;
+    font-family: var(--pixel-font);
 
     /* We use shadows with 0 blur to create solid blocks of color */
     box-shadow: 
@@ -127,9 +158,6 @@ img {
     0.125rem 0 0 0 #000, 
     0 -0.125rem 0 0 #000, 
     0 0.125rem 0 0 #000;
-  
-    /* Some breathing room so that it doesn't touch other elements */
-    margin: 0.5rem;
 }
 
 .product-buy-button:hover {
@@ -144,7 +172,7 @@ img {
 
 .product-feature-section {
     border: 2px solid green;
-    min-height: 17.5rem; /* 280px */
+    min-height: var(--feature-section-min-height);
 }
 
 .feature-section-media-wrapper {
@@ -217,8 +245,8 @@ img {
     scroll-snap-align: start;
 
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 0.75rem; /* 12px */
-    border-radius: 0.5rem;
+    padding: var(--content-padding-md);
+    border-radius: var(--image-border-radius);
     color: black;
     background-color: white; /* Dark gray med vit text kan oxå funka! */
 }
@@ -246,7 +274,7 @@ img {
     
     width: 2.5rem; /* ca 40px */
     height: 2.5rem;
-    font-size: 1.25rem; /* ca 20px */
+    font-size: var(--font-size-md);
     
     cursor: pointer;
     color: white;
@@ -276,7 +304,7 @@ img {
 /* tablet */
 @media screen and (min-width:768px) {
     section {
-        padding-inline: 3.25rem; /* ca 52px */
+        padding-inline: var(--section-padding-inline-md);
     }
 
     .upsell-section-grid {
@@ -284,6 +312,7 @@ img {
     }
 
     .feature-section-text-wrapper {
+        /* TODO: Change to max-width in another PR */
         width: 75ch;
     }
 }
@@ -291,8 +320,7 @@ img {
 /* small desktop */
 @media screen and (min-width:960px) {
     section {
-        padding-block: 5.125rem; /* 82px */ 
-        padding-inline: 4.5rem; /* 72px */
+        padding-block: var(--section-padding-block-lg)
     }
 
     .div-side {
@@ -300,7 +328,6 @@ img {
     }    
 
     .product-hero-section {
-        min-height: 45rem; /* ca 720px */
         border: 2px solid blue;
         grid-template-areas:
             "media title"
@@ -354,7 +381,6 @@ img {
         overflow: visible;
     }
 
-    
     .product-feature-section {
         display: grid;
         grid-template-columns: 1fr 2fr;
