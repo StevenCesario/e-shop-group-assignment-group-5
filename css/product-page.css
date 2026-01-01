@@ -4,10 +4,24 @@
     --green-darker: #45a049;
 
     /* SPACING */
-    --content-padding-block: 18px;
-    --content-padding-inline: 30px;
-    --button-border-radius: 4px;
+    --content-padding-block: 1.125rem; /* ca 18px */
+    --content-padding-inline: 1.875rem; /* ca 30px */
+    --content-all-round-padding-sm: 1rem; 
+    --content-gap: 3rem; /* ca 48px */
+    --section-padding-block: 3rem; /* ca 48px */
+    --section-padding-inline: 2.25rem; /* ca 36px */
+    --button-border-radius: 0.25rem; /*ca 4px */
+    --image-border-radius: 0.5rem; /* ca 8px */
+
     --carousel-gap: 16px;
+
+    --hero-section-min-height: 28.75rem; /* ca 460px */
+    --feature-section-min-height: 17.5rem; /* ca 280px */
+    --hero-section-padding-top: 4.5rem; /* ca 72px */
+    --title-padding-left: 0.5rem; /* ca 8px */
+    --buy-button-font-size-sm: 2rem;
+
+    --header-red-styling: 5px solid var(--red);
 }
 
 body { 
@@ -31,8 +45,8 @@ main {
 
 /* Get on the same page and merge into main */
 section {
-    padding-block: 48px; 
-    padding-inline: 36px;
+    padding-block: var(--section-padding-block); 
+    padding-inline: var(--section-padding-inline);
 }
 
 /* Merge into main? */
@@ -52,12 +66,11 @@ img {
 }
 
 .product-hero-section {
-    /* border: 2px solid red; */
-    padding-top: 72px;
-    min-height: 460px;
+    padding-top: var(--hero-section-padding-top);
+    min-height: var(--hero-section-min-height);
     display: grid;
     justify-items: center;
-    gap: 24px;
+    gap: var(--content-gap);
     grid-template-areas:
         "title"
         "media"
@@ -68,13 +81,12 @@ img {
 
 .product-title {
     grid-area: title;
-    border-left: 5px solid var(--red);
-    padding-left: 8px;
+    border-left: var(--header-red-styling);
+    padding-left: var(--title-padding-left);
 }
 
 .hero-img-wrapper {
     grid-area: media;
-    min-height: 320px;
     width: 100%;
     max-width: 500px; /* Se till att bilden inte blir för stor på mobil */
     display: flex;
@@ -82,15 +94,14 @@ img {
 }
 
 .product-main-image {
-    border-radius: 8px;
+    border-radius: var(--image-border-radius);
     box-shadow: 0 0 40px rgba(255, 255, 255, 0.45); 
-    border: 1px solid rgba(255, 255, 255, 0.8); /* Subtle edge definition */
+    border: 0.063rem solid rgba(255, 255, 255, 0.8); /* Subtle edge definition */
 }
 
 .product-info-small {
     background-color: var(--gray);
-    padding: 6px;
-    margin-inline: 8px;
+    padding: var(--content-all-round-padding-sm);
     grid-area: info;
 }
 
@@ -113,7 +124,7 @@ img {
     background-color: var(--green);
     color: white;
     padding: var(--content-padding-block) var(--content-padding-inline);
-    font-size: 32px;
+    font-size: var(--buy-button-font-size-sm);
     font-weight: bold;
     border-radius: var(--button-border-radius);
     font-family: "VT323", monospace;
@@ -127,12 +138,12 @@ img {
     0 6px 0 0 #000;
   
     /* Some breathing room so that it doesn't touch other elements */
-    margin: 8px;
+    margin: 0.5rem;
 }
 
 .product-buy-button:hover {
     background-color: var(--green-darker);
-    transform: translateY(-2px); /* Lift up 2px */
+    transform: translateY(-0.125rem); /* Lift up 2px */
 }
 
 .product-buy-button:active {
@@ -141,16 +152,11 @@ img {
 }
 
 .product-feature-section {
-    border: 2px solid green;
-    min-height: 280px;
+    min-height: var(--feature-section-min-height);
 }
 
 .feature-section-media-wrapper {
     display: none;
-}
-
-.product-upsell-section {
-    border: 2px solid blue;
 }
 
 /* Denna section är inte grid längre! */
@@ -215,8 +221,8 @@ img {
     scroll-snap-align: start;
 
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 12px;
-    border-radius: 8px;
+    padding: var(--content-all-round-padding-sm);
+    border-radius: var(--image-border-radius);
     color: black;
     background-color: white; /* Dark gray med vit text kan oxå funka! */
 }
@@ -244,7 +250,7 @@ img {
     
     width: 40px;
     height: 40px;
-    font-size: 20px;
+    font-size: var(--buy-button-font-size-sm);
     
     cursor: pointer;
     color: white;
@@ -299,7 +305,7 @@ img {
 
     .product-hero-section {
         min-height: 720px;
-        border: 2px solid blue;
+        /* border: 2px solid blue; */
         grid-template-areas:
             "media title"
             "media price"
