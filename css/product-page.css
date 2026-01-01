@@ -5,9 +5,9 @@
 
     /* SPACING */
     --content-padding-block: 1.125rem; /* ca 18px */
-    --content-padding-inline: 30px;
-    --button-border-radius: 4px;
-    --carousel-gap: 16px;
+    --content-padding-inline: 1.875rem; /* ca 30px */
+    --button-border-radius: 0.25rem; /* ca 4px */
+    --carousel-gap: 1rem;
 }
 
 body { 
@@ -31,8 +31,8 @@ main {
 
 /* Get on the same page and merge into main */
 section {
-    padding-block: 48px; 
-    padding-inline: 36px;
+    padding-block: 3rem; /* ca 48px */ 
+    padding-inline: 2.25rem /* ca 36px */
 }
 
 /* Merge into main? */
@@ -53,11 +53,11 @@ img {
 
 .product-hero-section {
     /* border: 2px solid red; */
-    padding-top: 72px;
-    min-height: 460px;
+    padding-top: 4.5rem; /* ca 72px */
+    min-height: 28.75rem; /* ca 460px */
     display: grid;
     justify-items: center;
-    gap: 24px;
+    gap: 1.5rem; /* ca 24px */
     grid-template-areas:
         "title"
         "media"
@@ -68,29 +68,29 @@ img {
 
 .product-title {
     grid-area: title;
-    border-left: 5px solid var(--red);
-    padding-left: 8px;
+    border-left: 0.313rem solid var(--red); /* ca 5px */
+    padding-left: 0.5rem;
 }
 
 .hero-img-wrapper {
     grid-area: media;
-    min-height: 320px;
+    min-height: 20rem; /* ca 320px */
     width: 100%;
-    max-width: 500px; /* Se till att bilden inte blir för stor på mobil */
+    max-width: 31.25rem; /* ca 500px */ /* Se till att bilden inte blir för stor på mobil */
     display: flex;
     place-content: center;
 }
 
 .product-main-image {
-    border-radius: 8px;
+    border-radius: 0.5rem;
     box-shadow: 0 0 40px rgba(255, 255, 255, 0.45); 
     border: 1px solid rgba(255, 255, 255, 0.8); /* Subtle edge definition */
 }
 
 .product-info-small {
     background-color: var(--gray);
-    padding: 6px;
-    margin-inline: 8px;
+    padding: 0.375rem; /* ca 6px */
+    margin-inline: 0.5rem;
     grid-area: info;
 }
 
@@ -113,26 +113,26 @@ img {
     background-color: var(--green);
     color: white;
     padding: var(--content-padding-block) var(--content-padding-inline);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: bold;
     border-radius: var(--button-border-radius);
     font-family: "VT323", monospace;
 
     /* We use shadows with 0 blur to create solid blocks of color */
     box-shadow: 
-    /* The "Pixels" on the corners */
-    -6px 0 0 0 #000, 
-    6px 0 0 0 #000, 
-    0 -6px 0 0 #000, 
-    0 6px 0 0 #000;
+    /* The "Pixels" on the corners */ /* ca 6px */
+    -0.125rem 0 0 0 #000, 
+    0.125rem 0 0 0 #000, 
+    0 -0.125rem 0 0 #000, 
+    0 0.125rem 0 0 #000;
   
     /* Some breathing room so that it doesn't touch other elements */
-    margin: 8px;
+    margin: 0.5rem;
 }
 
 .product-buy-button:hover {
     background-color: var(--green-darker);
-    transform: translateY(-2px); /* Lift up 2px */
+    transform: translateY(0.125rem); /* Lift up 2px */
 }
 
 .product-buy-button:active {
@@ -142,7 +142,7 @@ img {
 
 .product-feature-section {
     border: 2px solid green;
-    min-height: 280px;
+    min-height: 17.5rem; /* 280px */
 }
 
 .feature-section-media-wrapper {
@@ -215,8 +215,8 @@ img {
     scroll-snap-align: start;
 
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 12px;
-    border-radius: 8px;
+    padding: 0.75rem; /* 12px */
+    border-radius: 0.5rem;
     color: black;
     background-color: white; /* Dark gray med vit text kan oxå funka! */
 }
@@ -242,9 +242,9 @@ img {
     align-items: center;
     justify-content: center;
     
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
+    width: 2.5rem; /* ca 40px */
+    height: 2.5rem;
+    font-size: 1.25rem; /* ca 20px */
     
     cursor: pointer;
     color: white;
@@ -260,13 +260,13 @@ img {
 }
 
 /* Flytta knapparna något höger och vänster så att de inte täcker knapparna */
-.prev-btn { left: -20px; }
-.next-btn { right: -20px; }
+.prev-btn { left: 1.25rem; } /* ca 20px */
+.next-btn { right: 1.25rem; }
 
 /* TODO: Add to general.css */
 /* Protect specific icons from the global 'width: 100%' rule */
 .footer-images img {
-    height: 16px;       /* Force the small size */
+    height: 1rem;       /* Force the small size */
     width: auto;        /* Keep aspect ratio */
     display: inline-block; /* Let them sit side-by-side */
 }
@@ -274,7 +274,7 @@ img {
 /* tablet */
 @media screen and (min-width:768px) {
     section {
-        padding-inline: 52px;
+        padding-inline: 3.25rem; /* ca 52px */
     }
 
     .upsell-section-grid {
@@ -289,8 +289,8 @@ img {
 /* small desktop */
 @media screen and (min-width:960px) {
     section {
-        padding-block: 82px; 
-        padding-inline: 72px;
+        padding-block: 5.125rem; /* 82px */ 
+        padding-inline: 4.5rem; /* 72px */
     }
 
     .div-side {
@@ -298,7 +298,7 @@ img {
     }    
 
     .product-hero-section {
-        min-height: 720px;
+        min-height: 45rem; /* ca 720px */
         border: 2px solid blue;
         grid-template-areas:
             "media title"
@@ -313,39 +313,39 @@ img {
 
     .hero-img-wrapper {
         width: 100%; /* Let it fill its grid cell */
-        max-width: 700px;
+        max-width: 43.75rem; /* ca 700px */
         justify-self: center;
         align-self: center;
     }
 
     /* Gör ALLT större :) */
     .product-title {
-        font-size: 52px;
+        font-size: 3.25rem; /* ca 52px */
         align-self: end;
     }
 
     .product-info-small {
-        font-size: 20px;
-        padding: 20px;
+        font-size: 1.25rem; /* ca 20px */
+        padding: 1.25rem;
         line-height: 1.4;
-        max-width: 650px;
+        max-width: 40.625rem; /* ca 650px */
     }
 
     .product-price {
-        font-size: 48px;
+        font-size: 3rem; /* ca 48px */
         align-self: end;
     }
 
     .product-buy-button {
-        font-size: 40px;
-        padding: 20px 60px;
+        font-size: 2.5rem; /* ca 40px */
+        padding: 1.25rem 3.75rem; /* ca 20px and 60px */
     }
 
     .product-info-small {
-        font-size: 20px;
-        padding: 20px;
+        font-size: 1.25rem;
+        padding: 1.25rem;
         line-height: 1.4;
-        max-width: 750px;
+        max-width: 46.875rem; /* ca 750px */
 
         /* Setup för Sleeping Pikachu */
         position: relative;
@@ -356,7 +356,7 @@ img {
     .product-feature-section {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        gap: 12px;
+        gap: 0.75rem; /* ca 12px */
     }
 
     .feature-section-text-wrapper {
@@ -365,14 +365,14 @@ img {
     }
 
     .feature-section-text-wrapper h3 {
-        padding-bottom: 12px;
+        padding-bottom: 0.75rem; /* ca 12px */
     }
 
     .feature-section-media-wrapper {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-template-rows: repeat(2, 120px);
-        gap: 8px;
+        grid-template-rows: repeat(2, 7.5rem); /* ca 120px */
+        gap: 0.5rem;
         align-content: center;
     }
 
@@ -380,7 +380,7 @@ img {
         width: 100%;       /* Force the image to be as wide as the grid cell */
         height: 100%;      /*Force the image to be as tall as the row */
         object-fit: cover; /* To prevent the screenshots from stretching */
-        border-radius: 8px;
+        border-radius: 0.5rem;
     }
     
     .upsell-section-grid {
@@ -395,15 +395,15 @@ img {
     }
 
     /* Positionera knapparna reasonably på desktop också */
-    .prev-btn { left: -50px; }
-    .next-btn { right: -50px; }
+    .prev-btn { left: -3.125rem; } /* ca 50px */
+    .next-btn { right: -3.125rem; }
 
     .upsell-card {
-        font-size: 18px;
+        font-size: 1.125rem; /* ca 18px */
     }
 
     footer {
-        font-size: 20px;
+        font-size: 1.25rem; /* ca 20px */
     }
 }
 
@@ -417,30 +417,30 @@ img {
         bottom: 100%; 
         
         /* horizontal position: 10px from the right edge */
-        right: 10px;  
+        right: 0.063rem; /* ca 10px */  
         
         /* size him appropriately */
         width: 200px; 
         height: auto;
         
-        /* för att få honom att ligga på info boxen */
-        margin-bottom: -62px;
+        /* för att få honom att ligga på info boxen */ /* ca 62px */
+        margin-bottom: -3.875rem;
     }
 
     .product-feature-section {
         grid-template-columns: 1fr 2fr;
-        gap: 24px;
+        gap: 1.5rem; /* 24px */
     }
 
     .feature-section-text-wrapper {
         max-width: 65ch;
-        font-size: 18px;
+        font-size: 1.125rem; /* 18px */
         display: flex;
         flex-direction: column;
         justify-content: start;
     }
 
     .feature-section-media-wrapper {
-        grid-template-rows: repeat(2, 320px);
+        grid-template-rows: repeat(2, 20rem); /* ca 320px */
     }
 }
