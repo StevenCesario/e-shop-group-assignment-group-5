@@ -36,7 +36,7 @@ section {
 }
 
 /* Merge into main? */
-p, h2, h4, button { 
+p, h2, h3, h4, button { 
     margin: 0; 
 }
 
@@ -141,16 +141,11 @@ img {
 }
 
 .product-feature-section {
-    border: 2px solid green;
     min-height: 17.5rem; /* 280px */
 }
 
 .feature-section-media-wrapper {
     display: none;
-}
-
-.product-upsell-section {
-    border: 2px solid blue;
 }
 
 /* Denna section är inte grid längre! */
@@ -299,7 +294,6 @@ img {
 
     .product-hero-section {
         min-height: 45rem; /* ca 720px */
-        border: 2px solid blue;
         grid-template-areas:
             "media title"
             "media price"
@@ -365,7 +359,10 @@ img {
     }
 
     .feature-section-text-wrapper h3 {
-        padding-bottom: 0.75rem; /* ca 12px */
+        font-size: 1.75rem; /* ca 28px */ /* Explicitly set to 24px to match upsell section h3 */
+        border-left: 0.313rem solid var(--red); /* ca 5px */
+        padding-left: 0.5rem;
+        margin-bottom: 2rem; /* Changed from padding to margin to not mess with the red styling*/
     }
 
     .feature-section-media-wrapper {
@@ -381,6 +378,13 @@ img {
         height: 100%;      /*Force the image to be as tall as the row */
         object-fit: cover; /* To prevent the screenshots from stretching */
         border-radius: 0.5rem;
+    }
+
+    .product-upsell-section h3 {
+        font-size: 1.75rem; /* ca 28px */ /* Explicitly set to 24px to match upsell section h3 */
+        border-left: 0.313rem solid var(--red); /* ca 5px */
+        padding-left: 0.5rem;
+        margin-bottom: 0.75rem; /* ca 12px */
     }
     
     .upsell-section-grid {
