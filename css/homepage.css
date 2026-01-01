@@ -261,15 +261,3 @@ footer {
         max-height: 70vh;
         
         }
-
-
-        /* -- TILLFÄLLIGT -- */
-}
-
-header {
-    z-index: 1000;
-}
-
-.div-side {
- border: 1px solid blue;
-}
