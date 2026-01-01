@@ -4,7 +4,7 @@
     --green-darker: #45a049;
 
     /* SPACING */
-    --content-padding-block: 18px;
+    --content-padding-block: 1.125rem; /* ca 18px */
     --content-padding-inline: 30px;
     --button-border-radius: 4px;
     --carousel-gap: 16px;
