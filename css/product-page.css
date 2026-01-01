@@ -359,7 +359,7 @@ img {
     }
 
     .feature-section-text-wrapper h3 {
-        font-size: 1.75rem; /* ca 28px */ /* Explicitly set to 24px to match upsell section h3 */
+        font-size: 1.75rem; /* ca 28px */ /* Explicitly set to 28px to match upsell section h3 */
         border-left: 0.313rem solid var(--red); /* ca 5px */
         padding-left: 0.5rem;
         margin-bottom: 2rem; /* Changed from padding to margin to not mess with the red styling*/
@@ -381,7 +381,7 @@ img {
     }
 
     .product-upsell-section h3 {
-        font-size: 1.75rem; /* ca 28px */ /* Explicitly set to 24px to match upsell section h3 */
+        font-size: 1.75rem; /* ca 28px */
         border-left: 0.313rem solid var(--red); /* ca 5px */
         padding-left: 0.5rem;
         margin-bottom: 0.75rem; /* ca 12px */
