@@ -7,7 +7,7 @@ font-family: "VT323", "Monoton";
 }
 
 .main-content {
-    
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,66 +33,158 @@ font-family: "VT323", "Monoton";
      border-radius: 0,5rem;
     
 } 
-
-.hero-content {
-   display:flex
+    position: absolute;
 }
 
-.hero-content .hero-box {
-    height: 80vh;
-    width: 100%;
+#wrapper {
+    background-color: black;
+ 
+}   
+
+
+    /* -- HERO -- */
+
+.hero-wrapper {
+    background-color: black;
+    max-width: 100%;
+    max-height: 100vh;
+    position: relative;
+    display:flex;
+    /* overflow: hidden; */
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  
+}
+
+.hero-carousel {
+    background-color: black;
+    max-width: 300vw;
+    max-height: 40vh;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    transform: translate(-50%, -50%);
-    padding-top:50px;
+    scroll-behavior: smooth;
+    flex-direction: row;
+    animation: slider-animation 15s infinite alternate;
+     
 }
 
-.hero-content .hero-box:nth-child(1) {
+.slider-1, .slider-2, .slider-3 {
 
-    background-color: #990000; 
-    background-image: linear-gradient(147deg, #990000 0%, #ff0000 74%); 
-}
-
-.hero-content .hero-box:nth-child(2) {
-    border: 1px solid black;
-    background-color: white;
-    /* background-color: #990000;
-    background-image: linear-gradient(147deg, #ff0000 0%,  #990000 74%); */
-}
-.hero-content .hero-box:nth-child(3) {
-    border: 1px solid black;
-    background-color: grey;
-    /* background-color: #990000;
-    background-image: linear-gradient(147deg, #990000 0%, #ff0000 74%); */
-}
-
-.hero-slider-tabs input {
-    visibility: hidden;
-    display: none;
-}
-
-
-.labels {   
+    width: calc(100% /3);
+    max-height: 80vh;
+    object-fit: cover;
+    
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    border: solid var(--red) 3px;
+    box-shadow: 0 4px 0 rgba(221, 208, 208, 0.1); 
+    justify-content: flex-start;
+    align-items:center;
+    /* transition: transform 1s ease; */
+    
     display: flex;
-    gap: 10px;
-    position: absolute; 
-    bottom: 15%;
-    left: 15%;   
-    transform: translateX(-50%, -50%);
-    z-index: 10; /* for them to be always on top */
+}
+
+@keyframes slider-animation {
+    0%{ transform: translateX(0); 
+    }
+    33.33%{ transform: translateX(0); 
+    }
+    66.66%{ transform: translateX(-33.33%); 
+    }
+    100%{ transform: translateX(-66.66%); 
+    }
+}
+
+.slider-1 {
+    background-image: url(../img/Homepage/Hero-slider-background_test2.JPG);
+    background-size: 90%;
+    background-repeat: no-repeat;
+}
+
+.slider-2 {
+    background-image: url(../img//Homepage/Dungeon-chest_test.PNG);
+    background-size: 80;
+    background-repeat: no-repeat;
+}
+
+.slider-3 {
+    background-image: url(../img//Homepage/SNES-background_test.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+.hero-text {
+    color: white;
+    font-family: 'VT323', monospace;
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: var(--font-size-large);
+    grid-area: hero-text;  
     
 }
 
 .div-side {
    background-color: var(--black);
+.hero-text > h1 { 
+    background-color: var(--black);
 }
 
-.product-section {
+.hero-text p {
     background-color: var(--black);
-    padding-top: 6.25rem;
-    padding-bottom: 6.25rem;
+    font-size: var(--font-size-large);
+}
+
+.hero-button1, .hero-button2, .hero-button3 {
+    background: var(--black);
+    font-size: var(--font-size-large);
+    font-family: 'VT323', monospace;
+    border: 2px solid var(--red);
+    color: var(--white);
+    padding: 0.55rem 1.1rem;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease;
+    grid-area: hero-button;
+
+}
+
+.hero-button1:hover, .hero-button2:hover, .hero-button3:hover {
+    background: var(--red);
+    transform: scale(1.05);
+    opacity: 1;
+    color: var(--black);
+}
+
+
+/* .slider-1, .slider-2, .slider-3 {
+  width: 100%;
+  display:grid;
+  grid-template-areas:
+  "hero-text" "hero-slider1" "hero-slider1"
+  "pixel-figures" "hero-slider1" "hero-slider1"
+   "hero-button" "hero-slider1" "hero-slider1"
+   "hero-banner" "hero-slider1" "hero-slider1";
+} */
+
+.hero-slider1 {
+   grid-area: "hero-slider1";
+}
+
+.hero-banner {
+    background-color: var(--red);
+    min-width: 100vh;
+    margin: 0 auto;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+    /* -- PRODUCT SECTION -- */
+
+.product-section {
+    background-color: black;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     
     display:grid;
     grid-template-columns: column;
@@ -109,6 +201,7 @@ font-family: "VT323", "Monoton";
 .product-row {
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--general-gap-desktop);
     justify-content:flex-start;
     flex-wrap: wrap;
     margin: 1rem;
@@ -156,9 +249,30 @@ footer {
     }
 
 
+
+    /* -- TABLET -- */
+@media screen and (min-width:768px) {
+
+    .hero-carousel {
+        min-width: 300vw;
+        min-height: 50wh;
+    }
+
+    .hero-banner {
+    background-color: var(--red);
+    max-width: 100vh;
+    margin: 0 auto;
+    padding: 0.5rem;
+    text-align: center;
+    color: white;
+    font-size: var(--font-size-large);
 }
 
-/* small desktop */
+}
+
+
+    /* -- SMALL DESKTOP -- */
+
 @media screen and (min-width:960px) {
         #wrapper {
         display: grid;
@@ -168,6 +282,7 @@ footer {
 
     .div-side {
         background-color: black;
+        z-index: 1000;
     }   
     
 .product-row {
@@ -181,11 +296,37 @@ footer {
 .product-card {
     height: 18.75rem; /* Ca 300 px */
 
+    .hero-wrapper { 
+        max-width: 60vw;
+        max-height: 60vh;
+    }
+    
+    .slider-1 {
+    background-image: url(../img/Homepage/Hero-slider-background_test2.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    
+}
+
+    .slider-2 {
+    background-image: url(../img//Homepage/Dungeon-chest_test.PNG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem;
+}
+
+    .slider-3 {
+    background-image: url(../img//Homepage/SNES-background_test.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem;
 }
 
 }
 
-/* large desktop */
+    /* -- LARGE DESKTOP -- */
+
 @media screen and (min-width:1200px) {
         #wrapper {
         display: grid;
@@ -200,3 +341,10 @@ footer {
     height: 400px;
     }
 }
+        .hero-wrapper { 
+        max-width: 100vh;
+        max-height: 70vh;
+        
+        }
+
+ }

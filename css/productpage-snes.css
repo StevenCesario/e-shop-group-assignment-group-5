@@ -6,10 +6,7 @@
 
 body {
     background-color: var(--black);
-}
-
-header {
-    z-index: 1;
+    grid-template-columns: minmax(0, 1fr);
 }
 
 #main-content {
@@ -17,7 +14,7 @@ header {
 }
 
 .hero {
-    padding-top: 80px;
+    padding-top: 7.5rem;
 }
 
 .hero img {
@@ -34,16 +31,16 @@ header {
 }
 
 #products h2 {
-    margin: 20px 0px;
-    padding: 10px;
+    margin: 1.25rem 0;
+    padding: 0.625rem;
     border-left: 5px solid var(--red);
 }
 
 .product-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    margin: 10px 0px;
-    column-gap: var(--general-column-gap);
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0.625rem;
+    column-gap: 1rem;
     row-gap: var(--general-column-gap);
     align-items: center;
 }
@@ -54,7 +51,7 @@ article {
     color: var(--black);
     border: 1px solid var(--white);
     border-radius: var(--border-radius-s);
-    padding: 16px;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -67,11 +64,11 @@ article {
     padding-top: 1rem;
 }
 
-@media screen and (min-width:768px) {
+/* tablet and over */
+@media screen and (min-width: 768px) {
     .product-section {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-template-columns: repeat(4, 1fr);
     }
-    
 }
 
 
