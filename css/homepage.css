@@ -15,8 +15,7 @@ font-family: "VT323", "Monoton";
     color: white;
     /* position: relative; */
     
-    
-    }
+}
 
 .hero-section { 
     background-color: var(--black);
@@ -31,10 +30,8 @@ font-family: "VT323", "Monoton";
     /* position: relative; */
     transition: all .5s linear;
      border-radius: 0,5rem;
-    
-} 
-    position: absolute;
-}
+    }
+
 
 #wrapper {
     background-color: black;
@@ -103,7 +100,7 @@ font-family: "VT323", "Monoton";
 
 .slider-2 {
     background-image: url(../img//Homepage/Dungeon-chest_test.PNG);
-    background-size: 80;
+    background-size: 80%;
     background-repeat: no-repeat;
 }
 
@@ -125,6 +122,9 @@ font-family: "VT323", "Monoton";
 
 .div-side {
    background-color: var(--black);
+
+}
+
 .hero-text > h1 { 
     background-color: var(--black);
 }
@@ -138,7 +138,7 @@ font-family: "VT323", "Monoton";
     background: var(--black);
     font-size: var(--font-size-large);
     font-family: 'VT323', monospace;
-    border: 2px solid var(--red);
+    border: 3px solid var(--red);
     color: var(--white);
     padding: 0.55rem 1.1rem;
     border-radius: 6px;
@@ -156,24 +156,13 @@ font-family: "VT323", "Monoton";
     color: var(--black);
 }
 
-
-/* .slider-1, .slider-2, .slider-3 {
-  width: 100%;
-  display:grid;
-  grid-template-areas:
-  "hero-text" "hero-slider1" "hero-slider1"
-  "pixel-figures" "hero-slider1" "hero-slider1"
-   "hero-button" "hero-slider1" "hero-slider1"
-   "hero-banner" "hero-slider1" "hero-slider1";
-} */
-
 .hero-slider1 {
    grid-area: "hero-slider1";
 }
 
 .hero-banner {
     background-color: var(--red);
-    min-width: 100vh;
+    min-width: 100vw;
     margin: 0 auto;
     padding: 0.5rem;
     text-align: center;
@@ -183,11 +172,11 @@ font-family: "VT323", "Monoton";
 
 .product-section {
     background-color: black;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
     
     display:grid;
-    grid-template-columns: column;
+    grid-template-columns: columns;
     font-size: var(--font-size-large);
     
 }
@@ -200,7 +189,7 @@ font-family: "VT323", "Monoton";
 
 .product-row {
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: (2, 1fr);
     gap: var(--general-gap-desktop);
     justify-content:flex-start;
     flex-wrap: wrap;
@@ -230,26 +219,6 @@ footer {
     margin: 0;
 }
 
-@media sceen and (min-width:630) {
-.product-row
-
-
-}
-
-/* tablet */
-@media screen and (min-width:768px) {
-
-.product-row {
-  
-    grid-template-columns: repeat(2 auto-fit, minmax(200px, 1fr));
-    gap: 0.5rem;
-    justify-content:flex-start;
-    flex-wrap: wrap;
-    margin: 0.5rem; 
-    }
-
-
-
     /* -- TABLET -- */
 @media screen and (min-width:768px) {
 
@@ -268,6 +237,16 @@ footer {
     font-size: var(--font-size-large);
 }
 
+.product-row {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.5rem;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    margin: 0.5rem; 
+    }
+
+
 }
 
 
@@ -282,7 +261,6 @@ footer {
 
     .div-side {
         background-color: black;
-        z-index: 1000;
     }   
     
 .product-row {
@@ -295,7 +273,7 @@ footer {
 
 .product-card {
     height: 18.75rem; /* Ca 300 px */
-
+}
     .hero-wrapper { 
         max-width: 60vw;
         max-height: 60vh;
@@ -331,20 +309,17 @@ footer {
         #wrapper {
         display: grid;
         grid-template-columns: 1fr 8fr 1fr;
+        border: 2px solid red;
     }
-
-    .div-side {
-        background-color: black;
-    }   
 
     .product-card {
     height: 400px;
     }
-}
-        .hero-wrapper { 
-        max-width: 100vh;
+
+    .hero-wrapper { 
+        max-width: 70vh;
         max-height: 70vh;
         
-        }
+    }
 
  }
