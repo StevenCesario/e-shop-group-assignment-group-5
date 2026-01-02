@@ -2,6 +2,7 @@
     /* COLORS */
     --green: #4CAF50;
     --green-darker: #45a049;
+    --green-darkest: #06402B;
 
     /* SPACING */
     --content-padding-block: 1.125rem; /* ca 18px */
@@ -121,10 +122,10 @@ img {
     /* We use shadows with 0 blur to create solid blocks of color */
     box-shadow: 
     /* The "Pixels" on the corners */ /* ca 6px */
-    -0.375rem 0 0 0 #ffffff, 
-    0.375rem 0 0 0 #ffffff, 
-    0 -0.375rem 0 0 #ffffff, 
-    0 0.375rem 0 0 #ffffff;
+    -0.375rem 0 0 0 var(--green-darkest), 
+    0.375rem 0 0 0 var(--green-darkest), 
+    0 -0.375rem 0 0 var(--green-darkest), 
+    0 0.375rem 0 0 var(--green-darkest);
   
     /* Some breathing room so that it doesn't touch other elements */
     margin: 0.5rem;
@@ -309,6 +310,11 @@ img {
         align-items: start;
         text-align: left;
         justify-items: start;
+    }
+
+    /* Center only the Buy Now button */
+    .product-buy-button {
+        justify-self: center;
     }
 
     .hero-img-wrapper {
