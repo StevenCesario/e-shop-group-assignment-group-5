@@ -52,7 +52,6 @@ img {
 }
 
 .product-hero-section {
-    /* border: 2px solid red; */
     padding-top: 4.5rem; /* ca 72px */
     min-height: 28.75rem; /* ca 460px */
     display: grid;
@@ -64,6 +63,9 @@ img {
         "info"
         "price"
         "button";
+
+    /* NEW: Tunn bottom border för att separera sections */
+    border-bottom: 2px solid red;
 }
 
 .product-title {
@@ -142,6 +144,9 @@ img {
 
 .product-feature-section {
     min-height: 17.5rem; /* 280px */
+
+    /* NEW: Tunn bottom border för att separera sections */
+    border-bottom: 2px solid red;
 }
 
 .feature-section-media-wrapper {
@@ -294,6 +299,7 @@ img {
 
     .product-hero-section {
         min-height: 45rem; /* ca 720px */
+        padding-top: 5.75rem; /* ca 92px */
         grid-template-areas:
             "media title"
             "media price"
