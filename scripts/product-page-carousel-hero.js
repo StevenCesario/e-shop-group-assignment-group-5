@@ -2,7 +2,14 @@
 // säkert kan referera de element vi använder getElementById och querySelectorAll på. DOMContentLoaded
 // väntar endast på DOM elements, inte på bilder och CSS!
 document.addEventListener('DOMContentLoaded', () => {
-    const mainImage = document.getElementById('hero-main-image'); // Har nu id så att vi kan fetcha smidigt
+    const mainImage = document.getElementById('product-main-image'); // Har nu id så att vi kan fetcha smidigt
+
+    // Safety check! Kör scriptet om och endast om vi hittar bilden!
+    if (!mainImage) {
+        console.error("Oops! Kunde inte hitta 'product-main-image'. Kontrollera ditt HTML ID.");
+        return; // Stoppar skriptet här så det inte kraschar
+    }
+
     const sourceTags = document.querySelectorAll('.hero-source'); // Våra source tags som vi satt upp tidigare. The querySelectorAll method returnerar en NodeList!
     const thumbnails = document.querySelectorAll('.hero-thumbnails .thumbnail');
 
