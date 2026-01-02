@@ -92,11 +92,31 @@ img {
     grid-area: media-thumbnails;
     display: flex;
     gap: var(--carousel-gap);
+    width: 100%;
+    max-width: 31.25rem; /* Matchar hero-img-wrapper max-width */
+    /* justify-content: space-between; */
 }
 
 .hero-thumbnails img {
+    /* Tvinga alla thumbnails att vara samma höjd; uniform size */
     height: 3.75rem; /* ca 60px */
+
+    /* Dessa två rader tillsammans gör bilderna lika stora. flex: 1 funkar för 
+    containers och andra element. Men inte bilder! Lösningen är width: 0 */
+    flex: 1; 
+    width: 0;
+
+    /* Beskär bilden och fyll bilden centrerat utan att stretcha */
+    object-fit: cover; 
+    object-position: center;
+
     border: 1px solid rgba(255, 255, 255, 0.8); /* Subtle edge definition */
+}
+
+/* Your chosen state */
+.hero-thumbnails img.active {
+    filter: brightness(0.5);
+    border: 2px solid var(--red); /* Optional: add a border to make it pop */
 }
 
 .product-info-small {
