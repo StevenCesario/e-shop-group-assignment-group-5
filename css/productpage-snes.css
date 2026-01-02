@@ -1,8 +1,4 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=VT323&display=swap');
 
 body {
     background-color: var(--black);
@@ -11,14 +7,18 @@ body {
 
 #main-content {
     color: var(--white);
+    margin-bottom: 2rem;
 }
 
 .hero {
     padding-top: 7.5rem;
+    display: flex;
+    justify-content: center;
 }
 
-.hero img {
+.hero-img {
     border-radius: var(--border-radius-l);
+    width: 100%;
 }
 
 .hero-text {
@@ -68,6 +68,14 @@ article {
 @media screen and (min-width: 768px) {
     .product-section {
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    .hero {
+        padding-top: 4rem;
+    }
+
+    .hero-img {
+        height: 80vh;
     }
 }
 

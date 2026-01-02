@@ -96,6 +96,14 @@ nav {
   min-width:15%;
 }
 
+.active {
+  background-color: var(--red);
+}
+
+.active:hover {
+  color: var(--white);
+}
+
 nav #myLinks {
   display: none;
 }
