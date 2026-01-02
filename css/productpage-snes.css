@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&family=VT323&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--black);
     grid-template-columns: minmax(0, 1fr);
@@ -64,6 +68,26 @@ article {
     padding-top: 1rem;
 }
 
+#up-btn {
+    position: fixed;
+    display: none;
+    border: none;
+    border-radius: 2px;
+    bottom: 30px;
+    right: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px var(--gray);
+    font-size: 30px;
+    color: var(--red);
+}
+
+#up-btn:hover {
+    background-color: var(--red);
+    color: var(--white);
+    box-shadow: 2px 2px var(--dark-red);
+    transform: translateY(2px);
+}
+
 /* tablet and over */
 @media screen and (min-width: 768px) {
     .product-section {
@@ -76,6 +100,10 @@ article {
 
     .hero-img {
         height: 80vh;
+    }
+
+    #up-btn {
+        right: 30px;
     }
 }
 
