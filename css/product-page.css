@@ -307,7 +307,7 @@ img {
 
     .hero-img-wrapper {
         width: 100%; /* Let it fill its grid cell */
-        max-width: 43.75rem; /* ca 700px */
+        max-width: 37.5rem; /* EDIT: ca 600px */ /* Lite mindre för att få plats med de mindre bilderna under */
         justify-self: center;
         align-self: center;
     }
