@@ -77,6 +77,7 @@
                 <div class="hero-img-wrapper">
                   <picture>
                     <source
+                      class="hero-source"
                       type="image/avif"
                       srcset ="./img/product-page/zelda-lttp-sm.avif 500w,
                                ./img/product-page/zelda-lttp-md.avif 850w,
@@ -86,6 +87,7 @@
                              1155px">
 
                     <source
+                      class="hero-source"
                       type="image/webp"
                       srcset ="./img/product-page/zelda-lttp-sm.webp 500w,
                                ./img/product-page/zelda-lttp-md.webp 850w,
@@ -93,8 +95,11 @@
                       sizes="(max-width: 767px) 100vw,
                              (max-width: 1199px) 850px,
                              1155px">
+
+                    <!-- EDIT: Vi använder id här nu oxå i JavaScript syfte! -->
                     <img 
                       class="product-main-image" 
+                      id="product-main-image" 
                       src="./img/product-page/zelda-lttp-lg.jpg"
                       width="1155" 
                       height="800"
