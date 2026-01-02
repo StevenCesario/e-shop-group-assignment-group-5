@@ -72,7 +72,7 @@
         <div id="main-content">
             <section class="product-hero-section">
                 <h1 class="product-title">Product Title</h1>
-                <!-- Hero image carousel to be added here! -->
+
                 <div class="hero-img-wrapper">
                   <picture>
                     <source
@@ -101,6 +101,19 @@
                       loading="eager">
                   </picture>
                 </div>
+
+                <!-- The 'data-' prefix är för JavaScript filen -->
+                <div class="hero-thumbnails">
+                    <img 
+                      class="thumbnail active" 
+                      src="./img/product-page/zelda-lttp-sm.jpg" 
+                      alt="Thumbnail 1"
+                      data-image-src="reset"
+                    >
+                    <img class="thumbnail" src="./img/product-page/zelda-lttp-sm.jpg" alt="Thumbnail" data-image-src="./img/product-page/zelda-lttp-sm.jpg">
+                    <img class="thumbnail" src="./img/product-page/zelda-lttp-sm.jpg" alt="Thumbnail" data-image-src="./img/product-page/zelda-lttp-sm.jpg">
+                </div>
+
                 <div class="product-info-small">
                     <img class="sleeping-pikachu" src="img/product-page/pikcahu-sleeping-no-bg.png" alt="Sleeping Pikachu :)">
                     <p class="product-info-small-text">Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute</p>

@@ -61,6 +61,7 @@ img {
     grid-template-areas:
         "title"
         "media"
+        "media-thumbnails" /* NEW: Små bilder under hero bilden. Här på mobil och tablet, annan placement på desktop */
         "info"
         "price"
         "button";
@@ -85,6 +86,10 @@ img {
     border-radius: 0.5rem;
     box-shadow: 0 0 40px rgba(255, 255, 255, 0.45); 
     border: 1px solid rgba(255, 255, 255, 0.8); /* Subtle edge definition */
+}
+
+.hero-thumbnails {
+    grid-area: media-thumbnails
 }
 
 .product-info-small {
@@ -298,7 +303,7 @@ img {
             "media title"
             "media price"
             "media info"
-            "media button";
+            "media-thumbnails button"; /* NEW: Små bilder under hero bilden. Ligger "bottom to bottom" med Köp Nu knappen */
         grid-template-columns: 1.2fr 1fr;
         align-items: start;
         text-align: left;
