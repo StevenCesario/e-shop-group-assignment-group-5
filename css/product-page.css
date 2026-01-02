@@ -344,6 +344,17 @@ img {
         align-self: center;
     }
 
+    .hero-thumbnails {
+        /* Aligna thumbnail bilderna med hero bilden */
+        width: 100%;
+        max-width: 37.5rem; /* Matcha hero-img-wrapper på desktop*/
+        justify-self: center;
+    }
+
+    .hero-thumbnails img {
+        height: 5.5rem; /* Ökat från 3.75rem för att matcha Köp Nu knappens höjd */
+    }
+
     /* Gör ALLT större :) */
     .product-title {
         font-size: 3.25rem; /* ca 52px */
