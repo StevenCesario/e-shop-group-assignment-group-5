@@ -75,7 +75,7 @@ img {
 
 .hero-img-wrapper {
     grid-area: media;
-    min-height: 20rem; /* ca 320px */
+    min-height: auto; /* EDIT: Bytte från ca 320px till auto för att undvika ett onödigt gap mellan hero image och thumbnail images*/
     width: 100%;
     max-width: 31.25rem; /* ca 500px */ /* Se till att bilden inte blir för stor på mobil */
     display: flex;
