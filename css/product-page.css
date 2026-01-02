@@ -89,7 +89,14 @@ img {
 }
 
 .hero-thumbnails {
-    grid-area: media-thumbnails
+    grid-area: media-thumbnails;
+    display: flex;
+    gap: var(--carousel-gap);
+}
+
+.hero-thumbnails img {
+    height: 3.75rem; /* ca 60px */
+    border: 1px solid rgba(255, 255, 255, 0.8); /* Subtle edge definition */
 }
 
 .product-info-small {
