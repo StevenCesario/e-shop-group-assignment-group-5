@@ -1,11 +1,12 @@
 /* Contact section wrapper */
 .section {
-  max-width: 600px;
-  margin: 4rem auto;
+  max-width: 100%;
+  margin: 2rem auto;
   padding: 2rem 1.5rem;
   background: #1a1a1a;
   border-radius: 1rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  width: 50rem;
 }
 
 /* Title */
@@ -52,4 +53,30 @@
 .contact-form .explor-btn {
   margin-top: 1rem;
   align-self: center;
+}
+
+/* Mobile responsive contact form */
+@media (max-width: 768px) {
+  .section {
+    max-width: 100%;
+    width: 100%;
+    margin: 1rem 0.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+  }
+
+  .contact-form .explor-btn {
+    /* its actually send btn */
+    width: 100%;
+    font-size: 1.1rem;
+  }
 }

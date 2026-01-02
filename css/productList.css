@@ -66,7 +66,7 @@ body {
   font-family: "VT323", monospace;
 }
 
-.explor-btn {
+.explor-btn,.load-more-btn {
   margin-top: 1rem;
   padding: 1em;
   background-color: var(--red);
@@ -78,11 +78,11 @@ body {
   font-family: "VT323", monospace;
 }
 
-.explor-btn:hover {
+.explor-btn:hover ,.load-more-btn:hover {
   background-color: var(--dark-red);
 }
 
-.explor-btn:active {
+.explor-btn:active, .load-more-btn:active {
   transform: scale(0.95);
 }
 
@@ -281,11 +281,17 @@ footer > p {
 
   .hero img {
     width: 100%;
-    
+    margin: 0;
+    padding: 0%;
   }
-  .hero p{
+  .hero p {
     font-size: 1em;
     margin-top: -10em;
   }
-  
+  .hero {
+    margin-top: 2em;
+  }
+  .hero-container {
+    margin-bottom: -15em;
+  }
 }
