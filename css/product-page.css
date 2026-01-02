@@ -299,7 +299,6 @@ img {
 
     .product-hero-section {
         min-height: 45rem; /* ca 720px */
-        padding-top: 5.75rem; /* ca 92px */
         grid-template-areas:
             "media title"
             "media price"
