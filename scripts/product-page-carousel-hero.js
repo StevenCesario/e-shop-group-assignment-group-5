@@ -17,4 +17,31 @@ document.addEventListener('DOMContentLoaded', () => {
             srcset: source.getAttribute('srcset') // ... och the actual source set srcset vilket vi får genom the getAttribute method
         });
     });
-})
+
+    thumbnails.forEach(thumbnail => { // For each thumbnail i vår thumbnails NodeList... (använder oxå querySelectorAll!)
+        thumbnail.addEventListener('click', function() { // ...lägg till en click eventListener som...
+            // 1. Tar bort 'active' class:en från *alla* thumbnails
+            thumbnails.forEach(t => t.classList.remove('active')); // Vi har redan använt 'thumbnail' i forEach så vi kör bara 't' här
+            // 2. Lägger till 'active' class:en på den thumbnail användaren precis klickat på
+            this.classList.add('active');
+
+            const targetImage = this.getAttribute('data-image-src');
+
+            if (targetImage === 'reset') {
+                // Återkalla vår high quality hero image!
+                originalSrcsets.forEach(item => {
+                    item.element.setAttribute('srcset', item.srcset);
+                });
+
+                mainImage.src = originalMainSrc;
+            } else {
+                // Visa en "simpel" jpg
+                sourceTags.forEach(source => {
+                    source.removeAttribute('srcset');
+                });
+
+                mainImage.src = targetImage;
+            }
+        });
+    });
+});
