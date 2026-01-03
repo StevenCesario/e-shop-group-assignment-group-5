@@ -337,7 +337,7 @@ img {
 @media screen and (min-width:960px) {
     section {
         padding-block: 5.125rem; /* 82px */ 
-        padding-inline: 4.5rem; /* 72px */
+        /* Removed! No inline padding needed on dekstop */
     }
 
     .div-side {
@@ -419,6 +419,7 @@ img {
         display: grid;
         grid-template-columns: 1fr 2fr;
         gap: 0.75rem; /* ca 12px */
+        padding-inline: 0; /* Sätt denna explcitly till 0 för att få mer andningsrum */
     }
 
     .feature-section-text-wrapper {
