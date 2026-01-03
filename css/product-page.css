@@ -316,6 +316,11 @@ img {
     .hero-thumbnails img {
         height: 4.75rem; /* ca 76px */
     }
+    
+    /* EDIT: Gör h1:an lite större också */
+    .product-title {
+        font-size: 2.5rem; /* ca 40px */
+    }
 
     .upsell-section-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
