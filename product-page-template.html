@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/product-page.css">
 
     <script src="scripts/general.js" defer></script>
-    <script src="scripts/product-page-carousel.js" defer></script>
+    <script src="scripts/product-page-carousel-upsell.js" defer></script>
+    <script src="scripts/product-page-carousel-hero.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,9 +73,11 @@
         <div id="main-content">
             <section class="product-hero-section">
                 <h1 class="product-title">Product Title</h1>
+
                 <div class="hero-img-wrapper">
                   <picture>
                     <source
+                      class="hero-source"
                       type="image/avif"
                       srcset ="./img/product-page/zelda-lttp-sm.avif 500w,
                                ./img/product-page/zelda-lttp-md.avif 850w,
@@ -84,6 +87,7 @@
                              1155px">
 
                     <source
+                      class="hero-source"
                       type="image/webp"
                       srcset ="./img/product-page/zelda-lttp-sm.webp 500w,
                                ./img/product-page/zelda-lttp-md.webp 850w,
@@ -91,8 +95,11 @@
                       sizes="(max-width: 767px) 100vw,
                              (max-width: 1199px) 850px,
                              1155px">
+
+                    <!-- EDIT: Vi använder id här nu oxå i JavaScript syfte! -->
                     <img 
                       class="product-main-image" 
+                      id="product-main-image" 
                       src="./img/product-page/zelda-lttp-lg.jpg"
                       width="1155" 
                       height="800"
@@ -100,6 +107,19 @@
                       loading="eager">
                   </picture>
                 </div>
+
+                <!-- The 'data-' prefix är för JavaScript filen -->
+                <div class="hero-thumbnails">
+                    <img 
+                      class="thumbnail active" 
+                      src="./img/product-page/zelda-lttp-sm.jpg" 
+                      alt="Thumbnail 1"
+                      data-image-src="reset"
+                    >
+                    <img class="thumbnail" src="./img/link-to-the-past-screenshot-1.jpg" alt="Thumbnail" data-image-src="./img/link-to-the-past-screenshot-1.jpg">
+                    <img class="thumbnail" src="./img/link-to-the-past-screenshot-2.jpg" alt="Thumbnail" data-image-src="./img/link-to-the-past-screenshot-2.jpg">
+                </div>
+
                 <div class="product-info-small">
                     <img class="sleeping-pikachu" src="img/product-page/pikcahu-sleeping-no-bg.png" alt="Sleeping Pikachu :)">
                     <p class="product-info-small-text">Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute</p>

@@ -61,6 +61,7 @@ img {
     grid-template-areas:
         "title"
         "media"
+        "media-thumbnails" /* NEW: Små bilder under hero bilden. Här på mobil och tablet, annan placement på desktop */
         "info"
         "price"
         "button";
@@ -77,7 +78,7 @@ img {
 
 .hero-img-wrapper {
     grid-area: media;
-    min-height: 20rem; /* ca 320px */
+    min-height: auto; /* EDIT: Bytte från ca 320px till auto för att undvika ett onödigt gap mellan hero image och thumbnail images*/
     width: 100%;
     max-width: 31.25rem; /* ca 500px */ /* Se till att bilden inte blir för stor på mobil */
     display: flex;
@@ -88,6 +89,37 @@ img {
     border-radius: 0.5rem;
     box-shadow: 0 0 40px rgba(255, 255, 255, 0.45); 
     border: 1px solid rgba(255, 255, 255, 0.8); /* Subtle edge definition */
+}
+
+.hero-thumbnails {
+    grid-area: media-thumbnails;
+    display: flex;
+    gap: var(--carousel-gap);
+    width: 100%;
+    max-width: 31.25rem; /* Matchar hero-img-wrapper max-width */
+    /* justify-content: space-between; */
+}
+
+.hero-thumbnails img {
+    /* Tvinga alla thumbnails att vara samma höjd; uniform size */
+    height: 3.75rem; /* ca 60px */
+
+    /* Dessa två rader tillsammans gör bilderna lika stora. flex: 1 funkar för 
+    containers och andra element. Men inte bilder! Lösningen är width: 0 */
+    flex: 1; 
+    width: 0;
+
+    /* Beskär bilden och fyll bilden centrerat utan att stretcha */
+    object-fit: cover; 
+    object-position: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.8); /* Subtle edge definition */
+}
+
+/* Your chosen state */
+.hero-thumbnails img.active {
+    filter: brightness(0.5);
+    border: 2px solid var(--red); /* Optional: add a border to make it pop */
 }
 
 .product-info-small {
@@ -304,7 +336,7 @@ img {
             "media title"
             "media price"
             "media info"
-            "media button";
+            "media-thumbnails button"; /* NEW: Små bilder under hero bilden. Ligger "bottom to bottom" med Köp Nu knappen */
         grid-template-columns: 1.2fr 1fr;
         align-items: start;
         text-align: left;
@@ -318,9 +350,20 @@ img {
 
     .hero-img-wrapper {
         width: 100%; /* Let it fill its grid cell */
-        max-width: 43.75rem; /* ca 700px */
+        max-width: 37.5rem; /* EDIT: ca 600px */ /* Lite mindre för att få plats med de mindre bilderna under */
         justify-self: center;
         align-self: center;
+    }
+
+    .hero-thumbnails {
+        /* Aligna thumbnail bilderna med hero bilden */
+        width: 100%;
+        max-width: 37.5rem; /* Matcha hero-img-wrapper på desktop*/
+        justify-self: center;
+    }
+
+    .hero-thumbnails img {
+        height: 5.5rem; /* Ökat från 3.75rem för att matcha Köp Nu knappens höjd */
     }
 
     /* Gör ALLT större :) */
