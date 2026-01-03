@@ -53,7 +53,7 @@ img {
 }
 
 .product-hero-section {
-    padding-top: 4.5rem; /* ca 72px */
+    padding-top: 2rem; /* EDIT: Reduced from ca 72px to ca 32px */
     min-height: 28.75rem; /* ca 460px */
     display: grid;
     justify-items: center;
@@ -72,9 +72,6 @@ img {
 
 .product-title {
     grid-area: title;
-    /* Hide this on mobile */
-    border-left: 0.313rem solid var(--red); /* ca 5px */
-    padding-left: 0.5rem;
 }
 
 .hero-img-wrapper {
@@ -371,6 +368,10 @@ img {
     .product-title {
         font-size: 3.25rem; /* ca 52px */
         align-self: end;
+
+        /* EDIT: This is now only for desktop and above */
+        border-left: 0.313rem solid var(--red); /* ca 5px */
+        padding-left: 0.5rem;
     }
 
     .product-info-small {
