@@ -47,10 +47,11 @@ body {
 }
 
 .hero img {
-  width: 70%;
+  width: 83%;
   max-width: 100%;
   height: auto;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  margin-top: -4rem;
   border-radius: 1.5rem;
 }
 
@@ -66,7 +67,8 @@ body {
   font-family: "VT323", monospace;
 }
 
-.explor-btn,.load-more-btn {
+.explor-btn,
+.load-more-btn {
   margin-top: 1rem;
   padding: 1em;
   background-color: var(--red);
@@ -78,11 +80,13 @@ body {
   font-family: "VT323", monospace;
 }
 
-.explor-btn:hover ,.load-more-btn:hover {
+.explor-btn:hover,
+.load-more-btn:hover {
   background-color: var(--dark-red);
 }
 
-.explor-btn:active, .load-more-btn:active {
+.explor-btn:active,
+.load-more-btn:active {
   transform: scale(0.95);
 }
 
@@ -289,9 +293,10 @@ footer > p {
     margin-top: -10em;
   }
   .hero {
-    margin-top: 2em;
+    margin-top: 1em;
   }
   .hero-container {
-    margin-bottom: -15em;
+    margin-bottom: -20rem;
+    margin-top: -5em;
   }
 }
