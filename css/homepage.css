@@ -228,7 +228,9 @@ footer {
     }
 }
 
-
+.product-card {
+    height: 400px;
+}
     /* -- SMALL DESKTOP -- */
 
 @media screen and (min-width:960px) {
@@ -280,7 +282,7 @@ footer {
 }
 
 .product-card {
-    height: 18.75rem; /* Ca 300 px */
+    /* height: 18.75rem; Ca 300 px */
 }
 
 
@@ -295,9 +297,9 @@ footer {
         
     /* } */
 
-    .product-card {
+    /* .product-card {
     height: 400px;
-    }
+    } */
 
     .hero-wrapper { 
         max-width: 100vh;
