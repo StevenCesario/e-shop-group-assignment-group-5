@@ -308,6 +308,10 @@ img {
         padding-inline: 3.25rem; /* ca 52px */
     }
 
+    .product-hero-section {
+        margin-top: -3rem; /* EDIT: Dra upp hela hero section lite på tablet */
+    }
+
     .upsell-section-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
