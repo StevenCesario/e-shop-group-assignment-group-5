@@ -3,6 +3,7 @@
 
 body {
 font-family: "VT323", "Monoton";
+background-color: black
 
 }
 
@@ -10,7 +11,7 @@ font-family: "VT323", "Monoton";
     width: 100%;
 }
 
-#content {
+#main-content {
     width: 100%;
     overflow: hidden;
     background-color: black;
@@ -227,7 +228,9 @@ footer {
     }
 }
 
-
+.product-card {
+    height: 400px;
+}
     /* -- SMALL DESKTOP -- */
 
 @media screen and (min-width:960px) {
@@ -243,7 +246,7 @@ footer {
 
 .div-side {
         background-color: black;
-        min-height: 100%;
+        /* min-height: 100%; */
     }   
     
 .hero-wrapper { 
@@ -279,7 +282,7 @@ footer {
 }
 
 .product-card {
-    height: 18.75rem; /* Ca 300 px */
+    /* height: 18.75rem; Ca 300 px */
 }
 
 
@@ -294,9 +297,9 @@ footer {
         
     /* } */
 
-    .product-card {
-    height: 500px;
-    }
+    /* .product-card {
+    height: 400px;
+    } */
 
     .hero-wrapper { 
         max-width: 100vh;
