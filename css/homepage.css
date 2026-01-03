@@ -3,6 +3,7 @@
 
 body {
 font-family: "VT323", "Monoton";
+background-color: black
 
 }
 
@@ -295,7 +296,7 @@ footer {
     /* } */
 
     .product-card {
-    height: 500px;
+    height: 400px;
     }
 
     .hero-wrapper { 
