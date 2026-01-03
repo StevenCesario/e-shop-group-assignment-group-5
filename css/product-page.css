@@ -309,7 +309,12 @@ img {
     }
 
     .product-hero-section {
-        margin-top: -3rem; /* EDIT: Dra upp hela hero section lite på tablet */
+        margin-top: -3.75rem; /* EDIT: Dra upp hela hero section lite på tablet. ca 60px */
+    }
+
+    /* EDIT: Gör thumbnail bilderna lite större */
+    .hero-thumbnails img {
+        height: 4.75rem; /* ca 76px */
     }
 
     .upsell-section-grid {
