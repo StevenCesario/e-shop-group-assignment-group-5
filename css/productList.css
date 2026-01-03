@@ -47,7 +47,7 @@ body {
 }
 
 .hero img {
-  width: 100%;
+  width: 70%;
   max-width: 100%;
   height: auto;
   margin-bottom: 1.5rem;
@@ -56,7 +56,7 @@ body {
 
 .hero p {
   max-width: 30rem;
-  padding: 0.5rem;
+  padding: 0.2em;
   color: var(--light-gray);
   background-color: var(--dark-gray);
   border-radius: 0.3em;
@@ -66,7 +66,7 @@ body {
   font-family: "VT323", monospace;
 }
 
-.explor-btn {
+.explor-btn,.load-more-btn {
   margin-top: 1rem;
   padding: 1em;
   background-color: var(--red);
@@ -78,11 +78,11 @@ body {
   font-family: "VT323", monospace;
 }
 
-.explor-btn:hover {
+.explor-btn:hover ,.load-more-btn:hover {
   background-color: var(--dark-red);
 }
 
-.explor-btn:active {
+.explor-btn:active, .load-more-btn:active {
   transform: scale(0.95);
 }
 
@@ -124,7 +124,9 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
-.product.big-product, .product.big-product2, .product.big-product3 {
+.product.big-product,
+.product.big-product2,
+.product.big-product3 {
   grid-column: span 2; /* Just 2 columns wide */
   grid-row: span 2; /* 2 rows tall */
   grid-column: span 4;
@@ -154,13 +156,13 @@ body {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
-  border-radius: 1em;;
+  border-radius: 1em;
 }
 
 /* Style for image in normal product */
 .product-img {
   width: 100%;
-  height: 180px; /* default height, can be overridden in big-product */
+  height: 3rem;
 
   display: flex;
   align-items: center;
@@ -173,19 +175,19 @@ body {
 
 /* Product body styles */
 .product-body {
-  padding: 1rem;
+  padding: 1em;
 }
 
 .product-body h3 {
   margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .price {
   color: var(--red);
   font-weight: 800;
   margin-top: 0rem;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 /* =====================
@@ -268,5 +270,28 @@ footer > p {
   /* Reduce button size if needed */
   .explor-btn {
     font-size: 1em;
+  }
+
+  .hero p {
+    position: static; /* normal flow */
+    max-width: 100%; /* full width */
+    font-size: 1.1rem; /* smaller text */
+    margin: 1rem 0;
+  }
+
+  .hero img {
+    width: 100%;
+    margin: 0;
+    padding: 0%;
+  }
+  .hero p {
+    font-size: 1em;
+    margin-top: -10em;
+  }
+  .hero {
+    margin-top: 2em;
+  }
+  .hero-container {
+    margin-bottom: -15em;
   }
 }
