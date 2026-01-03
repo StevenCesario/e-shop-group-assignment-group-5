@@ -24,83 +24,42 @@ background-color: black
 
     /* -- HERO -- */
 
-.hero-wrapper {
-    background-color: black;
-    max-width: 100%;
-    overflow: hidden;
-    display:flex;
-
-  
-}
-
 .hero-carousel {
-    background-color: black;
-    width: 300%;
-    max-width:none;
-    max-height: 80vh;
-    margin: 0 auto;
-    display: flex;
-    /* flex-direction: row; */
-    animation: slider-animation 15s infinite alternate;
-   
+        display:none;
+ }
 
-     
-}
+ .hero-text p { 
+    display:none;
+ }
 
-.slider-1, .slider-2, .slider-3 {
-
-    width: calc(100% /3);
-    /* flex: 0 0 100%; */
-    height: 70vh;
-    /* object-fit: cover; */
-    display: flex;
-    aspect-ratio: 16 / 9;
-    overflow-x: auto;
-    /* border: solid var(--red) 3px; */
-    box-shadow: 0 4px 0 rgba(221, 208, 208, 0.1); 
+.hero-mobile-tablet {
+    background-image: url(../img/Homepage/Hero-slider-background_mobile.JPG);
+    background-size: 80vh;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    display:flex; 
     justify-content: center;
-    align-items:center;
-    /* transition: transform 1s ease; */
-    
-    
-}    
-
-@keyframes slider-animation {
-    0%{ transform: translateX(0); 
-    }
-    33.33%{ transform: translateX(0); 
-    }
-    66.66%{ transform: translateX(-33.33%); 
-    }
-    100%{ transform: translateX(-66.66%); 
-    }
 }
 
-.slider-1 {
-    background-image: url(../img/Homepage/Hero-slider-background_test2.JPG);
-    background-size: 80%;
-    background-repeat: no-repeat;
-}
-
-.slider-2 {
-    background-image: url(../img//Homepage/Dungeon-chest.PNG);
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
-.slider-3 {
-    background-image: url(../img//Homepage/SNES-background_test.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
+.hero-button1 {
+    background: var(--black);
+    font-size: var(--font-size-large);
+    font-family: 'VT323', monospace;
+    border: 3px solid var(--red);
+    color: var(--white);
+    border-radius: 0.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease;
 }
 
 .hero-text {
     color: white;
     font-family: 'VT323', monospace;
     text-align: center;
-    margin-bottom: 1em;
-    font-size: var(--font-size-large); 
-    
+    font-size: var(--font-size-general);  
+    margin-top: 2rem;
+    margin-bottom: 10rem;
 }
 
 .hero-text > h1 { 
@@ -109,35 +68,14 @@ background-color: black
 
 .hero-text p {
     background-color: var(--black);
-    font-size: var(--font-size-large);
-}
-
-.hero-button1, .hero-button2, .hero-button3 {
-    background: var(--black);
-    font-size: var(--font-size-large);
-    font-family: 'VT323', monospace;
-    border: 3px solid var(--red);
-    color: var(--white);
-    padding: 0.55rem 1.1rem;
-    border-radius: 6px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.15s ease, transform 0.15s ease;
-
-}
-
-.hero-button1:hover, .hero-button2:hover, .hero-button3:hover {
-    background: var(--red);
-    transform: scale(1.05);
-    opacity: 1;
-    color: var(--black);
+    font-size: var(--font-size-general);
+    padding-bottom: 0.5rem;
 }
 
 .hero-banner {
     background-color: var(--red);
     min-width: 100%;
     margin: 0 auto;
-    padding: 0.5rem;
     text-align: center;
     border-bottom-left-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
@@ -200,14 +138,44 @@ footer {
     margin: 0;
 }
 
-    /* -- TABLET -- */
-@media screen and (min-width:768px) {
+    /* -- TABLET -- min 768px -- */
+@media screen and (min-width:720px) {
 
-    .hero-carousel {
-        min-width: 300vw;
-        min-height: 60wh;
-    }
+.hero-mobile-tablet {
+    background-image: url(../img/Homepage/Hero-slider-background_mobile.JPG);
+    background-size: 100vh;
 
+}
+
+.hero-text {
+    color: white;
+    font-family: 'VT323', monospace;
+    text-align: center;
+    font-size: var(--font-size-general);  
+    margin-top: 2rem;
+}
+
+.hero-text > h1 { 
+    background-color: var(--black);
+}
+
+.hero-text p {
+    background-color: var(--black);
+    font-size: var(--font-size-general);
+    padding-bottom: 0.5rem;
+}
+.hero-button1 {
+    background: var(--black);
+    font-size: var(--font-size-large);
+    font-family: 'VT323', monospace;
+    border: 3px solid var(--red);
+    color: var(--white);
+    padding: 0.55rem 0.8rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease;
+}
     .hero-banner {
     background-color: var(--red);
     max-width: 100vh;
@@ -216,6 +184,8 @@ footer {
     text-align: center;
     color: white;
     font-size: var(--font-size-large);
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
 }
 
 .product-row {
@@ -225,19 +195,15 @@ footer {
     justify-content:flex-start;
     flex-wrap: wrap;
     margin: 0.5rem; 
-    }
 }
 
 .product-card {
     height: 400px;
 }
-    /* -- SMALL DESKTOP -- */
+}
+    /* -- SMALL DESKTOP -- min 960px -- */
 
 @media screen and (min-width:960px) {
-        /* #wrapper {
-        display: grid;
-        grid-template-columns: 1fr 8fr 1fr;    */
-    /* } */
 
 #main-content {
     width: 100%;
@@ -246,65 +212,233 @@ footer {
 
 .div-side {
         background-color: black;
-        /* min-height: 100%; */
     }   
     
-.hero-wrapper { 
-        min-width: 100%;
-        overflow: hidden;
-    }
+    /* -- HERO -- */
+.hero-mobile-tablet {
+    display:none;
+}
+
+.hero-wrapper {
+    background-color: black;
+    max-width: 100%;
+    max-height: 60vh;
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    align-content:center;
+}
 
 .hero-carousel {
-        width: 300%;
-        max-width: 0;
+    background-color: black;
+    width: 300%;
+    max-width:none;
+    max-height: 60vh;
+    margin: 0 auto;
+    display: flex;
+    /* flex-direction: row; */
+    animation: slider-animation 15s infinite alternate; 
+}
+
+.slider-1, .slider-2, .slider-3 {
+    width: calc(100% /3);
+    height: 60vh;
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    justify-content: flex-start;
+    align-items:center;
+    padding: 0.5rem;
+}    
+
+@keyframes slider-animation {
+    0%{ transform: translateX(0); 
     }
+    33.33%{ transform: translateX(0); 
+    }
+    66.66%{ transform: translateX(-33.33%); 
+    }
+    100%{ transform: translateX(-66.66%); 
+    }
+}
+
 .slider-1 {
-    background-image: url(../img/Homepage/Hero-slider-background_test2.JPG) center/cover no-repeat;
-    background-size: 80%;
+    background-image: url(../img/Homepage/Hero-slider-background_test2.JPG);
+    background-size: 120%;
+    background-repeat: no-repeat;
 }
 
 .slider-2 {
-    background-image: url(../img//Homepage/Dungeon-chest_test.PNG) center/cover no-repeat;
-    background-size: 80%;
+    background-image: url(../img//Homepage/Dungeon-chest_test.PNG);
+    background-size: 140%;
+    background-repeat: no-repeat;
 }
 
 .slider-3 {
-    background-image: url(../img//Homepage/SNES-background_test.png) center/cover no-repeat;
-    background-size: 80%;
+    background-image: url(../img//Homepage/SNES-background_test.png);
+    background-size: 120%;
+    background-repeat: no-repeat;
 }
 
+.hero-text {
+    color: white;
+    font-family: 'VT323', monospace;
+    text-align: center;
+    font-size: var(--font-size-general);  
+}
+
+.hero-text > h1 { 
+    background-color: var(--black);
+}
+
+.hero-text p {
+    background-color: var(--black);
+    font-size: var(--font-size-general);
+    padding-bottom: 0.5rem;
+}
+
+.hero-button1, .hero-button2, .hero-button3 {
+    background: var(--black);
+    font-size: var(--font-size-large);
+    font-family: 'VT323', monospace;
+    border: 3px solid var(--red);
+    color: var(--white);
+    padding: 0.55rem 0.8rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.hero-button1:hover, .hero-button2:hover, .hero-button3:hover {
+    background: var(--red);
+    transform: scale(1.05);
+    opacity: 1;
+    color: var(--black);
+}
 
 .product-row {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     margin: 1.5rem;
-    /* align-items: center */
 }
 
-.product-card {
-    /* height: 18.75rem; Ca 300 px */
+.hero-banner {
+    background-color: var(--red);
+    min-width: 100%;
+    margin: 0 auto;
+    padding: 0.5rem;
+    text-align: center;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+} 
 }
 
-
-}
-
-    /* -- LARGE DESKTOP -- */
+    /* -- LARGE DESKTOP -- min 1200 px --*/
 
 @media screen and (min-width:1200px) {
-        /* #wrapper {
-        display: grid;
-        grid-template-columns: 1fr 8fr 1fr; */
-        
-    /* } */
 
-    /* .product-card {
-    height: 400px;
-    } */
+    /* -- HERO -- */
 
-    .hero-wrapper { 
-        max-width: 100vh;
-        max-height: 80vh;
-        
+.hero-wrapper {
+    background-color: black;
+    max-width: 100%;
+    max-height: 80vh;
+    overflow: hidden;
+    display:flex;
+}
+
+.hero-carousel {
+    background-color: black;
+    width: 300%;
+    max-width:none;
+    max-height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    /* flex-direction: row; */
+    animation: slider-animation 15s infinite alternate; 
+}
+
+.slider-1, .slider-2, .slider-3 {
+    width: calc(100% /3);
+    height: 70vh;
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    justify-content: center;
+    align-items:center;
+}    
+
+@keyframes slider-animation {
+    0%{ transform: translateX(0); 
     }
+    33.33%{ transform: translateX(0); 
+    }
+    66.66%{ transform: translateX(-33.33%); 
+    }
+    100%{ transform: translateX(-66.66%); 
+    }
+}
+
+.slider-1 {
+    background-image: url(../img/Homepage/Hero-slider-background_test2.JPG);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.slider-2 {
+    background-image: url(../img//Homepage/Dungeon-chest.PNG);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.slider-3 {
+    background-image: url(../img//Homepage/SNES-background_test.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.hero-text {
+    color: white;
+    font-family: 'VT323', monospace;
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: var(--font-size-large);  
+}
+
+.hero-text > h1 { 
+    background-color: var(--black);
+}
+
+.hero-text p {
+    background-color: var(--black);
+    font-size: var(--font-size-large);
+}
+
+.hero-button1, .hero-button2, .hero-button3 {
+    background: var(--black);
+    font-size: var(--font-size-large);
+    font-family: 'VT323', monospace;
+    border: 3px solid var(--red);
+    color: var(--white);
+    padding: 0.55rem 1.1rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.hero-button1:hover, .hero-button2:hover, .hero-button3:hover {
+    background: var(--red);
+    transform: scale(1.05);
+    opacity: 1;
+    color: var(--black);
+}
+
+.product-row {
+  
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin: 1.5rem;
+}
 
  }
