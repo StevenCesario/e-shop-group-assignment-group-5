@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&family=VT323&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--black);
     grid-template-columns: minmax(0, 1fr);
@@ -76,6 +80,10 @@ article {
 
     .hero-img {
         height: 80vh;
+    }
+
+    #up-btn {
+        right: 30px;
     }
 }
 
