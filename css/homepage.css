@@ -164,7 +164,7 @@ font-family: "VT323", "Monoton";
 
 .product-row {
     display: grid; 
-    grid-template-columns:repeat(2, minmax(0, 1fr));
+    grid-template-columns:repeat(1, minmax(0, 1fr));
     gap: var(--general-gap-desktop);
     justify-content:flex-start;
     flex-wrap: wrap;
@@ -219,7 +219,7 @@ footer {
 
 .product-row {
     display:grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.5rem;
     justify-content:flex-start;
     flex-wrap: wrap;
@@ -273,8 +273,7 @@ footer {
 
 .product-row {
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
-    flex-wrap: nowrap;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     margin: 1.5rem;
     /* align-items: center */
 }
