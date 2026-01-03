@@ -6,80 +6,63 @@ font-family: "VT323", "Monoton";
 
 }
 
-.main-content {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--black);
-    color: white;
-    /* position: relative; */
-    
+#wrapper {
+    width: 100%;
 }
 
-.hero-section { 
-    background-color: var(--black);
-    min-width: 48rem;
-    height: 40vh;
-    padding: 2rem;
-    margin:0 auto;
-    overflow-x: auto;
-    
-    display: flex;
-    justify-content: center;
-    /* position: relative; */
-    transition: all .5s linear;
-     border-radius: 0,5rem;
-    }
-
-
-#wrapper {
+#content {
+    width: 100%;
+    overflow: hidden;
     background-color: black;
- 
-}   
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: white;  
 
+} 
 
     /* -- HERO -- */
 
 .hero-wrapper {
     background-color: black;
     max-width: 100%;
-    max-height: 100vh;
-    position: relative;
+    overflow: hidden;
     display:flex;
-    /* overflow: hidden; */
-    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+
   
 }
 
 .hero-carousel {
     background-color: black;
-    max-width: 300vw;
-    max-height: 40vh;
+    width: 300%;
+    max-width:none;
+    max-height: 80vh;
     margin: 0 auto;
     display: flex;
-    scroll-behavior: smooth;
-    flex-direction: row;
+    /* flex-direction: row; */
     animation: slider-animation 15s infinite alternate;
+   
+
      
 }
 
 .slider-1, .slider-2, .slider-3 {
 
     width: calc(100% /3);
-    max-height: 80vh;
-    object-fit: cover;
-    
+    /* flex: 0 0 100%; */
+    height: 70vh;
+    /* object-fit: cover; */
+    display: flex;
     aspect-ratio: 16 / 9;
     overflow-x: auto;
-    border: solid var(--red) 3px;
+    /* border: solid var(--red) 3px; */
     box-shadow: 0 4px 0 rgba(221, 208, 208, 0.1); 
-    justify-content: flex-start;
+    justify-content: center;
     align-items:center;
     /* transition: transform 1s ease; */
     
-    display: flex;
-}
+    
+}    
 
 @keyframes slider-animation {
     0%{ transform: translateX(0); 
@@ -94,19 +77,19 @@ font-family: "VT323", "Monoton";
 
 .slider-1 {
     background-image: url(../img/Homepage/Hero-slider-background_test2.JPG);
-    background-size: 90%;
+    background-size: 80%;
     background-repeat: no-repeat;
 }
 
 .slider-2 {
-    background-image: url(../img//Homepage/Dungeon-chest_test.PNG);
-    background-size: 80%;
+    background-image: url(../img//Homepage/Dungeon-chest.PNG);
+    background-size: 100%;
     background-repeat: no-repeat;
 }
 
 .slider-3 {
     background-image: url(../img//Homepage/SNES-background_test.png);
-    background-size: 80%;
+    background-size: 100%;
     background-repeat: no-repeat;
 }
 
@@ -115,14 +98,8 @@ font-family: "VT323", "Monoton";
     font-family: 'VT323', monospace;
     text-align: center;
     margin-bottom: 1em;
-    font-size: var(--font-size-large);
-    grid-area: hero-text;  
+    font-size: var(--font-size-large); 
     
-}
-
-.div-side {
-   background-color: var(--black);
-
 }
 
 .hero-text > h1 { 
@@ -145,7 +122,6 @@ font-family: "VT323", "Monoton";
     font-weight: 700;
     cursor: pointer;
     transition: background 0.15s ease, transform 0.15s ease;
-    grid-area: hero-button;
 
 }
 
@@ -156,17 +132,16 @@ font-family: "VT323", "Monoton";
     color: var(--black);
 }
 
-.hero-slider1 {
-   grid-area: "hero-slider1";
-}
-
 .hero-banner {
     background-color: var(--red);
-    min-width: 100vw;
+    min-width: 100%;
     margin: 0 auto;
     padding: 0.5rem;
     text-align: center;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
 }
+
 
     /* -- PRODUCT SECTION -- */
 
@@ -176,7 +151,7 @@ font-family: "VT323", "Monoton";
     padding-bottom: 6.25rem;
     
     display:grid;
-    grid-template-columns: columns;
+    grid-template-columns: column;
     font-size: var(--font-size-large);
     
 }
@@ -189,7 +164,7 @@ font-family: "VT323", "Monoton";
 
 .product-row {
     display: grid; 
-    grid-template-columns: (2, 1fr);
+    grid-template-columns:repeat(2, minmax(0, 1fr));
     gap: var(--general-gap-desktop);
     justify-content:flex-start;
     flex-wrap: wrap;
@@ -198,7 +173,7 @@ font-family: "VT323", "Monoton";
 }
 
 .product-card {
-     height: 18.75rem; /* Ca 300 px */
+    height: 18.75rem; /* Ca 300 px */
     border: 1px solid #ccc;
     border-radius: 1.5rem;
     padding: 1rem;
@@ -215,6 +190,11 @@ font-family: "VT323", "Monoton";
     cursor:pointer;
 }
 
+.text-products {
+    display:flex;
+
+}
+
 footer {
     margin: 0;
 }
@@ -224,7 +204,7 @@ footer {
 
     .hero-carousel {
         min-width: 300vw;
-        min-height: 50wh;
+        min-height: 60wh;
     }
 
     .hero-banner {
@@ -239,33 +219,61 @@ footer {
 
 .product-row {
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0.5rem;
     justify-content:flex-start;
     flex-wrap: wrap;
     margin: 0.5rem; 
     }
-
-
 }
 
 
     /* -- SMALL DESKTOP -- */
 
 @media screen and (min-width:960px) {
-        #wrapper {
+        /* #wrapper {
         display: grid;
-        grid-template-columns: 1fr 8fr 1fr;
-        
-    }
+        grid-template-columns: 1fr 8fr 1fr;    */
+    /* } */
 
-    .div-side {
+#main-content {
+    width: 100%;
+    overflow: hidden;
+}
+
+.div-side {
         background-color: black;
+        min-height: 100%;
     }   
     
+.hero-wrapper { 
+        min-width: 100%;
+        overflow: hidden;
+    }
+
+.hero-carousel {
+        width: 300%;
+        max-width: 0;
+    }
+.slider-1 {
+    background-image: url(../img/Homepage/Hero-slider-background_test2.JPG) center/cover no-repeat;
+    background-size: 80%;
+}
+
+.slider-2 {
+    background-image: url(../img//Homepage/Dungeon-chest_test.PNG) center/cover no-repeat;
+    background-size: 80%;
+}
+
+.slider-3 {
+    background-image: url(../img//Homepage/SNES-background_test.png) center/cover no-repeat;
+    background-size: 80%;
+}
+
+
 .product-row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
     flex-wrap: nowrap;
     margin: 1.5rem;
     /* align-items: center */
@@ -274,51 +282,26 @@ footer {
 .product-card {
     height: 18.75rem; /* Ca 300 px */
 }
-    .hero-wrapper { 
-        max-width: 60vw;
-        max-height: 60vh;
-    }
-    
-    .slider-1 {
-    background-image: url(../img/Homepage/Hero-slider-background_test2.JPG);
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 2rem;
-    
-}
 
-    .slider-2 {
-    background-image: url(../img//Homepage/Dungeon-chest_test.PNG);
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 2rem;
-}
-
-    .slider-3 {
-    background-image: url(../img//Homepage/SNES-background_test.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 2rem;
-}
 
 }
 
     /* -- LARGE DESKTOP -- */
 
 @media screen and (min-width:1200px) {
-        #wrapper {
+        /* #wrapper {
         display: grid;
-        grid-template-columns: 1fr 8fr 1fr;
-        border: 2px solid red;
-    }
+        grid-template-columns: 1fr 8fr 1fr; */
+        
+    /* } */
 
     .product-card {
-    height: 400px;
+    height: 500px;
     }
 
     .hero-wrapper { 
-        max-width: 70vh;
-        max-height: 70vh;
+        max-width: 100vh;
+        max-height: 80vh;
         
     }
 
