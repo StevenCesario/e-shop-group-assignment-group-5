@@ -214,13 +214,24 @@ main {
   margin-top: 8rem;
 }
 
-#up {
+#up-btn {
     position: fixed;
+    display: none;
+    border: none;
+    border-radius: 2px;
+    bottom: 30px;
+    right: 10px;
     cursor: pointer;
-    width: 50px;
-    margin-right: 5px;
-    right: 20px;
-    bottom: 60px;
+    box-shadow: 2px 2px var(--gray);
+    font-size: 30px;
+    color: var(--red);
+}
+
+#up-btn:hover {
+    background-color: var(--red);
+    color: var(--white);
+    box-shadow: 2px 2px var(--dark-red);
+    transform: translateY(2px);
 }
 
 footer {
