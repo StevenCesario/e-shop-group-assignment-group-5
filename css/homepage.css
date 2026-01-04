@@ -57,11 +57,14 @@ background-color: black
     text-align: center;
     font-size: var(--font-size-general);  
     margin-top: 2rem;
-    margin-bottom: 10rem;
+    margin-bottom: 12rem;
 }
 
 .hero-text > h1 { 
     background-color: var(--black);
+    margin-bottom:2rem;
+    padding: 1rem;
+    border: 3px solid var(--red);
 }
 
 .hero-text p {
@@ -151,17 +154,19 @@ footer {
     text-align: center;
     font-size: var(--font-size-general);  
     margin-top: 2rem;
-    
 }
 
 .hero-text > h1 { 
     background-color: var(--black);
+    margin-bottom:0;
+    padding: 1rem;
+    
 }
 
 .hero-text p {
     display:flex;
     background-color: var(--black);
-    font-size: var(--font-size-general);
+    font-size: var(--font-size-large);
     padding-bottom: 0.5rem;
 }
 .hero-button1 {
@@ -175,6 +180,7 @@ footer {
     font-weight: 700;
     cursor: pointer;
     transition: background 0.15s ease, transform 0.15s ease;
+    margin-top: 1rem;
 }
     /* .hero-banner {
     background-color: var(--red);
@@ -287,6 +293,7 @@ footer {
     /* font-size: var(--font-size-large); */
     margin-bottom:0;
     margin-left: 1rem;  
+
 }
 
 .hero-text > h1 { 
@@ -310,6 +317,7 @@ footer {
     border: 3px solid var(--red);
     color: var(--white);
     padding: 0.55rem 0.8rem;
+    margin-top: 1rem;
     border-radius: 0.5rem;
     font-weight: 700;
     cursor: pointer;
