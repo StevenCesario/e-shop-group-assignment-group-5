@@ -53,7 +53,7 @@ img {
 }
 
 .product-hero-section {
-    padding-top: 4.5rem; /* ca 72px */
+    padding-top: 2rem; /* EDIT: Reduced from ca 72px to ca 32px */
     min-height: 28.75rem; /* ca 460px */
     display: grid;
     justify-items: center;
@@ -72,8 +72,6 @@ img {
 
 .product-title {
     grid-area: title;
-    border-left: 0.313rem solid var(--red); /* ca 5px */
-    padding-left: 0.5rem;
 }
 
 .hero-img-wrapper {
@@ -324,6 +322,20 @@ img {
         padding-inline: 3.25rem; /* ca 52px */
     }
 
+    .product-hero-section {
+        margin-top: -3.75rem; /* EDIT: Dra upp hela hero section lite på tablet. ca 60px */
+    }
+
+    /* EDIT: Gör thumbnail bilderna lite större */
+    .hero-thumbnails img {
+        height: 4.75rem; /* ca 76px */
+    }
+    
+    /* EDIT: Gör h1:an lite större också */
+    .product-title {
+        font-size: 2.5rem; /* ca 40px */
+    }
+
     .upsell-section-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -384,6 +396,10 @@ img {
     .product-title {
         font-size: 3.25rem; /* ca 52px */
         align-self: end;
+
+        /* EDIT: This is now only for desktop and above */
+        border-left: 0.313rem solid var(--red); /* ca 5px */
+        padding-left: 0.5rem;
     }
 
     .product-info-small {
