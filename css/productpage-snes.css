@@ -6,7 +6,6 @@
 
 body {
     background-color: var(--black);
-    grid-template-columns: minmax(0, 1fr);
 }
 
 #main-content {
@@ -21,23 +20,15 @@ body {
 }
 
 .hero-img {
+    border: 6px solid var(--white);
     border-radius: var(--border-radius-l);
     width: 100%;
-}
-
-.hero-text {
-    position: absolute;
-    top: 325px;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
 }
 
 #products h2 {
     margin: 1.25rem 0;
     padding: 0.625rem;
-    border-left: 5px solid var(--red);
+    border-left: 5px solid var(--red)
 }
 
 .product-section {
@@ -53,10 +44,14 @@ article {
     height: 260px;
     background-color: var(--white);
     color: var(--black);
-    border: 1px solid var(--white);
     border-radius: var(--border-radius-s);
     padding: 1rem;
     text-align: center;
+    border: 3px solid var(--red);
+}    
+
+article:hover {
+    transform: translateY(-4px) rotate(-0.5deg);
 }
 
 .img-responsive {
@@ -78,13 +73,24 @@ article {
         padding-top: 4rem;
     }
 
-    .hero-img {
-        height: 80vh;
-    }
-
+    
     #up-btn {
         right: 30px;
     }
+}
+
+/* small desktop */
+@media screen and (min-width: 960px) {
+    article {
+        height: 300px;
+    }
+}
+
+/* large desktop */
+@media screen and (min-width: 1200px) {
+    .hero-img {
+        height: 80vh;
+}
 }
 
 
