@@ -8,7 +8,7 @@ background-color: black
 
 #wrapper {
     width: 100%;
-    margin-top:7.9rem;
+    margin-top:14.4rem;
 }
 
 #main-content {
@@ -145,7 +145,7 @@ footer {
 @media screen and (min-width:720px) {
 
 #wrapper {
-    margin-top:4.7rem;
+    margin-top:11rem;
 }
 
 .hero-mobile-tablet {
