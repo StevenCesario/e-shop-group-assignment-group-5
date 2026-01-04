@@ -126,6 +126,11 @@ img {
     border: 2px solid var(--red); /* Optional: add a border to make it pop */
 }
 
+/* NYTT: Göm desktop-only thumbnails på mobil */
+.th-desktop {
+    display: none;
+}
+
 .product-info-small {
     background-color: var(--gray);
     padding: 0.375rem; /* ca 6px */
@@ -409,6 +414,15 @@ img {
 
     .hero-thumbnails img {
         height: 5.5rem; /* Ökat från 3.75rem för att matcha Köp Nu knappens höjd */
+    }
+
+    /* NYTT: Göm mobile-only thumbnails på desktop och visa desktop-only thumbnails */
+    .th-mobile {
+        display: none;
+    }
+
+    .th-desktop {
+        display: block;
     }
 
     /* Gör ALLT större :) */
