@@ -53,7 +53,7 @@ img {
 }
 
 .product-hero-section {
-    padding-top: 2rem; /* EDIT: Reduced from ca 72px to ca 32px */
+    padding-top: 8rem; /* EDIT on EDIT: Reduced from ca 72px to ca 32px and then to ca 128px. Works on tablet too */
     min-height: 28.75rem; /* ca 460px */
     display: grid;
     justify-items: center;
@@ -364,6 +364,7 @@ img {
 
     .product-hero-section {
         min-height: 45rem; /* ca 720px */
+        margin-top: -5.75rem;
         grid-template-areas:
             "media title"
             "media price"
@@ -498,6 +499,10 @@ img {
 
 /* large desktop */
 @media screen and (min-width:1200px) {
+    .product-hero-section {
+        padding-top: 12.75rem;
+    }
+
     .sleeping-pikachu { /* Visas nu endast på large desktop */
         display: block;
         position: absolute; /* Takes him out of the document flow */
