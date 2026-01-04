@@ -8,11 +8,11 @@ background-color: black
 
 #wrapper {
     width: 100%;
+    margin-top:7.9rem;
 }
 
 #main-content {
     width: 100%;
-    /* overflow: hidden; */
     background-color: black;
     display: grid;
     justify-content: center;
@@ -31,10 +31,10 @@ background-color: black
  }
 
 .hero-mobile-tablet {
-    background-image: url(../img/Homepage/Hero-slider-background_mobile.JPG);
-    background-size: 80vh;
+    background-image: url(../img/Homepage/Hero-slider-background_mobile2.JPG);
+    background-size: 100%;
     background-repeat: no-repeat;
-    min-height: 100%;
+    min-height: 20vh;
     display:flex; 
     justify-content: center;
 }
@@ -51,6 +51,13 @@ background-color: black
     transition: background 0.15s ease, transform 0.15s ease;
 }
 
+.hero-button1:hover {
+    background: var(--red);
+    transform: scale(1.05);
+    opacity: 1;
+    color: var(--black);
+}
+
 .hero-text {
     color: white;
     font-family: 'VT323', monospace;
@@ -63,24 +70,17 @@ background-color: black
 .hero-text > h1 { 
     background-color: var(--black);
     margin-bottom:2rem;
-    padding: 1rem;
+    padding: 0.3rem;
     border: 3px solid var(--red);
 }
 
-.hero-text p {
-    background-color: var(--black);
-    font-size: var(--font-size-general);
-    padding-bottom: 0.5rem;
-}
-
-/* .hero-banner {
+.hero-banner {
     background-color: var(--red);
     min-width: 100%;
-    margin: 0 auto;
+    margin-top: 0.8rem;
     text-align: center;
-    border-bottom-left-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem;
-} */
+
+}
 
 
     /* -- PRODUCT SECTION -- */
@@ -89,11 +89,9 @@ background-color: black
     background-color: black;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    
     display:grid;
     grid-template-columns: column;
-    font-size: var(--font-size-general);
-    
+    font-size: var(--font-size-general);    
 }
 
 .product-section h2 {
@@ -113,7 +111,7 @@ background-color: black
 }
 
 .product-card {
-    height: 18.75rem; /* Ca 300 px */
+    min-height: 18.75rem; /* Ca 300 px */
     border: 3px solid var(--red);
     border-radius: 1.5rem;
     padding: 1rem;
@@ -145,9 +143,14 @@ footer {
     /* -- TABLET -- min 768px -- */
 @media screen and (min-width:720px) {
 
+#wrapper {
+    margin-top:4.7rem;
+}
+
 .hero-mobile-tablet {
-    background-image: url(../img/Homepage/Hero-slider-background_mobile.JPG);
+    background-image: url(../img/Homepage/Hero-slider-background_tablet.JPG);
     background-size: 100%;
+    min-height: 40vh;
 
 }
 
@@ -156,13 +159,18 @@ footer {
     font-family: 'VT323', monospace;
     text-align: center;
     font-size: var(--font-size-general);  
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .hero-text > h1 { 
     background-color: var(--black);
+    padding: 0.2rem;
     margin-bottom:0;
-    padding: 1rem;
+    border:none;
+    border-left: 2px solid red;
+    border-right: 2px solid red;
+    border-top: 2px solid red;
+    
     
 }
 
@@ -171,31 +179,22 @@ footer {
     background-color: var(--black);
     font-size: var(--font-size-large);
     padding-bottom: 0.5rem;
+    border-left: 2px solid red;
+    border-right: 2px solid red;
+    border-bottom: 2px solid red;
 }
 .hero-button1 {
-    background: var(--black);
-    font-size: var(--font-size-large);
-    font-family: 'VT323', monospace;
-    border: 3px solid var(--red);
-    color: var(--white);
     padding: 0.55rem 0.8rem;
-    border-radius: 0.5rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.15s ease, transform 0.15s ease;
     margin-top: 1rem;
 }
-    /* .hero-banner {
+.hero-banner {
     background-color: var(--red);
     max-width: 100vh;
     margin: 0 auto;
     padding: 0.5rem;
     text-align: center;
     color: white;
-    font-size: var(--font-size-large);
-    border-bottom-left-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem;
-} */
+}
 
 .product-row {
     display:grid;
@@ -233,6 +232,7 @@ footer {
     max-height: 40vh;
     overflow: hidden;
     display:flex;
+    
 }
 
 .hero-carousel {
@@ -243,16 +243,17 @@ footer {
     max-height: 70%;
     margin: 0 auto;
     animation: slider-animation 15s infinite alternate; 
+
 }
 
 .slider-1, .slider-2, .slider-3 {
     display: flex;
     width: calc(100% /3);
-    height: 60vh;
+    height: 45vh;
     object-fit: cover;
     aspect-ratio: 16 / 9;
     overflow-x: auto;
-}    
+}        
 
 @keyframes slider-animation {
     0%{ transform: translateX(0); 
@@ -267,19 +268,19 @@ footer {
 
 .slider-1 {
     background-image: url(../img/Homepage/Hero-slider-background_test3.JPG);
-    background-size: 112%;
+    background-size: 137%;
     background-repeat: no-repeat;
 }
 
 .slider-2 {
     background-image: url(../img/Homepage/HERO-slide2.JPG);
-    background-size: 100%;
+    background-size: 122%;
     background-repeat: no-repeat;
 }
 
 .slider-3 {
     background-image: url(../img//Homepage/SNES-background_test2.PNG);
-    background-size: 100%;
+    background-size: 124%;
     background-repeat: no-repeat;
 }
 
@@ -287,24 +288,21 @@ footer {
     color: white;
     font-family: 'VT323', monospace;
     text-align: center;
-    /* font-size: var(--font-size-large); */
+    font-size: var(--font-size-large);
     margin-bottom:0;
     margin-left: 1rem;  
+
 
 }
 
 .hero-text > h1 { 
     background-color: var(--black);
-    border: 2px solid red;
-    border-bottom:none;
 }
 
 .hero-text p {
     background-color: var(--black);
     font-size: var(--font-size-general);
     padding-bottom: 0.5rem;
-    border: 2px solid red;
-    border-top:none;
 }
 
 .hero-button1, .hero-button2, .hero-button3 {
@@ -328,21 +326,22 @@ footer {
     color: var(--black);
 }
 
+/* .hero-banner {
+    background-color: var(--red);
+    max-width: 100vh;
+    margin: 0 auto;
+    padding: 0.5rem;
+    text-align: center;
+    color: white;
+} */
+
 .product-row {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     margin: 1.5rem;
+       
 }
 
-/* .hero-banner {
-    background-color: var(--red);
-    min-width: 100%;
-    margin: 0 auto;
-    padding: 0.5rem;
-    text-align: center;
-    border-bottom-left-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem;
-}  */
 }
 
     /* -- LARGE DESKTOP -- min 1200 px --*/
@@ -350,6 +349,9 @@ footer {
 @media screen and (min-width:1200px) {
 
     /* -- HERO -- */
+    .slider-1, .slider-2, .slider-3 {
+    height: 80vh;
+} 
 
 .slider-1 {
     background-image: url(../img/Homepage/Hero-slider-background_test2.JPG);
@@ -380,25 +382,31 @@ footer {
  /* Larger desktop - To make the HERO-slider work a bit better on even larger desktops */
 
  @media screen and (min-width: 1340px) {
-    #wrapper{
+#wrapper{
        grid-template-columns: 2fr 6fr 2fr; 
     }
 
-    .slider-1 {
+.slider-1, .slider-2, .slider-3 {
+
+    height: 80vh;
+}    
+  
+
+.slider-1 {
     background-image: url(../img/Homepage/Hero-slider-background_test2.JPG);
-    background-size: 140%;
+    background-size: 100%;
     background-repeat: no-repeat;
 }
 
 .slider-2 {
     background-image: url(../img//Homepage/HERO-slide2.JPG);
-    background-size: 140%;
+    background-size: 100%;
     background-repeat: no-repeat;
 }
 
 .slider-3 {
     background-image: url(../img//Homepage/SNES-background_test2.PNG);
-    background-size: 140%;
+    background-size: 100%;
     background-repeat: no-repeat;
 }
  }
