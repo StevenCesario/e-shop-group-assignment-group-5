@@ -31,7 +31,7 @@ background-color: black
  }
 
 .hero-mobile-tablet {
-    background-image: url(../img/Homepage/Hero-slider-background_mobile2.JPG);
+    background-image: url(../img/Homepage/Hero-slider1-mobile.JPG);
     background-size: 100%;
     background-repeat: no-repeat;
     min-height: 20vh;
@@ -91,7 +91,8 @@ background-color: black
     padding-bottom: 2rem;
     display:grid;
     grid-template-columns: column;
-    font-size: var(--font-size-general);    
+    font-size: var(--font-size-general);  
+    align-content: center;  
 }
 
 .product-section h2 {
@@ -115,7 +116,7 @@ background-color: black
     border: 3px solid var(--red);
     border-radius: 1.5rem;
     padding: 1rem;
-    text-align:center;
+    text-align: center;
     background-color: white;
     color: black;
     margin: 0.5rem;
@@ -148,7 +149,7 @@ footer {
 }
 
 .hero-mobile-tablet {
-    background-image: url(../img/Homepage/Hero-slider-background_tablet.JPG);
+    background-image: url(../img/Homepage/Hero-slider1-tablet.JPG);
     background-size: 100%;
     min-height: 40vh;
 
@@ -267,7 +268,7 @@ footer {
 }
 
 .slider-1 {
-    background-image: url(../img/Homepage/Hero-slider-background_test3.JPG);
+    background-image: url(../img/Homepage/Hero-slider1-smalldesktop.JPG);
     background-size: 137%;
     background-repeat: no-repeat;
 }
@@ -354,7 +355,7 @@ footer {
 } 
 
 .slider-1 {
-    background-image: url(../img/Homepage/Hero-slider-background_test2.JPG);
+    background-image: url(../img/Homepage/Hero-slider1-largedesktop.JPG);
     background-size: 120%;
     background-repeat: no-repeat;
 }
@@ -366,7 +367,7 @@ footer {
 }
 
 .slider-3 {
-    background-image: url(../img//Homepage/SNES-background_test2.PNG);
+    background-image: url(../img//Homepage/HERO-slider3.JPG);
     background-size: 120%;
     background-repeat: no-repeat;
 }
@@ -387,13 +388,12 @@ footer {
     }
 
 .slider-1, .slider-2, .slider-3 {
-
     height: 80vh;
 }    
   
 
 .slider-1 {
-    background-image: url(../img/Homepage/Hero-slider-background_test2.JPG);
+    background-image: url(../img/Homepage/Hero-slider1-largedesktop.JPG);
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -405,7 +405,7 @@ footer {
 }
 
 .slider-3 {
-    background-image: url(../img//Homepage/SNES-background_test2.PNG);
+    background-image: url(../img//Homepage/HERO-slider3.PNG);
     background-size: 100%;
     background-repeat: no-repeat;
 }
