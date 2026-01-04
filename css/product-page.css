@@ -257,6 +257,8 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: var(--general-gap-desktop);
     /* The logic: Visa 2 kort på mobil, 4 på desktop (sätts nere i Media Queryn). Detta ersätter vår grid.
     Flexbox är det bättre valet i detta fall i och med att vi "pushar element out into the overflow"! */
     
@@ -272,7 +274,9 @@ img {
     padding: 0.75rem; /* 12px */
     border-radius: 0.5rem;
     color: black;
-    background-color: white; /* Dark gray med vit text kan oxå funka! */
+    background-color: white;
+    border: 3px solid red;
+    text-align: center;
 }
 
 .upsell-media-wrapper img {
@@ -485,15 +489,13 @@ img {
         /* (100% minus 48px of total gap space) divided by 4 */
         /* To use the variable, we need to subtract 3/4 of the gap from each card to make room for 3 gaps */
         flex: 0 0 calc(25% - (var(--carousel-gap) * 3 / 4));
+
+        font-size: 1.125rem; /* ca 18px */
     }
 
     /* Positionera knapparna reasonably på desktop också */
     .prev-btn { left: -3.125rem; } /* ca 50px */
     .next-btn { right: -3.125rem; }
-
-    .upsell-card {
-        font-size: 1.125rem; /* ca 18px */
-    }
 
     footer {
         font-size: 1.25rem; /* ca 20px */
