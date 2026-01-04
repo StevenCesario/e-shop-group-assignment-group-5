@@ -256,6 +256,7 @@ img {
 .upsell-card {
     display: grid;
     align-items: end;
+    justify-content: center;
     /* The logic: Visa 2 kort på mobil, 4 på desktop (sätts nere i Media Queryn). Detta ersätter vår grid.
     Flexbox är det bättre valet i detta fall i och med att vi "pushar element out into the overflow"! */
     
