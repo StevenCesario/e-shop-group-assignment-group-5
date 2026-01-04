@@ -87,12 +87,12 @@ background-color: black
 
 .product-section {
     background-color: black;
-    padding-top: 6.25rem;
-    padding-bottom: 6.25rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     
     display:grid;
     grid-template-columns: column;
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-general);
     
 }
 
@@ -114,16 +114,19 @@ background-color: black
 
 .product-card {
     height: 18.75rem; /* Ca 300 px */
-    border: 1px solid #ccc;
+    border: 3px solid var(--red);
     border-radius: 1.5rem;
     padding: 1rem;
     text-align:center;
     background-color: white;
     color: black;
     margin: 0.5rem;
-    /* max-width: 31.25rem; */
     display:grid;
     align-items: end;
+}
+
+.product-card:hover {
+    transform: translateY(-4px) rotate(-0.5deg); 
 }
 
 .product-card a {
@@ -202,10 +205,6 @@ footer {
     flex-wrap: wrap;
     margin: 0.5rem; 
 }
-
-.product-card {
-    height: 400px;
-}
 }
     /* -- SMALL DESKTOP -- min 960px -- */
 
@@ -231,11 +230,9 @@ footer {
 .hero-wrapper {
     background-color: black;
     max-width: 100%;
-    max-height: 60vh;
+    max-height: 40vh;
     overflow: hidden;
     display:flex;
-    /* justify-content: center;
-    align-content:center; */
 }
 
 .hero-carousel {
@@ -270,7 +267,7 @@ footer {
 
 .slider-1 {
     background-image: url(../img/Homepage/Hero-slider-background_test3.JPG);
-    background-size: 100%;
+    background-size: 112%;
     background-repeat: no-repeat;
 }
 
@@ -380,8 +377,28 @@ footer {
 
  }
 
+ /* Larger desktop - To make the HERO-slider work a bit better on even larger desktops */
+
  @media screen and (min-width: 1340px) {
     #wrapper{
        grid-template-columns: 2fr 6fr 2fr; 
     }
+
+    .slider-1 {
+    background-image: url(../img/Homepage/Hero-slider-background_test2.JPG);
+    background-size: 140%;
+    background-repeat: no-repeat;
+}
+
+.slider-2 {
+    background-image: url(../img//Homepage/HERO-slide2.JPG);
+    background-size: 140%;
+    background-repeat: no-repeat;
+}
+
+.slider-3 {
+    background-image: url(../img//Homepage/SNES-background_test2.PNG);
+    background-size: 140%;
+    background-repeat: no-repeat;
+}
  }
