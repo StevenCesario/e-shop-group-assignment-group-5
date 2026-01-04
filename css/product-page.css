@@ -131,6 +131,9 @@ img {
     padding: 0.375rem; /* ca 6px */
     margin-inline: 0.5rem;
     grid-area: info;
+    
+    /* Märkte när jag började på en riktig sida att detta behövs! */
+    min-width: 100%;
 }
 
 .sleeping-pikachu {
