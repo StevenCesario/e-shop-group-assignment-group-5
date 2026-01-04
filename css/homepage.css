@@ -2,7 +2,6 @@
 /* Font: Monotone static */
 
 body {
-font-family: "VT323", "Monoton";
 background-color: black
 
 }
@@ -250,8 +249,6 @@ footer {
     object-fit: cover;
     aspect-ratio: 16 / 9;
     overflow-x: auto;
-    /* justify-content: center;
-    align-items:center; */
 }    
 
 @keyframes slider-animation {
@@ -287,8 +284,9 @@ footer {
     color: white;
     font-family: 'VT323', monospace;
     text-align: center;
-    font-size: var(--font-size-large);
-    margin-bottom:0;  
+    /* font-size: var(--font-size-large); */
+    margin-bottom:0;
+    margin-left: 1rem;  
 }
 
 .hero-text > h1 { 
@@ -372,4 +370,10 @@ footer {
     margin: 1.5rem;
 }
 
+ }
+
+ @media screen and (min-width: 1340px) {
+    #wrapper{
+       grid-template-columns: 2fr 6fr 2fr; 
+    }
  }
