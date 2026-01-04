@@ -114,6 +114,12 @@ img {
     border: 1px solid rgba(255, 255, 255, 0.8); /* Subtle edge definition */
 }
 
+/* Tillagt: muspekare när vi hovrar över en thumbnail bild! */
+.hero-thumbnails img:hover {
+    cursor: pointer;
+    filter: brightness(0.8); /* A little bit darker */
+}
+
 /* Your chosen state */
 .hero-thumbnails img.active {
     filter: brightness(0.5);
