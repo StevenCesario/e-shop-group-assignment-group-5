@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nshop</title>
+
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/product-page.css">
+
+    <script src="scripts/general.js" defer></script>
+    <script src="scripts/product-page-carousel-upsell.js" defer></script>
+    <script src="scripts/product-page-carousel-hero.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- For the hamburgermenu from w3schools -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+    <header id="header">
+      
+
+      <nav>
+    
+        <!-- Logo now links back to homepage -->
+        <a class="logo-link" href="Homepage.html">
+            <img src="img/Nshop.logo.jpg" alt="Nshop logo" class="logo" />
+        </a>
+
+        <div class="nav-links">
+            <a href="productpage-nes.html">NES</a>
+            <a href="productpage.snes.html">SNES</a>
+            <a href="productlist.html">Products</a>
+            
+        </div>
+      
+
+
+        <div id="myLinks">
+          <a href="productpage-nes.html">NES</a>
+          <a href="productpage.snes.html">SNES</a>
+          <a href="productlist.html">Products</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars fa-2x"></i>
+        </a>
+
+        <div class="header-right">
+              <div class="search-container">
+                   <!--Search without styling until now------- -->
+                    <input type="text" placeholder="Search for products..." />
+                      <div class="search-icon">
+                        <a href="#" aria-label="Search">
+                      <i class="fa fa-search" aria-hidden="true" title=""Search"></i></a>
+   
+                      </div>
+                </div>
+                        <button class="cart-button"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true">(3)</i></button>
+              
+            </div>
+        
+      </nav>
+    </header>
+
+    <main id="wrapper">
+        <div class="div-side"></div>
+        <div id="main-content">
+            <section class="product-hero-section">
+                <h1 class="product-title">The Legend of Zelda: <br>A Link to the Past</h1>
+
+                <div class="hero-img-wrapper">
+                  <picture>
+                    <source
+                      class="hero-source"
+                      type="image/avif"
+                      srcset ="./img/product-page/zelda-lttp-sm.avif 500w,
+                               ./img/product-page/zelda-lttp-md.avif 850w,
+                               ./img/product-page/zelda-lttp-lg.avif 1155w"
+                      sizes="(max-width: 767px) 100vw,
+                             (max-width: 1199px) 850px,
+                             1155px">
+
+                    <source
+                      class="hero-source"
+                      type="image/webp"
+                      srcset ="./img/product-page/zelda-lttp-sm.webp 500w,
+                               ./img/product-page/zelda-lttp-md.webp 850w,
+                               ./img/product-page/zelda-lttp-lg.webp 1155w"
+                      sizes="(max-width: 767px) 100vw,
+                             (max-width: 1199px) 850px,
+                             1155px">
+
+                    <!-- EDIT: Vi använder id här nu oxå i JavaScript syfte! -->
+                    <img 
+                      class="product-main-image" 
+                      id="product-main-image" 
+                      src="./img/product-page/zelda-lttp-lg.jpg"
+                      width="1155" 
+                      height="800"
+                      alt="Legend of Zelda: A Link to the Past (1991) SNES Box Cover Art"
+                      loading="eager">
+                  </picture>
+                </div>
+
+                <!-- The 'data-' prefix är för JavaScript filen -->
+                <div class="hero-thumbnails">
+                    <img 
+                      class="thumbnail active" 
+                      src="./img/product-page/zelda-lttp-sm.jpg" 
+                      alt="Thumbnail 1"
+                      data-image-src="reset"
+                    >
+                    <img class="thumbnail" src="./img/link-to-the-past-screenshot-1.jpg" alt="Thumbnail" data-image-src="./img/link-to-the-past-screenshot-1.jpg">
+                    <img class="thumbnail" src="./img/link-to-the-past-screenshot-2.jpg" alt="Thumbnail" data-image-src="./img/link-to-the-past-screenshot-2.jpg">
+                </div>
+
+                <div class="product-info-small">
+                    <img class="sleeping-pikachu" src="img/product-page/pikcahu-sleeping-no-bg.png" alt="Sleeping Pikachu :)">
+                    <p class="product-info-small-text">SNES<br>Ny och inplastad<br><br>
+</p>
+                    <div class="product-choice">
+                        <h4>Val av region:</h4>
+                        <div>
+                            <input type="radio" id="option-1" name="choice" value="option-1">
+                            <label for="option-1">PAL</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="option-2" name="choice" value="option-2">
+                            <label for="option-2">NTSC</label>
+                        </div>
+                    </div> 
+                </div>
+                <h2 class="product-price">459kr</h2>
+                <button class="product-buy-button">KÖP NU</button>
+            </section>
+            <section class="product-feature-section">
+                <div class="feature-section-text-wrapper">
+                    <h3>Fantasty And Reality Collide In A Land Of Enhancement</h3>
+                    <p>Venture back to Hyrule and an age of magic and heroes. The predecessors of Link and Zelda face monsters on the march when a menacing magician takes over the kingdom. Only you can prevent his evil plot from shattering the land of Hyrule. <br><br>
+In your quest, you'll venture into twisting mazes, dungeons, palaces and shadowy forests. Test your mettle with mighty swords and magical weapons. Or heft a boulder and hurl it at your enemies. If the going gets tough, dive into a river—you can swim to escape! Learn powerful spells, locate magical artifacts and solve the mysteries of the evil magician and the hidden realm of Hyrule.
+</p>
+                    <br>
+                    <p>This exciting Super Nintendo Entertainment System™ sequel to the Legend Of Zelda™ and The Adventure Of Link™ uses 16-bit power to create a quest so colorful and detailed you don't just play it, you live it!
+</p>
+                </div>
+                <div class="feature-section-media-wrapper">
+                    <img class="product-screenshot" src="./img/link-to-the-past-screenshot-1.jpg" alt="Screenshot 1" height="120px">
+                    <img class="product-screenshot" src="./img/link-to-the-past-screenshot-2.jpg" alt="Screenshot 2" height="120px">
+                    <img class="product-screenshot" src="./img/link-to-the-past-screenshot-3.jpg" alt="Screenshot 3" height="120px">
+                    <img class="product-screenshot" src="./img/link-to-the-past-screenshot-4.jpg" alt="Screenshot 4" height="120px">
+                </div>
+            </section>
+            <section class="product-upsell-section">
+                <h3>Vi rekommenderar</h3>
+                <div class="carousel-wrapper">
+                  <button class="carousel-btn prev-btn" aria-label="Scroll Left">&lt;</button>
+                  <div class="upsell-carousel-track">
+                    <div class="upsell-card">
+                      <div class="upsell-grid-media-wrapper">
+                          <img src="./img/snes-controller-box.jpg" alt="SNES Controller" height="120px">
+                      </div>
+                      <div class="upsell-grid-text-wrapper">
+                          <h5>SNES Controller</h5>
+                          <span>479kr - I lager</span>
+                      </div>
+                    </div>
+                    <div class="upsell-card">
+                      <div class="upsell-grid-media-wrapper">
+                          <img src="./img/snes-controller-box.jpg" alt="SNES Controller" height="120px">
+                      </div>
+                      <div class="upsell-grid-text-wrapper">
+                          <h5>Donkey Kong</h5>
+                          <span>269kr - I lager</span>
+                      </div>
+                    </div>
+                    <div class="upsell-card">
+                      <div class="upsell-grid-media-wrapper">
+                          <img src="./img/snes-controller-box.jpg" alt="SNES Controller" height="120px">
+                      </div>
+                      <div class="upsell-grid-text-wrapper">
+                          <h5>Super Mario 2</h5>
+                          <span>379kr - I lager</span>
+                      </div>
+                    </div>
+                    <div class="upsell-card">
+                      <div class="upsell-grid-media-wrapper">
+                          <img src="./img/snes-controller-box.jpg" alt="SNES Controller" height="120px">
+                      </div>
+                      <div class="upsell-grid-text-wrapper">
+                          <h5>Earthbound</h5>
+                          <span>479kr - I lager</span>
+                      </div>
+                    </div>
+                    <div class="upsell-card">
+                      <div class="upsell-grid-media-wrapper">
+                          <img src="./img/snes-controller-box.jpg" alt="SNES Controller" height="120px">
+                      </div>
+                      <div class="upsell-grid-text-wrapper">
+                          <h5>Mario Kart</h5>
+                          <span>179kr - I lager</span>
+                      </div>
+                    </div>
+                    <div class="upsell-card">
+                      <div class="upsell-grid-media-wrapper">
+                          <img src="./img/snes-controller-box.jpg" alt="SNES Controller" height="120px">
+                      </div>
+                      <div class="upsell-grid-text-wrapper">
+                          <h5>Metroid</h5>
+                          <span>479kr - I lager</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-btn next-btn" aria-label="Scroll Right">&gt;</button>
+                </div>
+            </section>
+        </div>
+        <div class="div-side"></div>
+    </main>
+
+    <button onclick="topFunction()" id="up-btn" title="Go to top">
+        <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </button>
+
+    <footer>
+      <h3>Om oss</h3>
+      <p>
+        Vi är ett gäng fullstack studenter som älskar retrospel och
+        ville skapa en inbjudande och stilren e-shop med två av de större
+        retro-konsolerna någonsin.
+      </p>
+      <p>
+    <a id="footer-mail" href="contact.html">Kontakta oss</a><br /> Eller via mobil: 0700-123456
+       
+      </p>
+      <p>Säker betalning med</p>
+      <div class="footer-images">
+        <img src="./img/Mastercard.svg" alt="Mastercard" height="20px" />
+        <img src="./img/Klarna.png" alt="Klarna" height="20px" />
+        <img src="./img/VISA.svg" alt="VISA" height="20px" />
+      </div>
+
+      <p>Vi levererar med</p>
+      <div class="footer-images">
+        <img
+          id="leverans"
+          src="./img/Postnord.svg"
+          alt="Postnord"
+          height="16px"
+        />
+      </div>
+      <p>Made with love by &copy; Group 5</p>
+    </footer>
+    
+    
+</body>
+</html>
