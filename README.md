@@ -27,5 +27,5 @@ Loggan möter användaren när hen landar på sidan för att genast låta hen ve
 * Product list: Nahid/William
 
 ## Resurser
-Trello: https://trello.com/b/4YqLeQlL/sprints
-Journal: https://docs.google.com/document/d/1LXzNs6fM6HCDVaIMdpIqy-9WKHGSx71tLOyYnkJ0Qyc/edit?usp=sharing
+* Trello: https://trello.com/b/4YqLeQlL/sprints
+* Journal: https://docs.google.com/document/d/1LXzNs6fM6HCDVaIMdpIqy-9WKHGSx71tLOyYnkJ0Qyc/edit?usp=sharing
